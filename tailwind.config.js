@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        black: 'popBlack',
+        thin: 'popThin',
+        reg: 'popReg',
+      },
       colors: {
-        modal: 'var(--bg-modal, rgba(0, 0, 0, 0.75))',
-        default: 'var(--surface-default, #D8D8D2)',
-        'on-surface': 'var(--text-default, #000)',
-        primary: 'var(--semantic-brand-brand-0, #4236EB)',
-        secondary: 'var(--action-basic-default, #FFF)',
-  
+        greenlight: '#227432',
+        greendark: '#224C22',
+        orange: '#D17711',
         text: {
           DEFAULT: 'var(--text-default, #000)',
           subdued: 'var(--text-subdued, #8B8B84)',
@@ -70,76 +70,8 @@ module.exports = {
           disabled: 'var(--border-disabled, #F3F3F1)',
           focused: 'var(--border-focused, #458FFF)',
         },
-        'border-critical': {
-          DEFAULT: 'var(--border-critical-default, #DE1037)',
-          subdued: 'var(--border-critical-subdued, #FFA2A0)',
-          disabled: 'var(--border-critical-disabled, #FFEDEC)',
-        },
-        'border-warning': {
-          DEFAULT: 'var(--border-warning-default, #D58E2D)',
-          subdued: 'var(--border-warning-subdued, #FBD3A4)',
-        },
-        'border-success': {
-          DEFAULT: 'var(--border-success-default, #1E984E)',
-          subdued: 'var(--border-success-subdued, #A7FCBB)',
-        },
-        'border-highlight': {
-          DEFAULT: 'var(--border-highlight-default, #4236EB)',
-          subdued: 'var(--border-highlight-subdued, #97A5F9)',
-        },
-        'border-primary': {
-          DEFAULT: 'var(--border-primary-default, #4236EB)',
-          subdued: 'var(--border-primary-subdued, #ABB7FA)',
-        },
-        'border-inverse': {
-          DEFAULT: 'var(--border-inverse-default, #1B242C)',
-          subdued: 'var(--border-inverse-subdued, #3A424A)',
-        },
-        'border-action': {
-          basic: 'var(--border-action-basic, #D8D8D2)',
-          primary: 'var(--border-action-primary, #FFF)',
-          inverse: 'var(--border-action-inverse, #FFF)',
-        },
-        'border-formfield-default': 'var(--border-formfield, #DEE3E7)',
-        'border-table': {
-          horizontal: 'var(--border-table-horizontal, #DEE3E7)',
-          vertical: 'var(--border-table-vertical, #F0F3F5)',
-        },
-        'border-neutral-subdued': 'var(--border-neutral-subdued, #A6A6A6)',
-        'action-primary': {
-          disabled: 'var(--action-primary-disabled, #EBEBEB)',
-        },
-        'action-basic': {
-          DEFAULT: 'var(--action-basic-default, #FFF)',
-          hovered: 'var(--action-basic-hovered, #F3F3F1)',
-          pressed: 'var(--action-basic-pressed, #EAEAE6)',
-          depressed: 'var(--action-basic-depressed, #EAEAE6)',
-          disabled: 'var(--action-basic-disabled, #E4E4E0)',
-        },
-        'action-inverse': {
-          DEFAULT: 'var(--action-inverse-default, rgba(255, 255, 255, 0.00))',
-          hovered: 'var(--action-inverse-hovered, #F3F3F1)',
-          pressed: 'var(--action-inverse-pressed, #EAEAE6)',
-          depressed: 'var(--action-inverse-depressed, #EAEAE6)',
-          disabled: 'var(--action-inverse-disabled, #E4E4E0)',
-        },
-        'action-critical': {
-          DEFAULT: 'var(--action-critical-default, #C53434)',
-          hovered: 'var(--action-critical-hovered, #A13636)',
-          pressed: 'var(--action-critical-pressed, #952D2D)',
-          depressed: 'var(--action-critical-depressed, #6F2020)',
-          disabled: 'var(--action-primary-disabled, #EBEBEB)',
-        },
-        focused: 'var(--focused-default, #458FFF)',
-        decorative: {
-          one: 'var(--decorative-one, #1AF1BE)',
-          two: 'var(--decorative-two, #FC8DAE)',
-          three: 'var(--decorative-three, #FFB76F)',
-          four: 'var(--decorative-four, #AFEAFD)',
-          five: 'var(--decorative-five, #747474)',
-        },
       },
     },
   },
   plugins: [],
-}
+};
