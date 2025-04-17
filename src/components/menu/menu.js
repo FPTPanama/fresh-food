@@ -5,6 +5,9 @@ const Menu = () => {
   return (
     <div className={'flex justify-start items-center gap-4 w-1/4'}>
       <Link href={'/productos'}>
+        <p className="font-black text-greendark">HOME</p>
+      </Link>
+      <Link href={'/productos'}>
         <p className="font-black text-greendark">PRODUCTOS</p>
       </Link>
       <Link href={'/about-us'}>
