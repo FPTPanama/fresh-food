@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
 	font-family: popMed, 'DM Sans', sans-serif;
-	color: var(--colNegCor);
+	color: var(--greenDark);
 	box-sizing: border-box;
 
 	a {
@@ -31,7 +31,7 @@ html {
 body {
 	
 	overflow-x: hidden;
-	font-size: 14px;
+	font-size: 16px;
 	background-color: var(--freshBlanco);
 	background-size: cover;
 	background-size: 50%;
@@ -393,8 +393,8 @@ opacity: 1;
 .responsiveWidth {
 	
 	margin: auto;
-	@include gte(1200) {max-width: 1200px}
-	@include lte(1199) {max-width: 1024px}
+	@include gte(1400) {max-width: 1400px}
+	@include lte(1399) {max-width: 1200px}
 	@include lte(1025) {max-width: 920px}
 	@include lte(992) {max-width: 670px}
 	@include lte(768) {max-width: 680px}

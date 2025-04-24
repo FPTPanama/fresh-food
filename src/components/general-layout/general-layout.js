@@ -6,7 +6,7 @@ const GeneralLayout = ({ children }) => {
   return (
     <div className={'flex flex-col items-center justify-between'}>
       <Header />
-      {children}
+      <div className="mt-[180px] flex flex-col w-full mb-10">{children}</div>
       <Footer />
     </div>
   );
