@@ -41,7 +41,7 @@ $colors: (
 	freshBlanco: #e6efe2,
 	greenLight: #227432,
 	greenDark: #224C22,
-	orange: #D17711,
+	freshOrange: #D17711,
 	fresh: #e6efe2,
 
 );
@@ -63,7 +63,7 @@ $colors: (
 
 // Clases generadas automáticamente con el mismo nombre que el nombre del color
 @each $colorName, $color in $colors {
-    .#{$colorName} {
+	.#{"#{$colorName}"} {
        color: $color !important;
     }
 }
