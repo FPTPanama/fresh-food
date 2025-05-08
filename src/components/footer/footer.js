@@ -31,7 +31,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between h-[120px] w-full px-10 py-4">
+    <div className="flex items-center justify-between h-[120px] w-full px-10 py-4 my-20">
       <div className="flex items-center justify-start gap-5 w-2/6">
         <div className="flex items-center justify-center gap-5">
           <Image width={80} height={40} src={'/img/freshfood_short.svg'} alt="freshfood logo short" />
@@ -45,13 +45,14 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-start justify-center w-2/6">
-        {/* <Image className={'h-[320px] w-auto'} src={'/img/frutas_con_zumo.webp'} alt="frutas con zumo" width={250} height={200} /> */}
+        <Image className={'h-[320px] w-auto'} src={'/img/frutas_con_zumo.webp'} alt="frutas con zumo" width={250} height={200} />
       </div>
       <div className="flex flex-col items-end justify-center w-2/6 text-greendark">
         <p className="font-black">Nuestra dirección</p>
-        <p className="mb-2">Calle 55, PH SFC. Oficina 26D. Obarrio, Panama City, Panamá</p>
+        <p>Calle 55, PH SFC. Oficina 26D</p>
+        <p>Obarrio, Panama City, Panamá</p>
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 mt-4">
           <div className="grid grid-cols-4 mt-3 mb-3">
             {redSocItems.map((item, key) => {
               return (

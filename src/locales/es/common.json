@@ -1,5 +1,38 @@
 {
+    "header": {
+        "HOME": "Home",
+        "PRODUCTOS": "Productos",
+        "NOSOTROS": "Nosotros",
+        "QUIERES_MAS_INFO": "¿Quieres más información?"
+    },
     "home": {
-        "LLEVAMOS_LA_FRUTA" : "Llevamos lo mejor a donde más importa"
+        "LLEVAMOS_LA_FRUTA" : "Llevamos lo mejor a donde más importa",
+        "CADA_PRODUCTO_LLEGA": "Cada producto llega a su destino con la promesa de algo <span style='font-size: 36px; font-family: popRare'>bien hecho</span>.",
+        "YA_NOS_CONOCES": "¿Ya nos conoces?",
+        "LIMON_MANGO": "Limón, piña, pitahaya, mango, aguacate, café, cacao.",
+        "compromise_items": [
+            {
+                "TITLE": "Productos de calidad",
+                "TEXT": "De nuestra red de proveedores a su país."
+            },
+            {
+                "TITLE": "Logística internacional",
+                "TEXT": "Hacemos realidad su operación de inicio a fin."
+            },
+            {
+                "TITLE": "Disponibilidad",
+                "TEXT": "Nuestra cartera de productores garantiza disponibilidad todo el año."
+            },
+            {
+                "TITLE": "Calidad y compromiso",
+                "TEXT": "Nuestros clientes avalan la seriedad y transparencia de nuestras operaciones."
+            }
+        ],
+        "AGRICULTORES_EXPERTOS": "Agricultores expertos desde Panamá, Estados Unidos y Venezuela.",
+        "LLEVANDO_TU_MESA": "LLevando a tu mesa <br /> la esencia de la naturaleza.",
+        "NUESTRO_COMPROMISO": "Nuestro <br/> compromiso",
+        "NUESTRO_EMPAQUE": "Empaque que Protege y Realza Nuestro Producto",
+        "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "Cuidamos cada detalle, <br/> y el empaque no es la excepción.",
+        "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "Materiales de alta calidad como cartón corrugado o papel kraft, ideales para proteger y conservar la frescura durante todo el trayecto."
     }
 }

@@ -1,5 +1,3 @@
-// app/[locale]/layout.js
-
 import { notFound } from 'next/navigation';
 import { i18n } from '../../i18n';
 import '@/styles/global.scss';
