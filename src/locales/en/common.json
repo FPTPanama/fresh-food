@@ -1,39 +1,38 @@
 {
-    "header": {
-        "HOME": "Home",
-        "PRODUCTOS": "Products",
-        "NOSOTROS": "About Us",
-        "QUIERES_MAS_INFO": "Do you have more info?"
-    },
-    "footer": {
-
-    },
-    "home": {
-      "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
-      "CADA_PRODUCTO_LLEGA": "Each product reaches its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
-      "YA_NOS_CONOCES": "Have you met us yet?",
-      "LIMON_MANGO": "Lime, pineapple, dragon fruit, mango, avocado, coffee, cocoa.",
-      "compromise_items": [
-        {
-          "TITLE": "Quality products",
-          "TEXT": "From our network of suppliers to your country"
-        },
-        {
-          "TITLE": "International logistics",
-          "TEXT": "We make your operation a reality from start to finish"
-        },
-        {
-          "TITLE": "Availability",
-          "TEXT": "Our network of producers ensures year-round availability"
-        },
-        {
-          "TITLE": "Quality and commitment",
-          "TEXT": "Our clients endorse the seriousness and transparency of our operations"
-        }
-      ],
-      "AGRICULTORES_EXPERTOS": "Expert farmers from Panama, the United States, and Venezuela.",
-      "LLEVANDO_TU_MESA": "Bringing the essence of nature <br /> to your table.",
-      "NUESTRO_COMPROMISO": "Our commitment"
-    }
+  "header": {
+    "HOME": "Home",
+    "PRODUCTOS": "Products",
+    "NOSOTROS": "About Us",
+    "QUIERES_MAS_INFO": "Want more information?"
+  },
+  "home": {
+    "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
+    "CADA_PRODUCTO_LLEGA": "Each product arrives at its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
+    "YA_NOS_CONOCES": "Do you already know us?",
+    "LIMON_MANGO": "Lime, pineapple, dragon fruit, mango, avocado, coffee, cocoa.",
+    "compromise_items": [
+      {
+        "TITLE": "Quality products",
+        "TEXT": "From our network of suppliers to your country."
+      },
+      {
+        "TITLE": "International logistics",
+        "TEXT": "We make your operation happen from start to finish."
+      },
+      {
+        "TITLE": "Availability",
+        "TEXT": "Our network of producers ensures year-round availability."
+      },
+      {
+        "TITLE": "Quality and commitment",
+        "TEXT": "Our clients endorse the seriousness and transparency of our operations."
+      }
+    ],
+    "AGRICULTORES_EXPERTOS": "Expert farmers from Panama, the United States, and Venezuela.",
+    "LLEVANDO_TU_MESA": "Bringing to your table <br /> the essence of nature.",
+    "NUESTRO_COMPROMISO": "Our <br/> commitment",
+    "NUESTRO_EMPAQUE": "Packaging that Protects and Enhances Our Product",
+    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail, <br/> and packaging is no exception.",
+    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials such as corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey."
   }
-  
+}
