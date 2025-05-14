@@ -2,8 +2,13 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import Image from 'next/image';
 import { TiLeaf } from 'react-icons/ti';
 import { BiWorld, BiLoaderCircle } from 'react-icons/bi';
+import { PiFarmFill } from 'react-icons/pi';
+import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight } from 'react-icons/fa6';
 import { LuBadgeCheck } from 'react-icons/lu';
 import { getDictionary } from '@/lib/getDictionary';
+import { FaTruckLoading } from 'react-icons/fa';
+import { PiShippingContainerFill } from 'react-icons/pi';
+import { MdHouseboat } from 'react-icons/md';
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -29,6 +34,49 @@ export default async function Home({ params }) {
       title: dictionary.home.compromise_items[3].TITLE,
       icon: <LuBadgeCheck size={60} />,
       text: dictionary.home.compromise_items[3].TEXT,
+    },
+  ];
+
+  const RoadFruitMap = [
+    {
+      title: dictionary.home.road_fruit_map[0].TITLE,
+      icon: <PiFarmFill size={60} />,
+      text: dictionary.home.road_fruit_map[0].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[1].TITLE,
+      icon: <FaTruckField size={60} />,
+      text: dictionary.home.road_fruit_map[1].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[2].TITLE,
+      icon: <FaBoxesPacking size={60} />,
+      text: dictionary.home.road_fruit_map[2].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[3].TITLE,
+      icon: <FaTruckLoading size={60} />,
+      text: dictionary.home.road_fruit_map[3].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[4].TITLE,
+      icon: <PiShippingContainerFill size={60} />,
+      text: dictionary.home.road_fruit_map[4].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[5].TITLE,
+      icon: <FaShip size={60} />,
+      text: dictionary.home.road_fruit_map[5].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[6].TITLE,
+      icon: <MdHouseboat size={60} />,
+      text: dictionary.home.road_fruit_map[6].TEXT,
+    },
+    {
+      title: dictionary.home.road_fruit_map[7].TITLE,
+      icon: <FaTruckArrowRight size={60} className="" />,
+      text: dictionary.home.road_fruit_map[7].TEXT,
     },
   ];
 
@@ -85,7 +133,7 @@ export default async function Home({ params }) {
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-start justify-center w-full md:mt-14">
+          <section className="flex flex-col items-start justify-center w-full md:mt-14 text-greendark">
             <h2 className="font-black text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_COMPROMISO }} />
             <div className="grid grid-cols-4 w-full gap-10 mt-10">
               {compromiseItems.map((item, key) => {
@@ -101,7 +149,7 @@ export default async function Home({ params }) {
               })}
             </div>
           </section>
-          <section className="flex flex-col items-start justify-center w-full md: mt-14 gap-5">
+          <section className="flex flex-col items-start justify-center w-full md: mt-14 gap-5 text-greendark">
             <div className="flex flex-col items-start justify-center max-w-[350px] gap-5">
               <h2 className="font-black text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_EMPAQUE }} />
             </div>
@@ -122,6 +170,25 @@ export default async function Home({ params }) {
               <div className="flex items-center justify-center w-full">
                 <Image src={'/img/pineapples_box.webp'} width={400} height={200} alt="mangos en caja" />
               </div>
+            </div>
+          </section>
+          <section className="flex flex-col items-start justify-center w-full md: mt-14 gap-5 text-greendark">
+            <h2 className="font-black text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRA_RUTA }} />
+            <div className="grid grid-cols-4 w-full gap-10 mt-10">
+              {RoadFruitMap.map((item, key) => {
+                return (
+                  <div key={key} className="flex w-full flex-col justify-start items-center p-5 gap-5">
+                    <div className="flex items-center justify-start w-full gap-3">
+                      <p className="font-black text-l-600">{key + 1}</p>
+                      {item.icon}
+                    </div>
+                    <div className="flex flex-col items-start justify-start w-full gap-2">
+                      <p className="font-black text-l-300">{item.title}</p>
+                      <p>{item.text}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
         </div>

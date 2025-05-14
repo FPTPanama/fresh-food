@@ -3,8 +3,15 @@
     "HOME": "Home",
     "PRODUCTOS": "Products",
     "NOSOTROS": "About Us",
+    "LOGISTICA": "Logistic",
     "QUIERES_MAS_INFO": "Want more information?"
   },
+  "footer": {
+    "CENTRO_PRINCIPAL": "Its main recruitment hub is based in <span class='font-black'>Miami, USA</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
+    "NUESTRA_DIRECCION": "Our address",
+    "CALLE_NUMERO": "55th Street, PH SFC, Office 26D",
+    "PAIS_CIUDAD": "Obarrio, Panama City, Panamá"
+},
   "home": {
     "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
     "CADA_PRODUCTO_LLEGA": "Each product arrives at its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
@@ -33,6 +40,7 @@
     "NUESTRO_COMPROMISO": "Our <br/> commitment",
     "NUESTRO_EMPAQUE": "Packaging that Protects and Enhances Our Product",
     "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail, <br/> and packaging is no exception.",
-    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials such as corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey."
+    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials such as corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
+    "NUESTRA_RUTA": "Nuestra Ruta <br/> Tropical"
   }
 }

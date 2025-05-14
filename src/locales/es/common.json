@@ -3,7 +3,13 @@
         "HOME": "Home",
         "PRODUCTOS": "Productos",
         "NOSOTROS": "Nosotros",
+        "LOGISTICA": "Logística",
         "QUIERES_MAS_INFO": "¿Quieres más información?"
+    },
+    "footer": {
+        "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
+        "CALLE_NUMERO": "Calle 55, PH SFC. Oficina 26D",
+        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá"
     },
     "home": {
         "LLEVAMOS_LA_FRUTA" : "Llevamos lo mejor a donde más importa",
@@ -28,11 +34,50 @@
                 "TEXT": "Nuestros clientes avalan la seriedad y transparencia de nuestras operaciones."
             }
         ],
+        "road_fruit_map": [
+            {
+                "TITLE": "Recolección en el campo",
+                "TEXT": "Nuestra red de proveedores realiza su primera selección de las mejores frutas y registra el lote con la mejor condición"
+            },
+            {
+                "TITLE": "Transporte a planta de empaque",
+                "TEXT": "Transporte refrigerado y viajes cortos, evitando pérdida de calidad en los productos"
+            },
+            {
+                "TITLE": "Procesamiento y empaque",
+                "TEXT": "Aquí se lleva el lavado y desinfección de las frutas, se clasifica por tamaño, color y madurez. Se empaqueta en empaques con trazabilidad, es pre-enfriado y según el país de destino se emiten los certificados fitosanitarios correspondientes."
+            },
+            {
+                "TITLE": "Transporte al puerto de salida",
+                "TEXT": "En camiones refrigerados para mantener la cadena de frío continua, enviando junto a documentación, como factura, certificado fitosanitario, packing list, certificado de origen, etc."
+            },
+            {
+                "TITLE": "Exportación y carga en contenedor marítimo",
+                "TEXT": "En este punto pasa por un control de aduana, la revisión de de autoridades sanitarias, se consolida la carga y se sella el contenedor configurado según la temperatura adecuada."
+            },
+            {
+                "TITLE": "Transporte marítimo internacional",
+                "TEXT": "Durante todo el viaje es verificado por GPS y se controla la temperatura del contenedor para asegurar la cadena de frío durante todo el trayecto, variando las fechas entre 7 a 25 días dependiendo del destino"
+            },
+            {
+                "TITLE": "Llegada al puerto de destino",
+                "TEXT": "Se realiza el desembarque del contenedor, junto con la inspección aduanera y fitosanitaria local, y si todo está en orden la carga es liberada una vez aprobada la documentación."
+            },
+            {
+                "TITLE": "Distribución final al cliente",
+                "TEXT": "Llega el momento del transporte terrestre refrigerado de las frutas hasta el cliente final."
+            }
+        ],
         "AGRICULTORES_EXPERTOS": "Agricultores expertos desde Panamá, Estados Unidos y Venezuela.",
         "LLEVANDO_TU_MESA": "LLevando a tu mesa <br /> la esencia de la naturaleza.",
         "NUESTRO_COMPROMISO": "Nuestro <br/> compromiso",
         "NUESTRO_EMPAQUE": "Empaque que Protege y Realza Nuestro Producto",
-        "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "Cuidamos cada detalle, <br/> y el empaque no es la excepción.",
-        "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "Materiales de alta calidad como cartón corrugado o papel kraft, ideales para proteger y conservar la frescura durante todo el trayecto."
+        "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "Cuidamos cada detalle, y el empaque no es la excepción.",
+        "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "Materiales de alta calidad como cartón corrugado o papel kraft, ideales para proteger y conservar la frescura durante todo el trayecto.",
+        "NUESTRA_RUTA": "Nuestra Ruta <br/> Tropical"
+    },
+    "products": {
+        "CALIDAD_EN_MANOS": "La calidad nace en las manos que saben elegir.",
+        "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores. Seleccionamos con esmero lo mejor de nuestra tierra."
     }
 }
