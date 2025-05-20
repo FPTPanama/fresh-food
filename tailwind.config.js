@@ -8,6 +8,7 @@ module.exports = {
         thin: 'popThin',
         reg: 'popReg',
         rare: 'popRare',
+        homemade: 'popHomeMade',
       },
       fontSize: {
         'l-900': ['5rem', '5rem'],

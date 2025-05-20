@@ -78,6 +78,125 @@
     },
     "products": {
         "CALIDAD_EN_MANOS": "La calidad nace en las manos que saben elegir.",
-        "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores. Seleccionamos con esmero lo mejor de nuestra tierra."
+        "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores.",
+        "SELECCIONAMOS_CON_ESMERO": "Seleccionamos con esmero lo mejor de nuestra tierra",
+        "YA_CONOCES_NUESTROS_PRODUCTOS": "¿Ya conoces nuestros productos?",
+        "NUESTROS_PRODUCTOS": "Nuestros Productos",
+        "fruits": [
+            {
+                "TITLE": "Limón Tahití",
+                "TITLE_TEC": "Citrus latifolia",
+                "DESCRIPCION": "El limón Tahití es una variedad de lima sin semillas, de piel verde y sabor ácido, muy jugoso y popular en bebidas y cocina.",
+                "especificaciones": [
+                    {
+                        "PRESENTACIÓN": "A granel / en cajas plásticas o de cartón"
+                    },
+                    {
+                        "TAMAÑO / CALIBRE": "Calibres 110, 138, 175, 200"
+                    },
+                    {
+                        "COLOR": "Verde brillante uniforme"
+                    },
+                    {
+                        "PESO UNITARIO": "90 - 120 gramos"
+                    },
+                    {
+                        "CONTENIDO DE JUGO": ">= 45%"
+                    },
+                    {
+                        "EMPAQUE": "Cajas de 18 kg netos / 40 lbs"
+                    },
+                    {
+                        "ALMACENAMIENTO": "Refrigerado 8-10 degC; HR: 85-90%"
+                    },
+                    {
+                        "VIDA UTIL": "30 - 45 días"
+                    },
+                    {
+                        "ORIGEN": "Colombia, Veracruz-México"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Mango",
+                "TITLE_TEC": "Mangífera Indica",
+                "DESCRIPCION": "El mango es altamente apreciado a nivel mundial por su sabor dulce, aroma intenso y pulpa jugosa. Destaca por su valor comercial y su versatilidad en la gastronomía.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden"
+                    },
+                    {
+                        "Peso unitario": "300 - 600 gramos"
+                    },
+                    {
+                        "Pulpa": "Amarilla intensa, firme, sin fibras"
+                    },
+                    {
+                        "Empaque": "Cajas de 4kg, 6kg, o 9 Kg netos"
+                    },
+                    {
+                        "Almacenamiento": "10-13 degC, HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "14 - 21 días"
+                    },
+                    {
+                        "Origen" : "México, Perú, Venezuela"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Piña",
+                "TITLE_TEC": "Ananas Comosus",
+                "DESCRIPCION": "Nuestra piña con un sabor intenso, aroma fresco y un alto contenido de azúcar natural, nuestra piña es ideal para exportación gracias a su excelente vida útil y presentación impecable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen" : "Panamá"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Pitahaya fresca",
+                "TITLE_TEC": "Hylocereus undatus",
+                "DESCRIPCION": "Exótica, nutritiva y visualmente impactante, rica en antioxidantes, vitamina C y fibra, su pulpa dulce y refrescante la convierte en una opción ideal para una alimentación saludable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen" : "Panamá"
+                    }
+                ]
+            }
+        ],
+        "ESPECIFICACIONES": "Especificaciones",
+        "QUIERO_SABER_MAS": "Quiero saber más"
     }
 }
