@@ -2,6 +2,8 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import Image from 'next/image';
 import React from 'react';
+import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight } from 'react-icons/fa6';
+import { TiInfoLarge } from 'react-icons/ti';
 
 const Productos = async ({ params }) => {
   const { locale } = params;
@@ -12,6 +14,7 @@ const Productos = async ({ params }) => {
       title: dictionary.products.fruits[0].TITLE,
       title_tec: dictionary.products.fruits[0].TITLE_TEC,
       descripcion: dictionary.products.fruits[0].DESCRIPCION,
+      alias: dictionary.products.fruits[0].NOTE,
       img: '/img/productos/limon_tahiti.webp',
       bg_img: '/img/productos/limon_tahiti_fondo.webp',
       especificaciones: [
@@ -48,6 +51,7 @@ const Productos = async ({ params }) => {
       title: dictionary.products.fruits[1].TITLE,
       title_tec: dictionary.products.fruits[1].TITLE_TEC,
       descripcion: dictionary.products.fruits[1].DESCRIPCION,
+      alias: dictionary.products.fruits[1].NOTE,
       img: '/img/productos/mango.webp',
       bg_img: '/img/productos/mango_fondo.webp',
       especificaciones: [
@@ -78,6 +82,7 @@ const Productos = async ({ params }) => {
       title: dictionary.products.fruits[2].TITLE,
       title_tec: dictionary.products.fruits[2].TITLE_TEC,
       descripcion: dictionary.products.fruits[2].DESCRIPCION,
+      alias: dictionary.products.fruits[2].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/pineapple_fondo.webp',
       especificaciones: [
@@ -105,6 +110,7 @@ const Productos = async ({ params }) => {
       title: dictionary.products.fruits[3].TITLE,
       title_tec: dictionary.products.fruits[3].TITLE_TEC,
       descripcion: dictionary.products.fruits[3].DESCRIPCION,
+      alias: dictionary.products.fruits[3].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/pitahaya_fondo.webp',
       especificaciones: [
@@ -125,6 +131,102 @@ const Productos = async ({ params }) => {
         },
         {
           Origen: 'Panamá',
+        },
+      ],
+    },
+    {
+      title: dictionary.products.fruits[4].TITLE,
+      title_tec: dictionary.products.fruits[4].TITLE_TEC,
+      descripcion: dictionary.products.fruits[4].DESCRIPCION,
+      alias: dictionary.products.fruits[4].NOTE,
+      img: '/img/productos/pineapple.webp',
+      bg_img: '/img/productos/aguacate_fondo.webp',
+      especificaciones: [
+        {
+          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
+        },
+        {
+          'Peso unitario': '1.0 - 2.5 kg',
+        },
+        {
+          Empaque: 'Cajas de cartón de 12 kg',
+        },
+        {
+          Almacenamiento: '7 - 10 degC; HR: 85-90%',
+        },
+        {
+          'Vida útil': '15 - 25 días',
+        },
+        {
+          Origen: 'Panamá',
+        },
+      ],
+    },
+    {
+      title: dictionary.products.fruits[5].TITLE,
+      title_tec: dictionary.products.fruits[5].TITLE_TEC,
+      descripcion: dictionary.products.fruits[5].DESCRIPCION,
+      alias: dictionary.products.fruits[5].NOTE,
+      img: '/img/productos/pineapple.webp',
+      bg_img: '/img/productos/cacao_fondo.webp',
+      especificaciones: [
+        {
+          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
+        },
+        {
+          Fermentación: '80-90%',
+        },
+        {
+          Humedad: '<= 7.5%',
+        },
+        {
+          'Peso unitario': '1.0 - 2.5 kg',
+        },
+        {
+          Empaque: 'Sacos de yute de 60 kg con bolsa interna',
+        },
+        {
+          Almacenamiento: '18-22 degC, HR < 65%',
+        },
+        {
+          'Vida útil': '6 - 12 meses',
+        },
+        {
+          Origen: 'Panamá',
+        },
+      ],
+    },
+    {
+      title: dictionary.products.fruits[6].TITLE,
+      title_tec: dictionary.products.fruits[6].TITLE_TEC,
+      descripcion: dictionary.products.fruits[6].DESCRIPCION,
+      alias: dictionary.products.fruits[6].NOTE,
+      img: '/img/productos/pineapple.webp',
+      bg_img: '/img/productos/cafe_fondo.webp',
+      especificaciones: [
+        {
+          Variedad: 'Coffea arabica / robusta',
+        },
+        {
+          'Peso unitario': '150 - 350 g',
+        },
+        {
+          Proceso: 'Lavado / Natural / Honey / Anaeróbico',
+        },
+        {
+          Humedad: '10-12%',
+        },
+        {
+          Empaque: 'Sacos de yute de 60 kg con bolsa GrainPro',
+        },
+        {
+          Almacenamiento: '8 - 12 meses',
+        },
+        {
+          'Vida útil': '21 - 30 días',
+        },
+        {
+          Origen: 'Panamá - Chiriquí, Veraguas, Colombia',
         },
       ],
     },
@@ -163,94 +265,70 @@ const Productos = async ({ params }) => {
             />
           </div>
 
-          {/* <div className="flex flex-col w-full gap-5">
+          <div className="flex flex-col items-center justify-center w-full gap-5 mb-10">
             {products.map((fruit, key) => {
               return (
-                <div key={key} className="flex items-center justify-start h-auto gap-5 w-full rounded-lg py-10 text-greendark mt-5">
-                  <div className="flex flex-col justify-start items-start gap-4 w-1/3 p-5">
-                    <p className="text-l-400">{fruit.descripcion}</p>
-                  </div>
-                  <div className="flex flex-col items-center justify-center w-1/3 h-full p-5">
-                    <Image className="h-[340px] w-auto mb-5" src={fruit.img} width={400} height={400} alt={fruit.title} />
-                    <p className="text-l-700 font-black z-10">{fruit.title}</p>
-                    <p className="font-rare text-l-800 leading-9 text-orange">{fruit.title_tec}</p>
-                  </div>
-                  <div className="flex flex-col justify-start items-start gap-5 h-full w-1/3 p-5">
-                    <div className="flex flex-col justify-start items-start gap-3">
-                      <div className="flex flex-col gap-2 items-start justify-start">
-                        {fruit.especificaciones.map((item, key) => {
-                          return (
-                            <div key={key} className="flex items-center justify-center gap-2">
-                              <p className="font-black text-l-200">{Object.keys(item)}</p>
-                              <p className="text-l-body">{Object.values(item)}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
-
-          <div className="flex flex-col items-center justify-center w-full gap-10">
-            {products.map((fruit, key) => {
-              return (
-                <div
-                  className="flex flex-col items-center justify-center w-full min-h-[500px]"
-                  key={key}
-                  style={{
-                    backgroundImage: `url(${fruit.bg_img})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    width: '100%',
-                    position: 'relative',
-                    paddingTop: '56.25%',
-                    borderRadius: '50px',
-                    backgroundRepeat: 'no-repeat',
-                  }}
-                >
+                <>
                   <div
-                    className="flex flex-col items-center justify-center"
+                    className="flex flex-col items-center justify-center w-full min-h-[700px]"
+                    key={key}
                     style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      borderRadius: '50px',
-                      background: 'linear-gradient(90deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.7) 100%)',
+                      backgroundImage: `url(${fruit.bg_img})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      width: '100%',
+                      position: 'relative',
+                      borderRadius: '30px',
+                      backgroundRepeat: 'no-repeat',
                     }}
                   >
-                    <div className="flex items-center justify-center w-full h-full">
-                      <div className="flex flex-col justify-end items-start gap-4 w-1/3 p-10 h-full">
-                        <p className="text-l-400 text-white font-thin">{fruit.descripcion}</p>
-                      </div>
-                      <div className="flex flex-col items-center justify-center w-1/3">
-                        <p className="text-l-800 font-black text-white text-center z-10">{fruit.title}</p>
-                        <p className="font-homemade text-l-600 leading-9 text-white">{fruit.title_tec}</p>
-                        <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full">
-                          {dictionary.products.QUIERO_SABER_MAS}
-                        </button>
-                      </div>
-                      <div className="flex flex-col justify-center text-white items-start gap-5 h-full w-1/3 p-5">
-                        <div className="flex flex-col justify-start items-start gap-3">
-                          <div className="flex flex-col gap-2 items-start justify-start">
-                            {fruit.especificaciones.map((item, key) => {
-                              return (
-                                <div key={key} className="flex items-center justify-center gap-2">
-                                  <p className="font-black text-l-200">{Object.keys(item)}</p>
-                                  <p className="text-l-body">{Object.values(item)}</p>
-                                </div>
-                              );
-                            })}
+                    <div
+                      className="flex flex-col items-center justify-center"
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        borderRadius: '50px',
+                        background: 'linear-gradient(90deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.7) 100%)',
+                      }}
+                    >
+                      <div className="flex items-center justify-center w-full h-full">
+                        <div className="flex flex-col justify-end items-start gap-4 w-1/3 p-10 h-full">
+                          <p className="text-l-400 text-white font-thin" dangerouslySetInnerHTML={{ __html: fruit.descripcion }} />
+                        </div>
+                        <div className="flex flex-col items-center justify-center w-1/3">
+                          <p className="text-l-800 font-black text-white text-center z-10">{fruit.title}</p>
+                          <p className="font-homemade text-l-600 leading-9 text-white">{fruit.title_tec}</p>
+                          <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full">
+                            {dictionary.products.QUIERO_SABER_MAS}
+                          </button>
+                        </div>
+                        <div className="flex flex-col justify-center text-white items-start gap-5 h-full w-1/3 p-5">
+                          <div className="flex flex-col justify-start items-start gap-3">
+                            <div className="flex flex-col gap-2 items-start justify-start">
+                              {fruit.especificaciones.map((item, key) => {
+                                return (
+                                  <div key={key} className="flex items-center justify-center gap-2">
+                                    <p className="font-black text-l-200">{Object.keys(item)}</p>
+                                    <p className="text-l-body">{Object.values(item)}</p>
+                                  </div>
+                                );
+                              })}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div className="flex justify-start items-center h-9 w-full mb-10">
+                    <div className="flex items-center justify-center">
+                      <TiInfoLarge size={40} />
+                      <p className="font-reg text-l-100">{fruit.alias}</p>
+                    </div>
+                  </div>
+                </>
               );
             })}
           </div>

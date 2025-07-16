@@ -9,10 +9,10 @@ const Header = async ({ params }) => {
   const { locale } = params;
   const dictionary = await getDictionary(locale);
   return (
-    <div className={'flex w-screen fixed top-0 left-0 justify-between items-center z-20 md:h-[180px] px-10 py-4 bg-fresh'}>
+    <div className={'flex w-screen fixed top-0 left-0 justify-between items-center z-20 md:h-[130px] px-10 py-4 bg-fresh'}>
       <Menu params={params} />
       <Link className="cursor-pointer" href={'/'}>
-        <Image src={'/img/freshfood_logo.svg'} height={50} width={400} alt="freshfood logo" />
+        <Image src={'/img/freshfood_logo.svg'} height={50} width={300} alt="freshfood logo" />
       </Link>
       <div className="w-1/4 flex items-center justify-end gap-5">
         <button className="flex items-center justify-center gap-1 bg-greendark rounded-full py-2 px-3">
