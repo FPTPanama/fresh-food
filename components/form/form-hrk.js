@@ -48,7 +48,7 @@ const FormHrk = () => {
   };
 
   return (
-    <div className={'flex flex-col w-full gap-5 p-3'}>
+    <div className={'flex flex-col w-full gap-5'}>
       <ModalHrk showModal={showModal}>
         {loadingResponse ? (
           <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Sending your contact</p>
@@ -206,12 +206,12 @@ const FormHrk = () => {
         </div>
       </div>
 
-      <div className={classNames('flex items-center justify-center h-20')}>
+      <div className={classNames('flex items-center justify-center')}>
         <button
           className={classNames(
             'flex justify-center items-center p-3 w-full box-border rounded-2xl gap-3',
             { ' bg-greendark text-white': isValid },
-            { 'bg-transparent text-primary text-greendark shadow-xl': !isValid },
+            { 'bg-transparent text-primary text-greendark border-greendark border-2': !isValid },
           )}
           onClick={() => {
             isValid && sendEmail();
