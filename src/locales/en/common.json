@@ -42,5 +42,26 @@
     "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail, <br/> and packaging is no exception.",
     "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials such as corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
     "NUESTRA_RUTA": "Nuestra Ruta <br/> Tropical"
-  }
+  },
+  "about_us": {
+    "FRUTA_FRESCA_PRINCIPIO_FIN": "Fresh fruit from harvest to customer.",
+    "FRESH_FOOD_GARANTIZAMOS": "At Fresh Food, we guarantee a controlled supply chain from origin to final delivery.",
+    "SIN_INTERMEDIARIOS": "No intermediaries between the fruit and our transportation.",
+    "LA_UNICA_MANERA_DE_GARANTIZAR": "The only way to guarantee and certify our product under strict standards of quality, freshness, and nutritional value.",
+    "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "We follow rigorous protocols that ensure product integrity throughout the entire logistics process.",
+    "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Your trust, our priority.",
+    "SABEMOS_QUE_ELEGIR_ALIMENTOS": "We know that choosing imported food means trusting the process. That’s why we work every day to optimize our supply systems and ensure you receive the best.",
+
+    "pack": {
+        "CONTROL_TEMPERATURA": "Temperature control during transit and storage",
+        "EMPAQUE_ESPECIALIZADO": "Specialized packaging for perishable products",
+        "SEGUIMIENTO_TIEMPO_REAL": "Real-time shipment traceability tracking",
+        "CUMPLIMIENTO_NORMATIVAS": "Compliance with international sanitary and phytosanitary regulations",
+        "MANTENEMOS_CADENA": "We maintain the cold chain from origin to destination to preserve fruit freshness.",
+        "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
+        "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
+        "CUMPLIMOS_ESTANDARES": "We comply with global standards that guarantee quality, safety, and access to demanding markets."
+    }
+}
+
 }

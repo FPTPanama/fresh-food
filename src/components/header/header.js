@@ -19,9 +19,12 @@ const Header = async ({ params }) => {
           <MdLanguage size={20} color="white" />
           <p className="text-l-100 text-white">ES</p>
         </button>
-        <button className="flex items-center text-greendark text-l-100 justify-center border-greendark border-2 py-2 px-4 rounded-full">
+        <Link
+          href={'/contact'}
+          className="flex items-center text-greendark text-l-100 justify-center border-greendark border-2 py-2 px-4 rounded-full"
+        >
           {dictionary.header.QUIERES_MAS_INFO}
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -289,6 +289,22 @@
     },
     "about_us": {
         "FRUTA_FRESCA_PRINCIPIO_FIN": "Fruta fresca desde la recolección hasta el cliente.",
-        "FRESH_FOOD_GARANTIZAMOS": "En Fresh Food garantizamos una cadena de suministro controlada desde el origen hasta su entrega final."
+        "FRESH_FOOD_GARANTIZAMOS": "En Fresh Food garantizamos una cadena de suministro controlada desde el origen hasta su entrega final.",
+        "SIN_INTERMEDIARIOS": "Sin intermediarios entre la fruta y nuestro transporte.",
+        "LA_UNICA_MANERA_DE_GARANTIZAR": "La única manera de garantizar y certificar nuestro producto bajo estricto criterio de calidad, frescura y valor nutricional.",
+        "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "Seguimos protocolos rigurosos que aseguran la integridad del producto durante todo el proceso logístico.",
+        "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Tu confianza, nuestra prioridad.",
+        "SABEMOS_QUE_ELEGIR_ALIMENTOS": "Elegir alimentos importados implica confiar en el proceso. Por eso, trabajamos cada día para optimizar nuestros sistemas de abastecimiento y asegurar que recibas lo mejor.",
+
+        "pack": {
+            "CONTROL_TEMPERATURA": "Control de temperatura en tránsito y almacenamiento",
+            "EMPAQUE_ESPECIALIZADO": "Empaque especializado para productos perecederos",
+            "SEGUIMIENTO_TIEMPO_REAL": "Seguimiento en tiempo real de la trazabilidad del embarque",
+            "CUMPLIMIENTO_NORMATIVAS": "Cumplimiento de normativas sanitarias y fitosanitarias internacionales",
+            "MANTENEMOS_CADENA": "Mantenemos la cadena de frío desde el origen hasta el destino para preservar la frescura de las frutas.",
+            "UTILIZAMOS_EMPAQUES": "Utilizamos empaques diseñados para proteger frutas tropicales durante el transporte internacional.",
+            "OFRECEMOS_MONITOREO": "Ofrecemos monitoreo en tiempo real de cada embarque, desde la finca hasta el cliente final.",
+            "CUMPLIMOS_ESTANDARES": "Cumplimos con estándares globales que garantizan calidad, inocuidad y acceso a mercados exigentes."
+        }
     }
 }

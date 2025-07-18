@@ -2,12 +2,12 @@ import React from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
-const GeneralLayout = ({ children, params }) => {
+const GeneralLayout = ({ children, params, showFooter = true }) => {
   return (
     <div className={'flex flex-col items-center justify-between'}>
       <Header params={params} />
       <div className="mt-[180px] flex flex-col w-full mb-10">{children}</div>
-      <Footer params={params} />
+      {showFooter && <Footer params={params} />}
     </div>
   );
 };
