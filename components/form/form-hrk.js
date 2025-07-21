@@ -6,8 +6,9 @@ import emailjs from '@emailjs/browser';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { validEmail, validNombre, validPhone } from '@/utils/validations';
 import ModalHrk from 'components/modal-hrk/modal-hrk';
+import { getDictionary } from '@/lib/getDictionary';
 
-const FormHrk = () => {
+const FormHrk = ({ dictionary }) => {
   const [nombre, setNombre] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
@@ -72,11 +73,10 @@ const FormHrk = () => {
             <MdOutlineMarkEmailRead size={400} color="white" />
             <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center')}>
               <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>
-                Thanks for your message.
+                {dictionary.modal.GRACIAS_POR_TU_MENSAJE}
               </p>
               <p style={{ fontFamily: 'popThin' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl')}>
-                {' '}
-                We will contact to you soon.
+                {dictionary.modal.TE_CONTACTAREMOS}
               </p>
             </div>
 
@@ -94,19 +94,19 @@ const FormHrk = () => {
                 'transition-all',
               )}
             >
-              Done
+              {dictionary.modal.LISTO}
             </button>
           </div>
         )}
       </ModalHrk>
 
       <div className={'flex flex-col justify-center items-center gap-5 w-full text-greendark'}>
-        <div className={'flex flex-col justify-center items-start w-full gap-3'}>
+        <div className={'flex flex-col justify-center items-start w-full'}>
           <label
             htmlFor=""
             className={classNames({ 'text-primary': nameError.ok || nombre === null }, { 'text-red-600': !nameError.ok && nombre !== null })}
           >
-            Name
+            {dictionary.form.NAME}
           </label>
           <input
             className={classNames(
@@ -134,12 +134,12 @@ const FormHrk = () => {
             )}
           </div>
         </div>
-        <div className={'flex flex-col justify-center items-start w-full gap-3'}>
+        <div className={'flex flex-col justify-center items-start w-full'}>
           <label
             htmlFor="Email"
             className={classNames({ 'text-primary': emailError.ok || email === null }, { 'text-red-600': !emailError.ok && email !== null })}
           >
-            Email
+            {dictionary.form.EMAIL}
           </label>
           <input
             className={classNames(
@@ -170,12 +170,12 @@ const FormHrk = () => {
           </div>
         </div>
 
-        <div className={'flex flex-col justify-center items-start w-full gap-3'}>
+        <div className={'flex flex-col justify-center items-start w-full'}>
           <label
             htmlFor=""
             className={classNames({ 'text-primary': phoneError.ok || phone === null }, { 'text-red-600': !phoneError.ok && phone !== null })}
           >
-            Phone
+            {dictionary.form.PHONE}
           </label>
           <input
             style={{ unset: 'all' }}
@@ -217,7 +217,8 @@ const FormHrk = () => {
             isValid && sendEmail();
           }}
         >
-          Send <LuSend />
+          {dictionary.form.SEND}
+          <LuSend />
         </button>
       </div>
     </div>

@@ -10,22 +10,23 @@ const page = async ({ params }) => {
   return (
     <GeneralLayout params={params} showFooter={false}>
       <div className="responsiveWidth w-full text-greendark">
-        <div className="flex items-end justify-center w-full h-full border">
+        <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 flex flex-col gap-4 items-center">
             <div className="flex flex-col items-start justify-center w-1/2 gap-5">
               <Image src={'/img/mango_rebanado.webp'} width={150} height={200} />
-              <p className="text-l-600 font-bold max-w-[350px]">Aquí puedes comunicarte con nosotros</p>
+              <p className="text-l-600 font-bold max-w-[350px]">{dictionary.contact.AQUI_PUEDES_COMUNICARTE}</p>
 
               <p className="max-w-[350px]" dangerouslySetInnerHTML={{ __html: dictionary.footer.CENTRO_PRINCIPAL }} />
 
               <div className="flex flex-col items-start justify-center">
-                <p>Calle 55, PH SFC. Oficina 26D Obarrio,</p>
-                <p>Ciudad de Panamá, Panamá</p>
+                <p>{dictionary.contact.CALLE}</p>
+                <p>{dictionary.contact.CIUDAD}</p>
               </div>
             </div>
           </div>
-          <div className="flex items-end h-full justify-center w-1/3">
-            <FormHrk />
+          <div className="flex flex-col items-start h-full justify-center w-1/3 gap-5">
+            <p className="text-l-600 font-bold max-w-[350px]">{dictionary.contact.DEJANOS_TUS_DATOS}</p>
+            <FormHrk dictionary={dictionary} />
           </div>
         </div>
       </div>

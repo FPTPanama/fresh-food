@@ -6,6 +6,17 @@
     "LOGISTICA": "Logistic",
     "QUIERES_MAS_INFO": "Want more information?"
   },
+  "form": {
+    "NAME": "Nombre",
+    "EMAIL": "Email",
+    "PHONE": "Teléfono",
+     "SEND": "Send"
+},
+"modal": {
+  "GRACIAS_POR_TU_MENSAJE": "Thanks for your message.",
+  "TE_CONTACTAREMOS": "We will contact to you soon.",
+  "LISTO": "Done"
+ },
   "footer": {
     "CENTRO_PRINCIPAL": "Its main recruitment hub is based in <span class='font-black'>Miami, USA</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
     "NUESTRA_DIRECCION": "Our address",
@@ -62,6 +73,12 @@
         "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
         "CUMPLIMOS_ESTANDARES": "We comply with global standards that guarantee quality, safety, and access to demanding markets."
     }
+},
+"contact": {
+"AQUI_PUEDES_COMUNICARTE": "Aquí puedes comunicarte con nosotros.",
+"CALLE": "Calle 55, PH SFC. Oficina 26D Obarrio,",
+"CIUDAD": "Ciudad de Panamá, Panamá",
+"DEJANOS_TUS_DATOS": "Déjanos tus datos y te llamamos"
 }
 
 }

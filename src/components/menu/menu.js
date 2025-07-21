@@ -17,7 +17,7 @@ const Menu = async ({ params }) => {
       <Link href={'/about-us'}>
         <p className="font-black text-greendark">{dictionary.header.NOSOTROS}</p>
       </Link>
-      <Link href={'/about-us'}>
+      <Link href={'/logistic'}>
         <p className="font-black text-greendark">{dictionary.header.LOGISTICA}</p>
       </Link>
     </div>
