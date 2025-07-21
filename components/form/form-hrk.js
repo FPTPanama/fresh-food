@@ -6,7 +6,6 @@ import emailjs from '@emailjs/browser';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { validEmail, validNombre, validPhone } from '@/utils/validations';
 import ModalHrk from 'components/modal-hrk/modal-hrk';
-import { getDictionary } from '@/lib/getDictionary';
 
 const FormHrk = ({ dictionary }) => {
   const [nombre, setNombre] = useState(null);
@@ -52,7 +51,7 @@ const FormHrk = ({ dictionary }) => {
     <div className={'flex flex-col w-full gap-5'}>
       <ModalHrk showModal={showModal}>
         {loadingResponse ? (
-          <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Sending your contact</p>
+          <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>{dictionary.modal.SENDING_YOUR_CONTACT}</p>
         ) : (
           <div
             className={classNames(
@@ -61,17 +60,16 @@ const FormHrk = ({ dictionary }) => {
               'md:w-1/2',
               'w-full',
               'h-1/2',
-              'border-white',
               'rounded-3xl',
               'p-5',
               'justify-center',
-              'items-center',
-              'gap-4',
+              'items-start',
+              'gap-5',
               'slide-fwd-center',
             )}
           >
-            <MdOutlineMarkEmailRead size={400} color="white" />
-            <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center')}>
+            <MdOutlineMarkEmailRead size={100} color="white" />
+            <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center gap-5')}>
               <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>
                 {dictionary.modal.GRACIAS_POR_TU_MENSAJE}
               </p>
@@ -86,7 +84,7 @@ const FormHrk = ({ dictionary }) => {
                 'text-white',
                 'border-white',
                 'border-2',
-                'h-40',
+                'h-10',
                 'px-24',
                 'rounded-2xl',
                 'hover:text-xl',

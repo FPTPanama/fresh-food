@@ -13,6 +13,7 @@
         "SEND": "Enviar"
     },
     "modal": {
+        "SENDING_YOUR_CONTACT": "Sending your contact",
         "GRACIAS_POR_TU_MENSAJE": "Gracias por tu mensaje",
         "TE_CONTACTAREMOS": "Te contactaremos lo más pronto posible",
         "LISTO": "Listo"
