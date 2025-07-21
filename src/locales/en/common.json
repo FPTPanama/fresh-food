@@ -17,6 +17,9 @@
   "TE_CONTACTAREMOS": "We will contact to you soon.",
   "LISTO": "Done"
  },
+ "scroll_down": {
+  "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo"
+},
   "footer": {
     "CENTRO_PRINCIPAL": "Its main recruitment hub is based in <span class='font-black'>Miami, USA</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
     "NUESTRA_DIRECCION": "Our address",
@@ -79,6 +82,11 @@
 "CALLE": "Calle 55, PH SFC. Oficina 26D Obarrio,",
 "CIUDAD": "Ciudad de Panamá, Panamá",
 "DEJANOS_TUS_DATOS": "Déjanos tus datos y te llamamos"
+},
+"logistic": {
+    "SABEMOS_QUE_PARA_CONFIAR": "We know that in order to trust the quality of our tropical fruits, you need to understand how we handle them throughout the entire transportation process.",
+    "QUEREMOS_EXPLICARTE": "We want to clearly explain what happens from the moment the fruit is harvested by the picker to the moment it reaches your hands."
 }
+
 
 }

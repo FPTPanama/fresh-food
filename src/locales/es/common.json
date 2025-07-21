@@ -12,18 +12,21 @@
         "PHONE": "Teléfono",
         "SEND": "Enviar"
     },
-   "modal": {
-    "GRACIAS_POR_TU_MENSAJE": "Gracias por tu mensaje",
-    "TE_CONTACTAREMOS": "Te contactaremos lo más pronto posible",
-    "LISTO": "Listo"
-   },
+    "modal": {
+        "GRACIAS_POR_TU_MENSAJE": "Gracias por tu mensaje",
+        "TE_CONTACTAREMOS": "Te contactaremos lo más pronto posible",
+        "LISTO": "Listo"
+    },
+    "scroll_down": {
+        "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo"
+    },
     "footer": {
         "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
         "CALLE_NUMERO": "Calle 55, PH SFC. Oficina 26D",
         "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá"
     },
     "home": {
-        "LLEVAMOS_LA_FRUTA" : "Llevamos lo mejor a donde más importa",
+        "LLEVAMOS_LA_FRUTA": "Llevamos lo mejor a donde más importa",
         "CADA_PRODUCTO_LLEGA": "Cada producto llega a su destino con la promesa de algo <span style='font-size: 36px; font-family: popRare'>bien hecho</span>.",
         "YA_NOS_CONOCES": "¿Ya nos conoces?",
         "LIMON_MANGO": "Limón, piña, pitahaya, mango, aguacate, café, cacao.",
@@ -154,7 +157,7 @@
                         "Vida útil": "14 - 21 días"
                     },
                     {
-                        "Origen" : "México, Perú, Venezuela"
+                        "Origen": "México, Perú, Venezuela"
                     }
                 ]
             },
@@ -180,7 +183,7 @@
                         "Vida útil": "15 - 25 días"
                     },
                     {
-                        "Origen" : "Panamá"
+                        "Origen": "Panamá"
                     }
                 ]
             },
@@ -206,7 +209,7 @@
                         "Vida útil": "15 - 25 días"
                     },
                     {
-                        "Origen" : "Panamá"
+                        "Origen": "Panamá"
                     }
                 ]
             },
@@ -232,7 +235,7 @@
                         "Vida útil": "21 - 30 días"
                     },
                     {
-                        "Origen" : "Panamá, México, Colombia"
+                        "Origen": "Panamá, México, Colombia"
                     }
                 ]
             },
@@ -258,7 +261,7 @@
                         "Vida útil": "21 - 30 días"
                     },
                     {
-                        "Origen" : "Panamá, México, Colombia"
+                        "Origen": "Panamá, México, Colombia"
                     }
                 ]
             },
@@ -290,7 +293,7 @@
                         "Vida útil": "21 - 30 días"
                     },
                     {
-                        "Origen" : "Panamá - Chiriquí, Veraguas, Colombia"
+                        "Origen": "Panamá - Chiriquí, Veraguas, Colombia"
                     }
                 ]
             }
@@ -306,7 +309,6 @@
         "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "Seguimos protocolos rigurosos que aseguran la integridad del producto durante todo el proceso logístico.",
         "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Tu confianza, nuestra prioridad.",
         "SABEMOS_QUE_ELEGIR_ALIMENTOS": "Elegir alimentos importados implica confiar en el proceso. Por eso, trabajamos cada día para optimizar nuestros sistemas de abastecimiento y asegurar que recibas lo mejor.",
-
         "pack": {
             "CONTROL_TEMPERATURA": "Control de temperatura en tránsito y almacenamiento",
             "EMPAQUE_ESPECIALIZADO": "Empaque especializado para productos perecederos",
@@ -323,5 +325,11 @@
         "CALLE": "Calle 55, PH SFC. Oficina 26D Obarrio,",
         "CIUDAD": "Ciudad de Panamá, Panamá",
         "DEJANOS_TUS_DATOS": "Déjanos tus datos y te llamamos"
-}
+    },
+    "logistic": {
+        "Y_ESTA_ES_NUESTRA_RUTA": "Y esta es nuestra ruta natural",
+        "DONDE_COMIENZA": "Donde comienza el sabor de nuestros productos, del campo hasta la mesa.",
+        "SABEMOS_QUE_PARA_CONFIAR": " Sabemos que para confiar en la calidad de nuestras frutas tropicales, necesitas conocer cómo las manejamos durante todo el proceso de transporte.",
+        "QUEREMOS_EXPLICARTE": " Queremos explicarte con claridad qué ocurre desde el momento en que el recolector cosecha la fruta hasta que llega a tus manos."
+    }
 }
