@@ -45,7 +45,7 @@ const page = async ({ params }) => {
                 <p className="text-l-400 font-reg">{dictionary.about_us.FRESH_FOOD_GARANTIZAMOS}</p>
               </div>
               <div className="flex flex-col w-3/5 items-center justify-start h-full">
-                <Image className="h-auto w-full border-r-2 border-greenlight" src={'/img/limon_tahiti_volando.webp'} width={300} height={400} />
+                <Image className="h-full w-auto" src={'/img/limon_tahiti_volando_v2.webp'} width={300} height={400} alt="limon tahiti" />
               </div>
             </div>
           </section>

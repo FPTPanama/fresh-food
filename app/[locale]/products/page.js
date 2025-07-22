@@ -240,7 +240,7 @@ const Productos = async ({ params }) => {
               <h1 className="font-black text-l-800 text-greendark" dangerouslySetInnerHTML={{ __html: dictionary.products.CALIDAD_EN_MANOS }} />
             </div>
             <div className="flex items-center justify-center w-1/3">
-              <Image className="z-20" src={'/img/agricultor_con_pineapple.webp'} width={500} height={300} alt="agricultor con piña" />
+              <Image className="z-20" src={'/img/agricultor_con_pineapple_v2.webp'} width={500} height={300} alt="agricultor con piña" />
             </div>
             <div className="flex flex-col items-start justify-center w-1/3 gap-5 p-5">
               <h2

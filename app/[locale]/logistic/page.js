@@ -18,7 +18,13 @@ const Logistic = async ({ params }) => {
               <p className="text-l-500 font-reg">{dictionary.logistic.DONDE_COMIENZA}</p>
             </div>
             <div className="flex items-center justify-center w-1/3 h-32">
-              <Image className="w-4/5 z-20 relative bottom-32" src={'/img/aguacate_semilla_v2.webp'} width={400} height={500} />
+              <Image
+                className="w-4/5 z-20 relative bottom-32"
+                src={'/img/aguacate_semilla_v2.webp'}
+                width={400}
+                height={500}
+                alt="aguacate en semilla"
+              />
             </div>
             <div className="flex flex-col items-start justify-center w-1/3 gap-5">
               <p className="text-l-300 font-reg">{dictionary.logistic.SABEMOS_QUE_PARA_CONFIAR}</p>

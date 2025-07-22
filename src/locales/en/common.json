@@ -3,90 +3,336 @@
     "HOME": "Home",
     "PRODUCTOS": "Products",
     "NOSOTROS": "About Us",
-    "LOGISTICA": "Logistic",
+    "LOGISTICA": "Logistics",
     "QUIERES_MAS_INFO": "Want more information?"
   },
   "form": {
-    "NAME": "Nombre",
+    "NAME": "Name",
     "EMAIL": "Email",
-    "PHONE": "Teléfono",
-     "SEND": "Send"
-},
-"modal": {
-  "GRACIAS_POR_TU_MENSAJE": "Thanks for your message.",
-  "TE_CONTACTAREMOS": "We will contact to you soon.",
-  "LISTO": "Done"
- },
- "scroll_down": {
-  "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo"
-},
+    "PHONE": "Phone",
+    "SEND": "Send"
+  },
+  "modal": {
+    "SENDING_YOUR_CONTACT": "Sending your contact",
+    "GRACIAS_POR_TU_MENSAJE": "Thank you for your message",
+    "TE_CONTACTAREMOS": "We will contact you as soon as possible",
+    "LISTO": "Done"
+  },
+  "scroll_down": {
+    "DESLIZA_HACIA_ABAJO": "Scroll down"
+  },
   "footer": {
-    "CENTRO_PRINCIPAL": "Its main recruitment hub is based in <span class='font-black'>Miami, USA</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
-    "NUESTRA_DIRECCION": "Our address",
-    "CALLE_NUMERO": "55th Street, PH SFC, Office 26D",
-    "PAIS_CIUDAD": "Obarrio, Panama City, Panamá"
-},
+    "CENTRO_PRINCIPAL": "Its main contracting center is located in <span class='font-black'>Miami</span>, <span class='font-black'>United States</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
+    "CALLE_NUMERO": "55th Street, PH SFC. Office 26D",
+    "PAIS_CIUDAD": "Obarrio, Panama City, Panama"
+  },
   "home": {
     "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
-    "CADA_PRODUCTO_LLEGA": "Each product arrives at its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
-    "YA_NOS_CONOCES": "Do you already know us?",
+    "CADA_PRODUCTO_LLEGA": "Each product reaches its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
+    "YA_NOS_CONOCES": "Do you know us already?",
     "LIMON_MANGO": "Lime, pineapple, dragon fruit, mango, avocado, coffee, cocoa.",
     "compromise_items": [
       {
         "TITLE": "Quality products",
-        "TEXT": "From our network of suppliers to your country."
+        "TEXT": "From our supplier network to your country."
       },
       {
         "TITLE": "International logistics",
-        "TEXT": "We make your operation happen from start to finish."
+        "TEXT": "We make your operation a reality from start to finish."
       },
       {
         "TITLE": "Availability",
-        "TEXT": "Our network of producers ensures year-round availability."
+        "TEXT": "Our portfolio of producers guarantees year-round availability."
       },
       {
         "TITLE": "Quality and commitment",
         "TEXT": "Our clients endorse the seriousness and transparency of our operations."
       }
     ],
+    "road_fruit_map": [
+      {
+        "TITLE": "Field harvesting",
+        "TEXT": "Our supplier network performs the first selection of the best fruits and registers the batch in optimal condition."
+      },
+      {
+        "TITLE": "Transport to packing plant",
+        "TEXT": "Refrigerated transport and short trips, preventing quality loss in the products."
+      },
+      {
+        "TITLE": "Processing and packing",
+        "TEXT": "Fruits are washed and disinfected, sorted by size, color, and ripeness. Packed in traceable packaging, pre-cooled, and phytosanitary certificates are issued according to the destination country."
+      },
+      {
+        "TITLE": "Transport to port of departure",
+        "TEXT": "In refrigerated trucks to maintain the cold chain, along with documentation such as invoice, phytosanitary certificate, packing list, certificate of origin, etc."
+      },
+      {
+        "TITLE": "Export and loading into maritime container",
+        "TEXT": "Customs clearance and inspection by health authorities. Cargo is consolidated and the container is sealed and configured to the right temperature."
+      },
+      {
+        "TITLE": "International maritime transport",
+        "TEXT": "The container is GPS-tracked, and temperature is monitored throughout the journey to maintain the cold chain, with transit times ranging from 7 to 25 days depending on destination."
+      },
+      {
+        "TITLE": "Arrival at destination port",
+        "TEXT": "Container is unloaded and inspected by local customs and phytosanitary authorities. If everything is in order, cargo is released once documents are approved."
+      },
+      {
+        "TITLE": "Final distribution to client",
+        "TEXT": "Refrigerated land transport delivers the fruits to the final customer."
+      }
+    ],
     "AGRICULTORES_EXPERTOS": "Expert farmers from Panama, the United States, and Venezuela.",
     "LLEVANDO_TU_MESA": "Bringing to your table <br /> the essence of nature.",
     "NUESTRO_COMPROMISO": "Our <br/> commitment",
-    "NUESTRO_EMPAQUE": "Packaging that Protects and Enhances Our Product",
-    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail, <br/> and packaging is no exception.",
-    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials such as corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
-    "NUESTRA_RUTA": "Nuestra Ruta <br/> Tropical"
+    "NUESTRO_EMPAQUE": "Packaging That Protects and Enhances Our Product",
+    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail — packaging is no exception.",
+    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials like corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
+    "NUESTRA_RUTA": "Our <br/> Tropical Route"
+  },
+  "products": {
+    "CALIDAD_EN_MANOS": "La calidad nace en las manos que saben elegir.",
+    "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores.",
+    "SELECCIONAMOS_CON_ESMERO": "Seleccionamos con esmero lo mejor de nuestra tierra",
+    "YA_CONOCES_NUESTROS_PRODUCTOS": "¿Ya conoces nuestros productos?",
+    "NUESTROS_PRODUCTOS": "Nuestros Productos",
+    "fruits": [
+        {
+            "TITLE": "Limón Tahití",
+            "TITLE_TEC": "Citrus latifolia",
+            "NOTE": "También conocido como limón persa, lima persa, es muy popular en América Latina",
+            "DESCRIPCION": "El <span style='popBlack'>limón Tahití</span> es una variedad de lima sin semillas, de piel verde y sabor ácido, muy jugoso y popular en bebidas y cocina.",
+            "especificaciones": [
+                {
+                    "PRESENTACIÓN": "A granel / en cajas plásticas o de cartón"
+                },
+                {
+                    "TAMAÑO / CALIBRE": "Calibres 110, 138, 175, 200"
+                },
+                {
+                    "COLOR": "Verde brillante uniforme"
+                },
+                {
+                    "PESO UNITARIO": "90 - 120 gramos"
+                },
+                {
+                    "CONTENIDO DE JUGO": ">= 45%"
+                },
+                {
+                    "EMPAQUE": "Cajas de 18 kg netos / 40 lbs"
+                },
+                {
+                    "ALMACENAMIENTO": "Refrigerado 8-10 degC; HR: 85-90%"
+                },
+                {
+                    "VIDA UTIL": "30 - 45 días"
+                },
+                {
+                    "ORIGEN": "Colombia, Veracruz-México"
+                }
+            ]
+        },
+        {
+            "TITLE": "Mango",
+            "TITLE_TEC": "Mangífera Indica",
+            "NOTE": "Pertenece a la misma familia botánica que el anacardo (marañón) y el pistacho: la familia Anacardiaceae.",
+            "DESCRIPCION": "El <span style='popBlack'>Mango</span> es altamente apreciado a nivel mundial por su sabor dulce, aroma intenso y pulpa jugosa. Destaca por su valor comercial y su versatilidad en la gastronomía.",
+            "especificaciones": [
+                {
+                    "Variedad": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden"
+                },
+                {
+                    "Peso unitario": "300 - 600 gramos"
+                },
+                {
+                    "Pulpa": "Amarilla intensa, firme, sin fibras"
+                },
+                {
+                    "Empaque": "Cajas de 4kg, 6kg, o 9 Kg netos"
+                },
+                {
+                    "Almacenamiento": "10-13 degC, HR: 85-90%"
+                },
+                {
+                    "Vida útil": "14 - 21 días"
+                },
+                {
+                    "Origen": "México, Perú, Venezuela"
+                }
+            ]
+        },
+        {
+            "TITLE": "Piña",
+            "TITLE_TEC": "Ananas Comosus",
+            "NOTE": "Cada 'cuadro' o escama en la cáscara de la piña proviene de una flor individual. Estas pequeñas frutas crecen juntas en un tallo central y se unen para formar lo que parece ser una sola fruta grande",
+            "DESCRIPCION": "Nuestra <span style='popBlack'>piña</span> con un sabor intenso, aroma fresco y un alto contenido de azúcar natural, nuestra piña es ideal para exportación gracias a su excelente vida útil y presentación impecable.",
+            "especificaciones": [
+                {
+                    "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                },
+                {
+                    "Peso unitario": "1.0 - 2.5 kg"
+                },
+                {
+                    "Empaque": "Cajas de cartón de 12 kg"
+                },
+                {
+                    "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                },
+                {
+                    "Vida útil": "15 - 25 días"
+                },
+                {
+                    "Origen": "Panamá"
+                }
+            ]
+        },
+        {
+            "TITLE": "Pitahaya fresca",
+            "TITLE_TEC": "Hylocereus undatus",
+            "NOTE": "Florece solo de noche, y sus flores duran una sola noche antes de marchitarse.",
+            "DESCRIPCION": "Exótica, nutritiva y visualmente impactante, rica en antioxidantes, vitamina C y fibra, su pulpa dulce y refrescante la convierte en una opción ideal para una alimentación saludable.",
+            "especificaciones": [
+                {
+                    "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                },
+                {
+                    "Peso unitario": "1.0 - 2.5 kg"
+                },
+                {
+                    "Empaque": "Cajas de cartón de 12 kg"
+                },
+                {
+                    "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                },
+                {
+                    "Vida útil": "15 - 25 días"
+                },
+                {
+                    "Origen": "Panamá"
+                }
+            ]
+        },
+        {
+            "TITLE": "Aguacate",
+            "TITLE_TEC": "Persea americana",
+            "NOTE": "Su polinización es muy compleja porque sus flores tienen sexos alternos: cada flor funciona como hembra por unas horas y luego como macho al día siguiente",
+            "DESCRIPCION": "El aguacate es esa delicia cremosa y versátil que lo mismo va en una tostada que en un guacamole. Con su textura suave y sabor suavecito, es como el abrazo verde de la naturaleza. ¡Perfecto para darle alegría a cualquier platillo! ",
+            "especificaciones": [
+                {
+                    "Variedad": "Hass"
+                },
+                {
+                    "Peso unitario": "150 - 350 g"
+                },
+                {
+                    "Empaque": "Cajas de cartón de 4 kg"
+                },
+                {
+                    "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                },
+                {
+                    "Vida útil": "21 - 30 días"
+                },
+                {
+                    "Origen": "Panamá, México, Colombia"
+                }
+            ]
+        },
+        {
+            "TITLE": "Cacao",
+            "TITLE_TEC": "Theobroma cacao",
+            "NOTE": "Los insectos que lo polinizan son diminutos mosquitos del género Forcipomyia, y no abejas, como mucha gente piensa.",
+            "DESCRIPCION": "Ofrecemos cacao en grano 100% natural, seleccionado cuidadosamente y secado al sol. Ideal para la industria chocolatera y de alimentos.",
+            "especificaciones": [
+                {
+                    "Variedad": "Criollo / Trinitario / Forastero"
+                },
+                {
+                    "Peso unitario": "150 - 350 g"
+                },
+                {
+                    "Empaque": "Cajas de cartón de 4 kg"
+                },
+                {
+                    "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                },
+                {
+                    "Vida útil": "21 - 30 días"
+                },
+                {
+                    "Origen": "Panamá, México, Colombia"
+                }
+            ]
+        },
+        {
+            "TITLE": "Café",
+            "TITLE_TEC": "Coffea",
+            "NOTE": "Una curiosidad muy interesante del café es que la cafeína actúa como un pesticida natural para la planta.",
+            "DESCRIPCION": "Es el sabor de nuestra tierra y el cariño de nuestra gente en cada grano. Cultivado a mano en altitudes ideales, cuidadosamente seleccionado y tostado con pasión, ofrece una taza aromática, suave y llena de carácter. Perfecto para quienes valoran calidad, origen y una experiencia auténtica.",
+            "especificaciones": [
+                {
+                    "Variedad": "Coffea arabica / robusta"
+                },
+                {
+                    "Peso unitario": "150 - 350 g"
+                },
+                {
+                    "Proceso": "Lavado / Natural / Honey / Anaeróbico"
+                },
+                {
+                    "Humedad": "10-12%"
+                },
+                {
+                    "Empaque": "Sacos de yute de 60 kg con bolsa GrainPro"
+                },
+                {
+                    "Almacenamiento": "8 - 12 meses"
+                },
+                {
+                    "Vida útil": "21 - 30 días"
+                },
+                {
+                    "Origen": "Panamá - Chiriquí, Veraguas, Colombia"
+                }
+            ]
+        }
+    ],
+    "ESPECIFICACIONES": "Especificaciones",
+    "QUIERO_SABER_MAS": "Quiero saber más"
   },
   "about_us": {
     "FRUTA_FRESCA_PRINCIPIO_FIN": "Fresh fruit from harvest to customer.",
     "FRESH_FOOD_GARANTIZAMOS": "At Fresh Food, we guarantee a controlled supply chain from origin to final delivery.",
-    "SIN_INTERMEDIARIOS": "No intermediaries between the fruit and our transportation.",
+    "SIN_INTERMEDIARIOS": "No intermediaries between the fruit and our transport.",
     "LA_UNICA_MANERA_DE_GARANTIZAR": "The only way to guarantee and certify our product under strict standards of quality, freshness, and nutritional value.",
-    "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "We follow rigorous protocols that ensure product integrity throughout the entire logistics process.",
-    "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Your trust, our priority.",
-    "SABEMOS_QUE_ELEGIR_ALIMENTOS": "We know that choosing imported food means trusting the process. That’s why we work every day to optimize our supply systems and ensure you receive the best.",
-
+    "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "We follow rigorous protocols to ensure the product’s integrity throughout the entire logistics process.",
+    "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Your trust is our priority.",
+    "SABEMOS_QUE_ELEGIR_ALIMENTOS": "Choosing imported food means trusting the process. That’s why we work every day to optimize our supply systems and ensure you receive the best.",
     "pack": {
-        "CONTROL_TEMPERATURA": "Temperature control during transit and storage",
-        "EMPAQUE_ESPECIALIZADO": "Specialized packaging for perishable products",
-        "SEGUIMIENTO_TIEMPO_REAL": "Real-time shipment traceability tracking",
-        "CUMPLIMIENTO_NORMATIVAS": "Compliance with international sanitary and phytosanitary regulations",
-        "MANTENEMOS_CADENA": "We maintain the cold chain from origin to destination to preserve fruit freshness.",
-        "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
-        "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
-        "CUMPLIMOS_ESTANDARES": "We comply with global standards that guarantee quality, safety, and access to demanding markets."
+      "CONTROL_TEMPERATURA": "Temperature control during transit and storage",
+      "EMPAQUE_ESPECIALIZADO": "Specialized packaging for perishable products",
+      "SEGUIMIENTO_TIEMPO_REAL": "Real-time tracking of shipment traceability",
+      "CUMPLIMIENTO_NORMATIVAS": "Compliance with international sanitary and phytosanitary regulations",
+      "MANTENEMOS_CADENA": "We maintain the cold chain from origin to destination to preserve fruit freshness.",
+      "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
+      "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
+      "CUMPLIMOS_ESTANDARES": "We meet global standards that ensure quality, safety, and access to demanding markets."
     }
-},
-"contact": {
-"AQUI_PUEDES_COMUNICARTE": "Aquí puedes comunicarte con nosotros.",
-"CALLE": "Calle 55, PH SFC. Oficina 26D Obarrio,",
-"CIUDAD": "Ciudad de Panamá, Panamá",
-"DEJANOS_TUS_DATOS": "Déjanos tus datos y te llamamos"
-},
-"logistic": {
-    "SABEMOS_QUE_PARA_CONFIAR": "We know that in order to trust the quality of our tropical fruits, you need to understand how we handle them throughout the entire transportation process.",
-    "QUEREMOS_EXPLICARTE": "We want to clearly explain what happens from the moment the fruit is harvested by the picker to the moment it reaches your hands."
-}
+  },
+  "contact": {
+    "AQUI_PUEDES_COMUNICARTE": "Here you can get in touch with us.",
+    "CALLE": "55th Street, PH SFC. Office 26D Obarrio,",
+    "CIUDAD": "Panama City, Panama",
+    "DEJANOS_TUS_DATOS": "Leave us your information and we’ll call you"
+  },
+  "logistic": {
+    "Y_ESTA_ES_NUESTRA_RUTA": "And this is our natural route",
+    "DONDE_COMIENZA": "Where the flavor of our products begins — from the field to the table.",
+    "SABEMOS_QUE_PARA_CONFIAR": "We know that to trust the quality of our tropical fruits, you need to understand how we handle them throughout the transportation process.",
+    "QUEREMOS_EXPLICARTE": "We want to clearly explain what happens from the moment the fruit is harvested until it reaches your hands."
+  }
 
 
 }

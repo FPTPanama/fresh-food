@@ -93,7 +93,13 @@ export default async function Home({ params }) {
                 <button className="px-10 py-3 bg-greendark rounded-full text-white">{dictionary.home.YA_NOS_CONOCES}</button>
               </div>
               <div className="flex items-center justify-center w-2/6 border">
-                <Image className="mb-28 z-30 md:w-[800px] absolute" src={'/img/frutas_con_zumo_v3.webp'} width={700} height={200} />
+                <Image
+                  className="mb-28 z-30 md:w-[800px] absolute"
+                  src={'/img/frutas_con_zumo_v3.webp'}
+                  width={700}
+                  height={200}
+                  alt="frutas con zumo"
+                />
               </div>
               <div className="flex flex-col items-start justify-center w-2/6 h-ful gap-5">
                 <p className="font-black text-l-800 text-greendark">{dictionary.home.LIMON_MANGO}</p>
