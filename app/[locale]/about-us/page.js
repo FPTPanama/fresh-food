@@ -38,9 +38,9 @@ const page = async ({ params }) => {
     <GeneralLayout params={params}>
       <div className="responsiveWidth text-greendark">
         <div className="flex flex-col w-full gap-20">
-          <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-start gap-7">
-            <div className="flex items-start justify-center w-full h-full">
-              <div className="flex flex-col justify-start items-start w-2/5 h-full gap-5">
+          <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-center gap-7">
+            <div className="flex items-center justify-center w-full h-full">
+              <div className="flex flex-col justify-center items-start w-2/5 h-full gap-5">
                 <h1 className="font-black text-l-800 text-greendark">{dictionary.about_us.FRUTA_FRESCA_PRINCIPIO_FIN}</h1>
                 <p className="text-l-400 font-reg">{dictionary.about_us.FRESH_FOOD_GARANTIZAMOS}</p>
               </div>

@@ -91,120 +91,216 @@
         "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "Materiales de alta calidad como cartón corrugado o papel kraft, ideales para proteger y conservar la frescura durante todo el trayecto.",
         "NUESTRA_RUTA": "Nuestra <br/> Ruta Tropical"
       },
-    "products": {
-        "CALIDAD_EN_MANOS": "Quality is born in the hands that know how to choose.",
-        "DESDE_PRIMER_CORTE": "From the first cut, each fruit reflects our farmers' passion and knowledge.",
-        "SELECCIONAMOS_CON_ESMERO": "We carefully select the best from our land",
-        "YA_CONOCES_NUESTROS_PRODUCTOS": "Have you seen our products yet?",
-        "NUESTROS_PRODUCTOS": "Our Products",
+      "products": {
+        "CALIDAD_EN_MANOS": "La calidad nace en las manos que saben elegir.",
+        "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores.",
+        "SELECCIONAMOS_CON_ESMERO": "Seleccionamos con esmero lo mejor de nuestra tierra",
+        "YA_CONOCES_NUESTROS_PRODUCTOS": "¿Ya conoces nuestros productos?",
+        "NUESTROS_PRODUCTOS": "Nuestros Productos",
         "fruits": [
-          {
-            "TITLE": "Tahitian Lime",
-            "TITLE_TEC": "Citrus latifolia",
-            "NOTE": "Also known as Persian lime, it's very popular in Latin America.",
-            "DESCRIPCION": "<span style='popBlack'>Tahitian lime</span> is a seedless variety with green skin and acidic flavor, very juicy and popular in drinks and cooking.",
-            "especificaciones": [
-              { "PRESENTACIÓN": "Bulk / plastic or cardboard boxes" },
-              { "TAMAÑO / CALIBRE": "Sizes 110, 138, 175, 200" },
-              { "COLOR": "Uniform bright green" },
-              { "PESO UNITARIO": "90 - 120 grams" },
-              { "CONTENIDO DE JUGO": ">= 45%" },
-              { "EMPAQUE": "18 kg net boxes / 40 lbs" },
-              { "ALMACENAMIENTO": "Refrigerated 8–10°C; RH: 85–90%" },
-              { "VIDA UTIL": "30 - 45 days" },
-              { "ORIGEN": "Colombia, Veracruz-Mexico" }
-            ]
-          },
-          {
-            "TITLE": "Mango",
-            "TITLE_TEC": "Mangifera indica",
-            "NOTE": "Belongs to the same botanical family as cashew and pistachio: Anacardiaceae.",
-            "DESCRIPCION": "<span style='popBlack'>Mango</span> is prized worldwide for its sweet taste, intense aroma, and juicy pulp. It stands out for its commercial value and culinary versatility.",
-            "especificaciones": [
-              { "Variedad": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden" },
-              { "Peso unitario": "300 - 600 grams" },
-              { "Pulpa": "Deep yellow, firm, fiberless" },
-              { "Empaque": "4kg, 6kg, or 9kg net boxes" },
-              { "Almacenamiento": "10–13°C; RH: 85–90%" },
-              { "Vida útil": "14 - 21 days" },
-              { "Origen": "Mexico, Peru, Venezuela" }
-            ]
-          },
-          {
-            "TITLE": "Pineapple",
-            "TITLE_TEC": "Ananas comosus",
-            "NOTE": "Each 'eye' on the pineapple skin is from a single flower, fused into one fruit.",
-            "DESCRIPCION": "Our <span style='popBlack'>pineapple</span> has intense flavor, fresh aroma, and high natural sugar content. Ideal for export due to its excellent shelf life and flawless presentation.",
-            "especificaciones": [
-              { "Variedad": "MD2 (Golden Sweet / Extra Sweet)" },
-              { "Peso unitario": "1.0 - 2.5 kg" },
-              { "Empaque": "12 kg cardboard boxes" },
-              { "Almacenamiento": "7–10°C; RH: 85–90%" },
-              { "Vida útil": "15 - 25 days" },
-              { "Origen": "Panama" }
-            ]
-          },
-          {
-            "TITLE": "Fresh Dragon Fruit",
-            "TITLE_TEC": "Hylocereus undatus",
-            "NOTE": "Blooms only at night and flowers last for a single night.",
-            "DESCRIPCION": "Exotic, nutritious, and visually striking. Rich in antioxidants, vitamin C, and fiber. Its sweet, refreshing pulp makes it ideal for healthy eating.",
-            "especificaciones": [
-              { "Variedad": "MD2 (Golden Sweet / Extra Sweet)" },
-              { "Peso unitario": "1.0 - 2.5 kg" },
-              { "Empaque": "12 kg cardboard boxes" },
-              { "Almacenamiento": "7–10°C; RH: 85–90%" },
-              { "Vida útil": "15 - 25 days" },
-              { "Origen": "Panama" }
-            ]
-          },
-          {
-            "TITLE": "Avocado",
-            "TITLE_TEC": "Persea americana",
-            "NOTE": "Its pollination is complex—each flower functions as female for a few hours, then as male the next day.",
-            "DESCRIPCION": "Avocado is that creamy, versatile delight perfect on toast or in guacamole. With a soft texture and smooth flavor, it's nature’s green hug—ready to brighten any dish!",
-            "especificaciones": [
-              { "Variedad": "Hass" },
-              { "Peso unitario": "150 - 350 g" },
-              { "Empaque": "4 kg cardboard boxes" },
-              { "Almacenamiento": "5–7°C; RH: 85–90%" },
-              { "Vida útil": "21 - 30 days" },
-              { "Origen": "Panama, Mexico, Colombia" }
-            ]
-          },
-          {
-            "TITLE": "Cocoa",
-            "TITLE_TEC": "Theobroma cacao",
-            "NOTE": "Pollinated by tiny midges of the Forcipomyia genus, not bees as commonly believed.",
-            "DESCRIPCION": "We offer 100% natural cocoa beans, carefully selected and sun-dried. Perfect for the chocolate and food industries.",
-            "especificaciones": [
-              { "Variedad": "Criollo / Trinitario / Forastero" },
-              { "Peso unitario": "150 - 350 g" },
-              { "Empaque": "4 kg cardboard boxes" },
-              { "Almacenamiento": "5–7°C; RH: 85–90%" },
-              { "Vida útil": "21 - 30 days" },
-              { "Origen": "Panama, Mexico, Colombia" }
-            ]
-          },
-          {
-            "TITLE": "Coffee",
-            "TITLE_TEC": "Coffea",
-            "NOTE": "Caffeine acts as a natural pesticide for the coffee plant.",
-            "DESCRIPCION": "The flavor of our land and the love of our people in every bean. Hand-grown at ideal altitudes, carefully selected and roasted with passion. An aromatic, smooth, and character-filled cup—perfect for those who value quality, origin, and authenticity.",
-            "especificaciones": [
-              { "Variedad": "Coffea arabica / robusta" },
-              { "Peso unitario": "150 - 350 g" },
-              { "Proceso": "Washed / Natural / Honey / Anaerobic" },
-              { "Humedad": "10–12%" },
-              { "Empaque": "60 kg jute bags with GrainPro liner" },
-              { "Almacenamiento": "8–12 months" },
-              { "Vida útil": "21 - 30 days" },
-              { "Origen": "Panama – Chiriquí, Veraguas, Colombia" }
-            ]
-          }
+            {
+                "TITLE": "Limón Tahití",
+                "TITLE_TEC": "Citrus latifolia",
+                "NOTE": "También conocido como limón persa, lima persa, es muy popular en América Latina",
+                "DESCRIPCION": "El <span style='popBlack'>limón Tahití</span> es una variedad de lima sin semillas, de piel verde y sabor ácido, muy jugoso y popular en bebidas y cocina.",
+                "especificaciones": [
+                    {
+                        "PRESENTACIÓN": "A granel / en cajas plásticas o de cartón"
+                    },
+                    {
+                        "TAMAÑO / CALIBRE": "Calibres 110, 138, 175, 200"
+                    },
+                    {
+                        "COLOR": "Verde brillante uniforme"
+                    },
+                    {
+                        "PESO UNITARIO": "90 - 120 gramos"
+                    },
+                    {
+                        "CONTENIDO DE JUGO": ">= 45%"
+                    },
+                    {
+                        "EMPAQUE": "Cajas de 18 kg netos / 40 lbs"
+                    },
+                    {
+                        "ALMACENAMIENTO": "Refrigerado 8-10 degC; HR: 85-90%"
+                    },
+                    {
+                        "VIDA UTIL": "30 - 45 días"
+                    },
+                    {
+                        "ORIGEN": "Colombia, Veracruz-México"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Mango",
+                "TITLE_TEC": "Mangífera Indica",
+                "NOTE": "Pertenece a la misma familia botánica que el anacardo (marañón) y el pistacho: la familia Anacardiaceae.",
+                "DESCRIPCION": "El <span style='popBlack'>Mango</span> es altamente apreciado a nivel mundial por su sabor dulce, aroma intenso y pulpa jugosa. Destaca por su valor comercial y su versatilidad en la gastronomía.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden"
+                    },
+                    {
+                        "Peso unitario": "300 - 600 gramos"
+                    },
+                    {
+                        "Pulpa": "Amarilla intensa, firme, sin fibras"
+                    },
+                    {
+                        "Empaque": "Cajas de 4kg, 6kg, o 9 Kg netos"
+                    },
+                    {
+                        "Almacenamiento": "10-13 degC, HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "14 - 21 días"
+                    },
+                    {
+                        "Origen": "México, Perú, Venezuela"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Piña",
+                "TITLE_TEC": "Ananas Comosus",
+                "NOTE": "Cada 'cuadro' o escama en la cáscara de la piña proviene de una flor individual. Estas pequeñas frutas crecen juntas en un tallo central y se unen para formar lo que parece ser una sola fruta grande",
+                "DESCRIPCION": "Nuestra <span style='popBlack'>piña</span> con un sabor intenso, aroma fresco y un alto contenido de azúcar natural, nuestra piña es ideal para exportación gracias a su excelente vida útil y presentación impecable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen": "Panamá"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Pitahaya fresca",
+                "TITLE_TEC": "Hylocereus undatus",
+                "NOTE": "Florece solo de noche, y sus flores duran una sola noche antes de marchitarse.",
+                "DESCRIPCION": "Exótica, nutritiva y visualmente impactante, rica en antioxidantes, vitamina C y fibra, su pulpa dulce y refrescante la convierte en una opción ideal para una alimentación saludable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen": "Panamá"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Aguacate",
+                "TITLE_TEC": "Persea americana",
+                "NOTE": "Su polinización es muy compleja porque sus flores tienen sexos alternos: cada flor funciona como hembra por unas horas y luego como macho al día siguiente",
+                "DESCRIPCION": "El aguacate es esa delicia cremosa y versátil que lo mismo va en una tostada que en un guacamole. Con su textura suave y sabor suavecito, es como el abrazo verde de la naturaleza. ¡Perfecto para darle alegría a cualquier platillo! ",
+                "especificaciones": [
+                    {
+                        "Variedad": "Hass"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 4 kg"
+                    },
+                    {
+                        "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá, México, Colombia"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Cacao",
+                "TITLE_TEC": "Theobroma cacao",
+                "NOTE": "Los insectos que lo polinizan son diminutos mosquitos del género Forcipomyia, y no abejas, como mucha gente piensa.",
+                "DESCRIPCION": "Ofrecemos cacao en grano 100% natural, seleccionado cuidadosamente y secado al sol. Ideal para la industria chocolatera y de alimentos.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Criollo / Trinitario / Forastero"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 4 kg"
+                    },
+                    {
+                        "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá, México, Colombia"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Café",
+                "TITLE_TEC": "Coffea",
+                "NOTE": "Una curiosidad muy interesante del café es que la cafeína actúa como un pesticida natural para la planta.",
+                "DESCRIPCION": "Es el sabor de nuestra tierra y el cariño de nuestra gente en cada grano. Cultivado a mano en altitudes ideales, cuidadosamente seleccionado y tostado con pasión, ofrece una taza aromática, suave y llena de carácter. Perfecto para quienes valoran calidad, origen y una experiencia auténtica.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Coffea arabica / robusta"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Proceso": "Lavado / Natural / Honey / Anaeróbico"
+                    },
+                    {
+                        "Humedad": "10-12%"
+                    },
+                    {
+                        "Empaque": "Sacos de yute de 60 kg con bolsa GrainPro"
+                    },
+                    {
+                        "Almacenamiento": "8 - 12 meses"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá - Chiriquí, Veraguas, Colombia"
+                    }
+                ]
+            }
         ],
-        "ESPECIFICACIONES": "Specifications",
-        "QUIERO_SABER_MAS": "I want to know more"
+        "ESPECIFICACIONES": "Especificaciones",
+        "QUIERO_SABER_MAS": "Quiero saber más"
       },
     "about_us": {
         "FRUTA_FRESCA_PRINCIPIO_FIN": "Fruta fresca desde la recolección hasta el cliente.",
