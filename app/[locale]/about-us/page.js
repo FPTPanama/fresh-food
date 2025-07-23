@@ -53,7 +53,7 @@ const page = async ({ params }) => {
             <div
               className="flex flex-col items-center justify-center w-full min-h-[700px]"
               style={{
-                backgroundImage: `url(/img/cacao_perfilado.webp)`,
+                backgroundImage: `url(/img/cacao_perfilado_ok.webp)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 width: '100%',

@@ -16,7 +16,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[0].DESCRIPCION,
       alias: dictionary.products.fruits[0].NOTE,
       img: '/img/productos/limon_tahiti.webp',
-      bg_img: '/img/productos/limon_tahiti_fondo.webp',
+      bg_img: '/img/productos/limon_tahiti_fondo_ok.webp',
       especificaciones: [
         {
           Presentación: 'A granel / en cajas plásticas o de cartón',
@@ -53,7 +53,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[1].DESCRIPCION,
       alias: dictionary.products.fruits[1].NOTE,
       img: '/img/productos/mango.webp',
-      bg_img: '/img/productos/mango_fondo.webp',
+      bg_img: '/img/productos/mango_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'Tommy Atkins / Kent / Ataulfo / Keitt / Haden',
@@ -84,7 +84,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[2].DESCRIPCION,
       alias: dictionary.products.fruits[2].NOTE,
       img: '/img/productos/pineapple.webp',
-      bg_img: '/img/productos/pineapple_fondo.webp',
+      bg_img: '/img/productos/pineapple_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
@@ -112,7 +112,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[3].DESCRIPCION,
       alias: dictionary.products.fruits[3].NOTE,
       img: '/img/productos/pineapple.webp',
-      bg_img: '/img/productos/pitahaya_fondo.webp',
+      bg_img: '/img/productos/pitahaya_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
@@ -140,7 +140,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[4].DESCRIPCION,
       alias: dictionary.products.fruits[4].NOTE,
       img: '/img/productos/pineapple.webp',
-      bg_img: '/img/productos/aguacate_fondo.webp',
+      bg_img: '/img/productos/aguacate_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
@@ -168,7 +168,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[5].DESCRIPCION,
       alias: dictionary.products.fruits[5].NOTE,
       img: '/img/productos/pineapple.webp',
-      bg_img: '/img/productos/cacao_fondo.webp',
+      bg_img: '/img/productos/cacao_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
@@ -202,7 +202,7 @@ const Productos = async ({ params }) => {
       descripcion: dictionary.products.fruits[6].DESCRIPCION,
       alias: dictionary.products.fruits[6].NOTE,
       img: '/img/productos/pineapple.webp',
-      bg_img: '/img/productos/cafe_fondo.webp',
+      bg_img: '/img/productos/cafe_fondo_ok.webp',
       especificaciones: [
         {
           Variedad: 'Coffea arabica / robusta',
@@ -240,7 +240,7 @@ const Productos = async ({ params }) => {
               <h1 className="font-black text-l-800 text-greendark" dangerouslySetInnerHTML={{ __html: dictionary.products.CALIDAD_EN_MANOS }} />
             </div>
             <div className="flex items-center justify-center w-1/3">
-              <Image className="z-20" src={'/img/agricultor_con_pineapple_v2.webp'} width={500} height={300} alt="agricultor con piña" />
+              <Image className="z-20" src={'/img/agricultor_con_pineapple_ok.webp'} width={500} height={300} alt="agricultor con piña" />
             </div>
             <div className="flex flex-col items-start justify-center w-1/3 gap-5 p-5">
               <h2

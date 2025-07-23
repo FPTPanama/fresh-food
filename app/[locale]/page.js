@@ -95,7 +95,7 @@ export default async function Home({ params }) {
               <div className="flex items-center justify-center w-2/6 border">
                 <Image
                   className="mb-28 z-30 md:w-[800px] absolute"
-                  src={'/img/frutas_con_zumo_v3.webp'}
+                  src={'/img/frutas_con_zumo_ok.webp'}
                   width={700}
                   height={200}
                   alt="frutas con zumo"
@@ -109,7 +109,7 @@ export default async function Home({ params }) {
           <section
             className="mt-20"
             style={{
-              backgroundImage: 'url(/img/agricultor_limones_tahiti.webp)',
+              backgroundImage: 'url(/img/agricultor_limones_tahiti_ok.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               width: '100%',
@@ -161,7 +161,7 @@ export default async function Home({ params }) {
             </div>
             <div className="grid grid-cols-3 w-full gap-5">
               <div className="flex items-center justify-center w-full">
-                <Image src={'/img/mangos_box.webp'} width={400} height={200} alt="mangos en caja" />
+                <Image src={'/img/mangos_box_ok.webp'} width={400} height={200} alt="mangos en caja" />
               </div>
               <div className="flex flex-col w-full items-center justify-center gap-5">
                 <p

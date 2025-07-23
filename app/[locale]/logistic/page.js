@@ -20,7 +20,7 @@ const Logistic = async ({ params }) => {
             <div className="flex items-center justify-center w-1/3 h-32">
               <Image
                 className="w-4/5 z-20 relative bottom-32"
-                src={'/img/aguacate_semilla_v2.webp'}
+                src={'/img/aguacate_semilla_ok.webp'}
                 width={400}
                 height={500}
                 alt="aguacate en semilla"

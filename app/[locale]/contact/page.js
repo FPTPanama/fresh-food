@@ -13,7 +13,7 @@ const page = async ({ params }) => {
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 flex flex-col gap-4 items-center">
             <div className="flex flex-col items-start justify-center w-1/2 gap-5">
-              <Image src={'/img/mango_rebanado.webp'} width={150} height={200} alt="mango rebanado" />
+              <Image src={'/img/mango_rebanado_ok.webp'} width={150} height={200} alt="mango rebanado" />
               <p className="text-l-600 font-bold max-w-[350px]">{dictionary.contact.AQUI_PUEDES_COMUNICARTE}</p>
 
               <p className="max-w-[350px]" dangerouslySetInnerHTML={{ __html: dictionary.footer.CENTRO_PRINCIPAL }} />

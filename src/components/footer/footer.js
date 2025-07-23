@@ -44,7 +44,7 @@ const Footer = async ({ params }) => {
         </div>
       </div>
       <div className="flex items-start justify-center w-2/6">
-        <Image className={'h-[320px] w-auto'} src={'/img/frutas_con_zumo.webp'} alt="frutas con zumo" width={250} height={200} />
+        <Image className={'h-[320px] w-auto'} src={'/img/frutas_footer.webp'} alt="frutas con zumo" width={250} height={200} />
       </div>
       <div className="flex flex-col items-end justify-center w-2/6 text-greendark">
         <p className="font-black">{dictionary.footer.NUESTRA_DIRECCION}</p>
