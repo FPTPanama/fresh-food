@@ -174,7 +174,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <div className="flex items-center justify-center w-full">
-                <Image src={'/img/pineapples_box.webp'} width={400} height={200} alt="mangos en caja" />
+                <Image src={'/img/pineapples_box_ok.webp'} width={400} height={200} alt="mangos en caja" />
               </div>
             </div>
           </section>
