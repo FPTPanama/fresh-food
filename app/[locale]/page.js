@@ -9,6 +9,7 @@ import { getDictionary } from '@/lib/getDictionary';
 import { FaTruckLoading } from 'react-icons/fa';
 import { PiShippingContainerFill } from 'react-icons/pi';
 import { MdHouseboat } from 'react-icons/md';
+import Link from 'next/link';
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -82,7 +83,7 @@ export default async function Home({ params }) {
 
   return (
     <div className="flex flex-col responsiveWidth">
-      <GeneralLayout params={params}>
+      <GeneralLayout dictionary={dictionary}>
         <div className="flex flex-col gap-14 w-full items-center justify-center">
           <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-center gap-7">
             <div className="flex items-center justify-center w-full h-full">
@@ -90,11 +91,13 @@ export default async function Home({ params }) {
                 <h1 className="font-black text-l-800">{dictionary.home.LLEVAMOS_LA_FRUTA}</h1>
                 <p className="text-l-300" dangerouslySetInnerHTML={{ __html: dictionary.home.CADA_PRODUCTO_LLEGA }} />
 
-                <button className="px-10 py-3 bg-greendark rounded-full text-white">{dictionary.home.YA_NOS_CONOCES}</button>
+                <Link href={'/about-us'} className="px-10 py-3 bg-greendark rounded-full text-white z-20 hover:px-14 transition-all">
+                  {dictionary.home.YA_NOS_CONOCES}
+                </Link>
               </div>
-              <div className="flex items-center justify-center w-2/6 border">
+              <div className="flex items-center justify-center w-2/6">
                 <Image
-                  className="mb-28 z-30 md:w-[800px] absolute"
+                  className="mb-28 md:w-[800px] absolute z-10"
                   src={'/img/frutas_con_zumo_ok.webp'}
                   width={700}
                   height={200}

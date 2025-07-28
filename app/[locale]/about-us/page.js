@@ -35,7 +35,7 @@ const page = async ({ params }) => {
   ];
 
   return (
-    <GeneralLayout params={params}>
+    <GeneralLayout dictionary={dictionary}>
       <div className="responsiveWidth text-greendark">
         <div className="flex flex-col w-full gap-20">
           <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-center gap-7">

@@ -233,7 +233,7 @@ const Productos = async ({ params }) => {
   ];
   return (
     <div className="responsiveWidth gap-10">
-      <GeneralLayout params={params}>
+      <GeneralLayout dictionary={dictionary}>
         <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-center gap-7">
           <div className="flex w-full items-center justify-between">
             <div className="flex flex-col items-start justify-center gap-5 w-1/3">
@@ -268,10 +268,9 @@ const Productos = async ({ params }) => {
           <div className="flex flex-col items-center justify-center w-full gap-5 mb-10">
             {products.map((fruit, key) => {
               return (
-                <>
+                <div key={key} className="flex flex-col w-full gap-3">
                   <div
                     className="flex flex-col items-center justify-center w-full min-h-[700px]"
-                    key={key}
                     style={{
                       backgroundImage: `url(${fruit.bg_img})`,
                       backgroundSize: 'cover',
@@ -301,7 +300,7 @@ const Productos = async ({ params }) => {
                         <div className="flex flex-col items-center justify-center w-1/3">
                           <p className="text-l-800 font-black text-white text-center z-10">{fruit.title}</p>
                           <p className="font-homemade text-l-600 leading-9 text-white">{fruit.title_tec}</p>
-                          <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full">
+                          <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full hover:px-14 transition-all hover:font-black">
                             {dictionary.products.QUIERO_SABER_MAS}
                           </button>
                         </div>
@@ -328,7 +327,7 @@ const Productos = async ({ params }) => {
                       <p className="font-reg text-l-100">{fruit.alias}</p>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
           </div>

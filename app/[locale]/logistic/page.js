@@ -9,7 +9,7 @@ const Logistic = async ({ params }) => {
   const dictionary = await getDictionary(locale);
   return (
     <div className="responsiveWidth gap-10 text-greendark">
-      <GeneralLayout params={params}>
+      <GeneralLayout dictionary={dictionary}>
         <section style={{ height: 'calc(100vh - 180px)' }} className="flex flex-col w-full items-center justify-center gap-7">
           <ScrollButton dictionary={dictionary} />
           <div className="flex items-center justify-center w-full">

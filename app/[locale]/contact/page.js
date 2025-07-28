@@ -8,7 +8,7 @@ const page = async ({ params }) => {
   const { locale } = params;
   const dictionary = await getDictionary(locale);
   return (
-    <GeneralLayout params={params} showFooter={false}>
+    <GeneralLayout dictionary={dictionary} showFooter={false}>
       <div className="responsiveWidth w-full text-greendark">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 flex flex-col gap-4 items-center">
@@ -16,7 +16,7 @@ const page = async ({ params }) => {
               <Image src={'/img/mango_rebanado_ok.webp'} width={150} height={200} alt="mango rebanado" />
               <p className="text-l-600 font-bold max-w-[350px]">{dictionary.contact.AQUI_PUEDES_COMUNICARTE}</p>
 
-              <p className="max-w-[350px]" dangerouslySetInnerHTML={{ __html: dictionary.footer.CENTRO_PRINCIPAL }} />
+              <p className="max-w-[350px]" dangerouslySetInnerHTML={{ __html: dictionary?.footer?.CENTRO_PRINCIPAL }} />
 
               <div className="flex flex-col items-start justify-center">
                 <p>{dictionary.contact.CALLE}</p>
