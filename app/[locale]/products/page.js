@@ -2,11 +2,10 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import Image from 'next/image';
 import React from 'react';
-import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight } from 'react-icons/fa6';
 import { TiInfoLarge } from 'react-icons/ti';
 
 const Productos = async ({ params }) => {
-  const { locale } = params;
+  const { locale } = await params;
   const dictionary = await getDictionary(locale);
 
   const products = [
@@ -17,35 +16,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[0].NOTE,
       img: '/img/productos/limon_tahiti.webp',
       bg_img: '/img/productos/limon_tahiti_fondo_ok.webp',
-      especificaciones: [
-        {
-          Presentación: 'A granel / en cajas plásticas o de cartón',
-        },
-        {
-          'Tamaño / Calibre': 'Calibres 110, 138, 175, 200',
-        },
-        {
-          Color: 'Verde brillante uniforme',
-        },
-        {
-          'Peso unitario': '90 - 120 gramos',
-        },
-        {
-          'Contenido de jugo': '>= 45%',
-        },
-        {
-          Empaque: 'Cajas de 18 kg netos / 40 lbs',
-        },
-        {
-          Almacenamiento: 'Refrigerado 8-10 degC; HR: 85-90%',
-        },
-        {
-          'Vida útil': '30 - 45 días',
-        },
-        {
-          Origen: 'Colombia, Veracruz-México',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[0].especificaciones,
     },
     {
       title: dictionary.products.fruits[1].TITLE,
@@ -54,29 +25,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[1].NOTE,
       img: '/img/productos/mango.webp',
       bg_img: '/img/productos/mango_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'Tommy Atkins / Kent / Ataulfo / Keitt / Haden',
-        },
-        {
-          'Peso unitario': '300 - 600 gramos',
-        },
-        {
-          Pulpa: 'Amarilla intensa, firme, sin fibras',
-        },
-        {
-          Empaque: 'Cajas de 4kg, 6kg, o 9 Kg netos',
-        },
-        {
-          Almacenamiento: '10-13 degC, HR: 85-90%',
-        },
-        {
-          'Vida útil': '14 - 21 días',
-        },
-        {
-          Origen: 'México, Perú, Venezuela',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[1].especificaciones,
     },
     {
       title: dictionary.products.fruits[2].TITLE,
@@ -85,26 +34,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[2].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/pineapple_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
-        },
-        {
-          'Peso unitario': '1.0 - 2.5 kg',
-        },
-        {
-          Empaque: 'Cajas de cartón de 12 kg',
-        },
-        {
-          Almacenamiento: '7 - 10 degC; HR: 85-90%',
-        },
-        {
-          'Vida útil': '15 - 25 días',
-        },
-        {
-          Origen: 'Panamá',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[2].especificaciones,
     },
     {
       title: dictionary.products.fruits[3].TITLE,
@@ -113,26 +43,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[3].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/pitahaya_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
-        },
-        {
-          'Peso unitario': '1.0 - 2.5 kg',
-        },
-        {
-          Empaque: 'Cajas de cartón de 12 kg',
-        },
-        {
-          Almacenamiento: '7 - 10 degC; HR: 85-90%',
-        },
-        {
-          'Vida útil': '15 - 25 días',
-        },
-        {
-          Origen: 'Panamá',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[3].especificaciones,
     },
     {
       title: dictionary.products.fruits[4].TITLE,
@@ -141,26 +52,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[4].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/aguacate_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
-        },
-        {
-          'Peso unitario': '1.0 - 2.5 kg',
-        },
-        {
-          Empaque: 'Cajas de cartón de 12 kg',
-        },
-        {
-          Almacenamiento: '7 - 10 degC; HR: 85-90%',
-        },
-        {
-          'Vida útil': '15 - 25 días',
-        },
-        {
-          Origen: 'Panamá',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[4].especificaciones,
     },
     {
       title: dictionary.products.fruits[5].TITLE,
@@ -169,32 +61,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[5].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/cacao_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'MD2 (Golden Sweet / Extra Sweet)',
-        },
-        {
-          Fermentación: '80-90%',
-        },
-        {
-          Humedad: '<= 7.5%',
-        },
-        {
-          'Peso unitario': '1.0 - 2.5 kg',
-        },
-        {
-          Empaque: 'Sacos de yute de 60 kg con bolsa interna',
-        },
-        {
-          Almacenamiento: '18-22 degC, HR < 65%',
-        },
-        {
-          'Vida útil': '6 - 12 meses',
-        },
-        {
-          Origen: 'Panamá',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[5].especificaciones,
     },
     {
       title: dictionary.products.fruits[6].TITLE,
@@ -203,32 +70,7 @@ const Productos = async ({ params }) => {
       alias: dictionary.products.fruits[6].NOTE,
       img: '/img/productos/pineapple.webp',
       bg_img: '/img/productos/cafe_fondo_ok.webp',
-      especificaciones: [
-        {
-          Variedad: 'Coffea arabica / robusta',
-        },
-        {
-          'Peso unitario': '150 - 350 g',
-        },
-        {
-          Proceso: 'Lavado / Natural / Honey / Anaeróbico',
-        },
-        {
-          Humedad: '10-12%',
-        },
-        {
-          Empaque: 'Sacos de yute de 60 kg con bolsa GrainPro',
-        },
-        {
-          Almacenamiento: '8 - 12 meses',
-        },
-        {
-          'Vida útil': '21 - 30 días',
-        },
-        {
-          Origen: 'Panamá - Chiriquí, Veraguas, Colombia',
-        },
-      ],
+      especificaciones: dictionary.products.fruits[6].especificaciones,
     },
   ];
   return (

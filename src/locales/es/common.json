@@ -331,6 +331,92 @@
         "Y_ESTA_ES_NUESTRA_RUTA": "Y esta es nuestra ruta natural",
         "DONDE_COMIENZA": "Donde comienza el sabor de nuestros productos, del campo hasta la mesa.",
         "SABEMOS_QUE_PARA_CONFIAR": " Sabemos que para confiar en la calidad de nuestras frutas tropicales, necesitas conocer cómo las manejamos durante todo el proceso de transporte.",
-        "QUEREMOS_EXPLICARTE": " Queremos explicarte con claridad qué ocurre desde el momento en que el recolector cosecha la fruta hasta que llega a tus manos."
+        "QUEREMOS_EXPLICARTE": " Queremos explicarte con claridad qué ocurre desde el momento en que el recolector cosecha la fruta hasta que llega a tus manos.",
+        "ruta_tropical": [
+            {
+                "TITLE": "Recolección en el campo",
+                "DESCRIPTION": "Nuestra red de proveedores realiza una primera selección de las mejores frutas y registra el lote en condiciones óptimas.",
+                "specifications": [
+                    "Cosecha en el punto óptimo de madurez, basada en índices Brix, color y firmeza.",
+                    "Personal capacitado → cortes limpios que minimizan magulladuras.",
+                    "Selección primaria en sitio: se descartan frutos con defectos visibles.",
+                    "Registro digital del lote (finca, parcela, fecha y hora) en una app de trazabilidad compatible con GlobalG.A.P.",
+                    "Pre‑enfriado en sombra y uso de bins ventilados para bajar la pulpa de °C de campo a < 24 °C antes del transporte."
+              ]
+            },
+            {
+                "TITLE": "Transporte a la planta de empaque",
+                "DESCRIPTION": "Transporte refrigerado y viajes cortos, evitando pérdida de calidad en los productos.",
+                "specifications": [
+                    "Camiones refrigerados (0‑5 °C) sanitizados antes de cada carga.",
+                    "Viajes < 3 h para evitar rotura de la cadena de frío.",
+                    "Data‑loggers que registran temperatura y humedad relativa cada 15 min.",
+                    "Seguro de transporte con cobertura “door to door”, gestión de incidencias en tiempo real vía GPS."
+              ]
+            },
+            {
+                "TITLE": "Procesamiento y empaque",
+                "DESCRIPTION": "Las frutas se lavan, clasifican, empacan y se emiten certificados fitosanitarios según el país de destino.",
+                "specifications": [
+                    "Lavado con solución clorada (100‑150 ppm) y enjuague con agua potable.",
+                    "Clasificación óptica por tamaño, color y defecto superficial.",
+                    "Empaque en cajas de cartón certificado FSC con liners microperforados para controlar etileno.",
+                    "Pre‑enfriamiento forzado (forced‑air) a la temperatura objetivo del producto.",
+                    "Etiquetado con código QR que vincula a la trazabilidad completa y a los certificados fitosanitarios emitidos."
+              ]
+            },
+            {
+                "TITLE": "Transporte al puerto de salida",
+                "DESCRIPTION": "En camiones refrigerados para mantener la cadena de frío, junto con la documentación requerida.",
+                "specifications": [
+                    "Transferencia directa a cámaras de consolidación a 0‑2 °C.",
+                    "Verificación de documentos: factura, lista de empaque, certificado de origen, Phyto Certificate, registro FDA, BL draft.",
+                    "Inspección de contenedores con pistolas láser para garantizar –1 °C ±0,5 antes de la carga."
+              ]
+            },
+            {
+                "TITLE": "Exportación y carga en contenedor marítimo",
+                "DESCRIPTION": "Despacho de aduana, revisión sanitaria y configuración del contenedor a la temperatura adecuada.",
+                "specifications": [
+                    "Despacho aduanero electrónico (Ventanilla Única Marítima).",
+                    "Inspección SENASA/MIDA y liberación sanitaria.",
+                    "Contenedor reefer sellado (plomo aduanero) y configuración de set‑point, ventilación y humedad según tipo de fruta.",
+                    "Inserción de termógrafos y sondas remotas para monitoreo continuo.",
+                    "Reporte “Pre‑Trip Inspection” firmado y archivado en la nube."
+              ]
+            },
+            {
+                "TITLE":  "Transporte marítimo internacional",
+                "DESCRIPTION": "El contenedor es monitoreado para asegurar la cadena de frío durante todo el trayecto.",
+                "specifications": [
+                    "Seguimiento satelital y alertas automáticas si la temperatura se desvía > 1 °C.",
+                    "Opción de atmósfera controlada (CA/MA) para productos sensibles.",
+                    "Tránsito 7‑25 días, con envío de status updates semanales al cliente.",
+                    "Seguro de carga con cláusula ICC(A) y cobertura de avería particular."
+              ]
+            },
+            {
+                "TITLE": "Llegada al puerto de destino",
+                "DESCRIPTION": "El contenedor es descargado, inspeccionado y liberado tras la aprobación documental.",
+                "specifications": [
+                    "Descarga, inspección fitosanitaria y liberación por la Autoridad Aduanera local.",
+                    "Comparación de logs de temperatura con los registrados en origen para validar la cadena de frío.",
+                    "Si procede, fumigación o muestreo para residuos de pesticidas.",
+                    "Coordinación de drayage hasta almacén frigorífico o centro de distribución."
+              ]
+            },
+            {
+                "TITLE": "Distribución final al cliente",
+                "DESCRIPTION": "El transporte terrestre refrigerado entrega las frutas al cliente final.",
+                "specifications": [
+                    "Transporte refrigerado (0‑5 °C) con rutas optimizadas para disminuir tiempos de entrega.",
+                    "Control de calidad en destino: inspección visual, medición Brix y temperatura de pulpa.",
+                    "Entrega “last mile” a supermercados, mayoristas o procesadores, con POD electrónico (Proof of Delivery).",
+                    "Encuesta de satisfacción y retroalimentación para mejora continua."
+              ]
+            }
+          ]
+          
+
     }
 }

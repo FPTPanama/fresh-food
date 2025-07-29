@@ -4,11 +4,11 @@ import { TiLeaf } from 'react-icons/ti';
 import { BiWorld, BiLoaderCircle } from 'react-icons/bi';
 import { PiFarmFill } from 'react-icons/pi';
 import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight } from 'react-icons/fa6';
-import { LuBadgeCheck } from 'react-icons/lu';
-import { getDictionary } from '@/lib/getDictionary';
-import { FaTruckLoading } from 'react-icons/fa';
-import { PiShippingContainerFill } from 'react-icons/pi';
 import { MdHouseboat } from 'react-icons/md';
+import { PiShippingContainerFill } from 'react-icons/pi';
+import { LuBadgeCheck } from 'react-icons/lu';
+import { FaTruckLoading } from 'react-icons/fa';
+import { getDictionary } from '@/lib/getDictionary';
 import Link from 'next/link';
 
 export default async function Home({ params }) {

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const page = async ({ params }) => {
-  const { locale } = params;
+  const { locale } = await params;
   const dictionary = await getDictionary(locale);
   return (
     <GeneralLayout dictionary={dictionary} showFooter={false}>

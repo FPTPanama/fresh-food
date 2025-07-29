@@ -8,7 +8,7 @@ import { MdTrackChanges } from 'react-icons/md';
 import { GrUserPolice } from 'react-icons/gr';
 
 const page = async ({ params }) => {
-  const { locale } = params;
+  const { locale } = await params;
   const dictionary = await getDictionary(locale);
 
   const aboutUsPack = [

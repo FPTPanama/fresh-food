@@ -29,7 +29,7 @@ const Header = ({ dictionary }) => {
       <Link className="cursor-pointer flex-1 flex items-center justify-center" href={'/'}>
         <Image src={'/img/freshfood_logo.svg'} height={50} width={300} alt="freshfood logo" />
       </Link>
-      x
+
       <div className="flex-1 flex items-center justify-end gap-5">
         <LanguageSwitcher />
 
