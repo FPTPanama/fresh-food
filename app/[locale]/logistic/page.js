@@ -2,7 +2,9 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import ScrollButton from 'components/scroll-button/scroll-down';
 import { PiFarmFill } from 'react-icons/pi';
-import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight } from 'react-icons/fa6';
+import { FaTruckField, FaBoxesPacking, FaShip, FaTruckArrowRight, FaTruckArrowDown } from 'react-icons/fa6';
+import { IoChevronDownOutline } from 'react-icons/io5';
+
 import { MdHouseboat } from 'react-icons/md';
 import { TbPointFilled } from 'react-icons/tb';
 import { PiShippingContainerFill } from 'react-icons/pi';
@@ -10,6 +12,7 @@ import { FaTruckLoading } from 'react-icons/fa';
 import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import React from 'react';
+import TitleScrollDisplay from 'components/title-scroll-display/title-scroll-display';
 
 const Logistic = async ({ params }) => {
   const { locale } = await params;
@@ -90,33 +93,40 @@ const Logistic = async ({ params }) => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col w-full gap-20">
+        <section className="flex flex-col w-full gap-36">
           {ruta_tropical.map((step, key) => {
             return (
-              <div
-                style={{ height: 'calc(100vh - 180px)' }}
-                key={key}
-                className="flex flex-col w-full items-center justify-center gap-10 border-greenlight border-b"
-              >
+              <div key={key} className="flex flex-col w-full items-center justify-between gap-10 h-3/4">
                 <div className="flex items-center justify-start gap-2 w-full">
                   <p className="font-black text-l-400">{key + 1}</p>
                   <TbPointFilled />
-                  <p className="text-l-400 font-black">{step.title.toUpperCase()}</p>
+                  <p className="text-l-400 font-black max-w-[300px]">{step.title.toUpperCase()}</p>
                 </div>
-                <div className="flex w-3/4 gap-10">
-                  <div className="flex flex-col items-start justify-center w-full">
-                    <p className="text-l-600 font-reg">{step.description}</p>
+                <div className="flex flex-col justify-between items-center w-full">
+                  <div className="flex w-3/4 gap-10">
+                    <div className="flex flex-col items-start justify-center w-full">
+                      <p className="text-l-600 font-reg">{step.description}</p>
+                    </div>
+                    <div className="flex flex-col items-start justify-center w-full gap-5 list-outside">
+                      {step.especifications.map((spec, key) => {
+                        return (
+                          <div key={key} className="flex items-center w-full justify-start">
+                            <FaAngleRight className="w-1/12" size={20} />
+                            <p className="w-11/12">{spec}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="flex flex-col items-start justify-center w-full gap-5 list-outside">
-                    {step.especifications.map((spec, key) => {
-                      return (
-                        <div key={key} className="flex items-center w-full justify-start">
-                          <FaAngleRight className="w-1/12" size={20} />
-                          <p className="w-11/12">{spec}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
+                </div>
+                <div className="flex items-center justify-center h-10 w-full">
+                  {key < ruta_tropical.length - 1 && (
+                    <div className="flex flex-col items-center justify-center w-full relative h-14 top-6">
+                      <TitleScrollDisplay title={ruta_tropical[key + 1]?.title} number={key + 2} />
+
+                      <div className="flex h-[1px] items-center justify-center w-2/4 border-greendark border" />
+                    </div>
+                  )}
                 </div>
               </div>
             );
