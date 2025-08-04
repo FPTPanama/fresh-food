@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "antd": "^5.26.7",
     "autoprefixer": "^10.4.21",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",

@@ -21,10 +21,10 @@ const ScrollButton = ({ dictionary }) => {
 
   return (
     <div
-      className={`${isAtTop ? 'slide-bottom' : 'slide-up'} flex items-center justify-center absolute bottom-10 border-greendark border-2 py-2 px-8 rounded-full gap-2`}
+      className={`${isAtTop ? 'slide-bottom' : 'slide-up'} flex items-center justify-center z-50 absolute w-auto h-auto border-greendark border-2 rounded-full gap-2 -rotate-90`}
     >
-      <p className="text-l-100 font-reg">{dictionary.scroll_down.DESLIZA_HACIA_ABAJO}</p>
-      <MdOutlineArrowDownward />
+      <p className="text-l-100 font-reg -rotate-90">{dictionary.scroll_down.DESLIZA_HACIA_ABAJO}</p>
+      {/* <MdOutlineArrowDownward /> */}
     </div>
   );
 };

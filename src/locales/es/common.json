@@ -19,7 +19,8 @@
         "LISTO": "Listo"
     },
     "scroll_down": {
-        "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo"
+        "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo",
+        "DESLIZA_PARA_VER": "Desliza para ver"
     },
     "footer": {
         "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",

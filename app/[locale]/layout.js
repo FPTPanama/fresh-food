@@ -31,8 +31,8 @@ export const metadata = {
   },
 };
 
-export default function LocaleLayout({ children, params }) {
-  const { locale } = params;
+const LocaleLayout = async ({ children, params }) => {
+  const { locale } = await params;
 
   if (!i18n.locales.includes(locale)) {
     notFound();
@@ -40,7 +40,9 @@ export default function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className={`bg-fresh`}>{children}</body>
+      <body className={`bg-fresh snap-y snap-mandatory scroll-smooth overflow-y-scroll`}>{children}</body>
     </html>
   );
-}
+};
+
+export default LocaleLayout;

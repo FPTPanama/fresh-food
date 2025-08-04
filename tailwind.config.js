@@ -3,6 +3,7 @@ module.exports = {
   content: ['./{app,src,components}/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      scrollSnapType: ['responsive'],
       fontFamily: {
         black: 'popBlack',
         thin: 'popThin',
