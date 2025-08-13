@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -27,4 +27,6 @@
 	cursor: pointer;
 
 }
+
+@tailwind utilities;
 

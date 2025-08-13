@@ -28,7 +28,8 @@
   },
   "home": {
     "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
-    "CADA_PRODUCTO_LLEGA": "Each product reaches its destination with the promise of something <span style='font-size: 36px; font-family: popRare'>well made</span>.",
+    "CADA_PRODUCTO_LLEGA": "Each product reaches its destination with the promise of something ",
+    "BIEN_HECHO": "well made",
     "YA_NOS_CONOCES": "Do you know us already?",
     "LIMON_MANGO": "Lime, pineapple, dragon fruit, mango, avocado, coffee, cocoa.",
     "compromise_items": [
@@ -87,7 +88,7 @@
     "LLEVANDO_TU_MESA": "Bringing to your table <br /> the essence of nature.",
     "NUESTRO_COMPROMISO": "Our <br/> commitment",
     "NUESTRO_EMPAQUE": "Packaging That Protects and Enhances Our Product",
-    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail — packaging is no exception.",
+    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail. Packaging is no exception.",
     "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials like corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
     "NUESTRA_RUTA": "Our <br/> Tropical Route"
   },

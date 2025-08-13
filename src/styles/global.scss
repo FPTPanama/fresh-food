@@ -303,10 +303,6 @@ opacity: 1;
 	cursor: pointer;
 }
 
-.hide {
-	visibility: hidden;
-	display: none;
-}
 
 .hideOnTablet {
 	@include tablet {

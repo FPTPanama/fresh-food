@@ -6,7 +6,7 @@ const GeneralLayout = ({ children, dictionary, showFooter = true, overflowHidden
   return (
     <div className={`flex flex-col items-center justify-between ${overflowHidden && 'overflow-hidden'} h-auto`}>
       <Header dictionary={dictionary} />
-      <div className="mt-[130px] flex flex-col w-full mb-10">{children}</div>
+      <div className="md:mt-[130px] flex flex-col w-full mb-10">{children}</div>
       {showFooter && <Footer dictionary={dictionary} />}
     </div>
   );

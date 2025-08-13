@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { i18n } from '../../i18n';
+import '@/styles/burger-menu.scss';
 import '@/styles/global.scss';
 import '@/styles/globals.css';
 import '@/styles/mixins.scss';

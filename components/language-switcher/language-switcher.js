@@ -23,20 +23,26 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <button
-      onClick={toggleLocale}
-      onMouseOver={() => setIsHover(true)}
-      onMouseOut={() => setIsHover(false)}
-      className={classNames('flex items-center justify-between gap-2 px-4 py-2 bg-greendark rounded-full text-white transition-all', {
-        grow: isHover,
-      })}
-    >
-      <div className="flex items-center justify-center gap-1">
+    <>
+      <button
+        onClick={toggleLocale}
+        onMouseOver={() => setIsHover(true)}
+        onMouseOut={() => setIsHover(false)}
+        className={classNames('hidden md:flex items-center justify-between gap-2 px-4 py-2 bg-greendark rounded-full text-white md:transition-all', {
+          grow: isHover,
+        })}
+      >
+        <div className="flex items-center justify-center gap-1">
+          <MdLanguage size={20} />
+          <span className="text-sm font-medium">{currentLocale.toUpperCase()}</span>
+        </div>
+        {isHover && <span className="text-sm">→ {currentLocale === 'es' ? 'EN' : 'ES'}</span>}
+      </button>
+      <button onClick={toggleLocale} className="flex md:!hidden items-center justify-center gap-1">
         <MdLanguage size={20} />
         <span className="text-sm font-medium">{currentLocale.toUpperCase()}</span>
-      </div>
-      {isHover && <span className="text-sm">→ {currentLocale === 'es' ? 'EN' : 'ES'}</span>}
-    </button>
+      </button>
+    </>
   );
 };
 
