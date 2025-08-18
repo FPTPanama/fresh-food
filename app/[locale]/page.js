@@ -85,7 +85,7 @@ export default async function Home({ params }) {
     <div className="flex flex-col responsiveWidth">
       <GeneralLayout dictionary={dictionary}>
         <div className="flex flex-col gap-14 w-full items-center justify-center">
-          <section className="flex flex-col w-full h-full mt-20 md:mt-0 md:h-[calc(100vh-180px)] items-center justify-center gap-7">
+          <section className="flex flex-col w-full h-full mt-10 md:mt-0 md:h-[calc(100vh-180px)] items-center justify-center gap-7">
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full">
               <div className="flex flex-col items-start md:items-end justify-center w-full md:w-2/6 text-greendark text-left md:text-right gap-5">
                 <h1 className="font-black text-l-600 md:text-l-800">{dictionary.home.LLEVAMOS_LA_FRUTA}</h1>
@@ -101,7 +101,7 @@ export default async function Home({ params }) {
                   {dictionary.home.YA_NOS_CONOCES}
                 </Link>
               </div>
-              <div className="flex items-center justify-center w-full md:w-2/6 h-[100px] mt-20 md:mt-0">
+              <div className="flex items-center justify-center w-full md:w-2/6 h-[100px] mt-44 md:mt-0">
                 <Image
                   className="mb-0 md:mb-28 md:h-auto md:w-[800px] absolute z-10"
                   src={'/img/frutas_con_zumo_ok.webp'}
@@ -146,10 +146,10 @@ export default async function Home({ params }) {
           </section>
           <section className="flex flex-col items-start justify-center w-full md:mt-14 text-greendark">
             <h2 className="font-black text-l-500 md:text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_COMPROMISO }} />
-            <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 md:gap-10 mt-10">
               {compromiseItems.map((item, key) => {
                 return (
-                  <div key={key} className="flex w-full flex-col justify-start items-center p-10 md:p-5 gap-5">
+                  <div key={key} className="flex w-full flex-col justify-start items-center p-0 md:p-5 gap-2 md:gap-5">
                     <div className="flex items-center justify-start w-full">{item.icon}</div>
                     <div className="flex flex-col items-start justify-start w-full gap-2">
                       <p className="font-black text-l-400 md:text-l-300 leading-2">{item.title}</p>
@@ -188,7 +188,7 @@ export default async function Home({ params }) {
             <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 mt-10">
               {RoadFruitMap.map((item, key) => {
                 return (
-                  <div key={key} className="flex w-full flex-col justify-start items-center p-5 gap-5">
+                  <div key={key} className="flex w-full flex-col justify-start items-center md:p-5 gap-5">
                     <div className="flex items-center justify-start w-full gap-3">
                       <p className="font-black text-l-600">{key + 1}</p>
                       {item.icon}
