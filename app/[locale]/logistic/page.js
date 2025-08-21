@@ -97,10 +97,10 @@ const Logistic = async ({ params }) => {
               return (
                 <div
                   key={key}
-                  className="md:snap-start h-auto md:h-[calc(100vh-130px)] flex flex-col items-center justify-between gap-10 md:px-8 md:py-12"
+                  className="md:snap-start h-auto md:h-[calc(100vh-130px)] flex flex-col items-center justify-between gap-2 md:gap-10 md:px-8 md:py-12"
                 >
                   <div className="flex items-center justify-start w-full">
-                    <div className="flex flex-col md:flex-row justify-start items-start md:items-center md:gap-2">
+                    <div className="flex flex-col md:flex-row md:justify-start items-start md:items-center md:gap-2">
                       <p className="font-black text-l-600 md:text-l-400">{key + 1}</p>
                       <TbPointFilled className="hidden md:block" />
                       <p className="text-l-300 md:text-l-400 font-black max-w-[300px]">{step.title.toUpperCase()}</p>
@@ -115,7 +115,7 @@ const Logistic = async ({ params }) => {
                         {step.especifications.map((spec, key) => {
                           return (
                             <div key={key} className="flex items-center w-full justify-start">
-                              <FaAngleRight className="w-1/12" size={20} />
+                              <FaAngleRight className="hidden md:block w-1/12" size={20} />
                               <p className="w-full md:w-11/12">{spec}</p>
                             </div>
                           );
