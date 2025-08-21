@@ -35,8 +35,8 @@ const page = async ({ params }) => {
   ];
 
   return (
-    <GeneralLayout dictionary={dictionary}>
-      <div className="responsiveWidth text-greendark">
+    <div className="responsiveWidth text-greendark">
+      <GeneralLayout dictionary={dictionary}>
         <div className="flex flex-col w-full gap-20">
           <section className="flex flex-col w-full h-auto md:h-[calc(100vh-180px)] items-center justify-center gap-7">
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full">
@@ -102,8 +102,8 @@ const page = async ({ params }) => {
             </div>
           </section>
         </div>
-      </div>
-    </GeneralLayout>
+      </GeneralLayout>
+    </div>
   );
 };
 
