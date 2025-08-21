@@ -79,7 +79,7 @@ const Logistic = async ({ params }) => {
               </div>
               <div className="md:flex items-center justify-center w-full md:w-1/3 h-24 md:h-32">
                 <Image
-                  className="w-3/5 z-50 relative bottom-40 left-20 md:bottom-10"
+                  className="w-3/5 md:w-full z-50 relative bottom-40 left-20 md:left-0 md:bottom-10"
                   src={'/img/aguacate_semilla_ok.webp'}
                   width={400}
                   height={500}
