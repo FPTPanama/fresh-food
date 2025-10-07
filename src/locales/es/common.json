@@ -1,0 +1,424 @@
+{
+    "header": {
+        "HOME": "Home",
+        "PRODUCTOS": "Productos",
+        "NOSOTROS": "Nosotros",
+        "LOGISTICA": "Logística",
+        "QUIERES_MAS_INFO": "¿Quieres más información?"
+    },
+    "form": {
+        "NAME": "Nombre",
+        "EMAIL": "Email",
+        "PHONE": "Teléfono",
+        "SEND": "Enviar"
+    },
+    "modal": {
+        "SENDING_YOUR_CONTACT": "Sending your contact",
+        "GRACIAS_POR_TU_MENSAJE": "Gracias por tu mensaje",
+        "TE_CONTACTAREMOS": "Te contactaremos lo más pronto posible",
+        "LISTO": "Listo"
+    },
+    "scroll_down": {
+        "DESLIZA_HACIA_ABAJO": "Desliza hacia abajo",
+        "DESLIZA_PARA_VER": "Desliza para ver"
+    },
+    "footer": {
+        "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
+        "CALLE_NUMERO": "Calle 55, PH SFC. Oficina 26D",
+        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá"
+    },
+    "home": {
+        "LLEVAMOS_LA_FRUTA": "Llevamos lo mejor a donde más importa",
+        "CADA_PRODUCTO_LLEGA": "Cada producto llega a su destino con la promesa de algo ",
+        "BIEN_HECHO": "bien hecho",
+        "YA_NOS_CONOCES": "¿Ya nos conoces?",
+        "LIMON_MANGO": "Limón, piña, pitahaya, mango, aguacate, café, cacao.",
+        "compromise_items": [
+          {
+            "TITLE": "Productos de calidad",
+            "TEXT": "De nuestra red de proveedores a su país."
+          },
+          {
+            "TITLE": "Logística internacional",
+            "TEXT": "Hacemos realidad su operación de inicio a fin."
+          },
+          {
+            "TITLE": "Disponibilidad",
+            "TEXT": "Nuestra cartera de productores garantiza disponibilidad todo el año."
+          },
+          {
+            "TITLE": "Calidad y compromiso",
+            "TEXT": "Nuestros clientes avalan la seriedad y transparencia de nuestras operaciones."
+          }
+        ],
+        "road_fruit_map": [
+          {
+            "TITLE": "Recolección en el campo",
+            "TEXT": "Nuestra red de proveedores realiza una primera selección de las mejores frutas y registra el lote en condiciones óptimas."
+          },
+          {
+            "TITLE": "Transporte a la planta de empaque",
+            "TEXT": "Transporte refrigerado y viajes cortos, evitando pérdida de calidad en los productos."
+          },
+          {
+            "TITLE": "Procesamiento y empaque",
+            "TEXT": "Las frutas se lavan y desinfectan, se clasifican por tamaño, color y madurez. Se empacan con trazabilidad, se preenfrían y se emiten certificados fitosanitarios según el país de destino."
+          },
+          {
+            "TITLE": "Transporte al puerto de salida",
+            "TEXT": "En camiones refrigerados para mantener la cadena de frío, junto con la documentación como factura, certificado fitosanitario, lista de empaque, certificado de origen, etc."
+          },
+          {
+            "TITLE": "Exportación y carga en contenedor marítimo",
+            "TEXT": "Despacho de aduana y revisión por autoridades sanitarias. La carga se consolida y el contenedor se sella y se configura a la temperatura adecuada."
+          },
+          {
+            "TITLE": "Transporte marítimo internacional",
+            "TEXT": "El contenedor es rastreado por GPS y se monitorea la temperatura durante todo el trayecto para asegurar la cadena de frío. El tiempo de tránsito varía entre 7 y 25 días según el destino."
+          },
+          {
+            "TITLE": "Llegada al puerto de destino",
+            "TEXT": "El contenedor se descarga y es inspeccionado por las autoridades aduaneras y fitosanitarias locales. Si todo está en orden, la carga se libera tras la aprobación de los documentos."
+          },
+          {
+            "TITLE": "Distribución final al cliente",
+            "TEXT": "El transporte terrestre refrigerado entrega las frutas al cliente final."
+          }
+        ],
+        "AGRICULTORES_EXPERTOS": "Agricultores expertos de Panamá, Estados Unidos y Venezuela.",
+        "LLEVANDO_TU_MESA": "Llevando a tu mesa <br /> la esencia de la naturaleza.",
+        "NUESTRO_COMPROMISO": "Nuestro <br/> compromiso",
+        "NUESTRO_EMPAQUE": "Empaque que protege y realza nuestro producto",
+        "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "Cuidamos cada detalle. El empaque no es la excepción.",
+        "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "Materiales de alta calidad como cartón corrugado o papel kraft, ideales para proteger y conservar la frescura durante todo el trayecto.",
+        "NUESTRA_RUTA": "Nuestra <br/> Ruta Tropical"
+      },
+      "products": {
+        "CALIDAD_EN_MANOS": "La calidad nace en las manos que saben elegir.",
+        "DESDE_PRIMER_CORTE": "Desde el primer corte, cada fruto refleja la pasión y el conocimiento de nuestros agricultores.",
+        "SELECCIONAMOS_CON_ESMERO": "Seleccionamos con esmero lo mejor de nuestra tierra",
+        "YA_CONOCES_NUESTROS_PRODUCTOS": "¿Ya conoces nuestros productos?",
+        "NUESTROS_PRODUCTOS": "Nuestros Productos",
+        "fruits": [
+            {
+                "TITLE": "Limón Tahití",
+                "TITLE_TEC": "Citrus latifolia",
+                "NOTE": "También conocido como limón persa, lima persa, es muy popular en América Latina",
+                "DESCRIPCION": "El <span style='popBlack'>limón Tahití</span> es una variedad de lima sin semillas, de piel verde y sabor ácido, muy jugoso y popular en bebidas y cocina.",
+                "especificaciones": [
+                    {
+                        "PRESENTACIÓN": "A granel / en cajas plásticas o de cartón"
+                    },
+                    {
+                        "TAMAÑO / CALIBRE": "Calibres 110, 138, 175, 200"
+                    },
+                    {
+                        "COLOR": "Verde brillante uniforme"
+                    },
+                    {
+                        "PESO UNITARIO": "90 - 120 gramos"
+                    },
+                    {
+                        "CONTENIDO DE JUGO": ">= 45%"
+                    },
+                    {
+                        "EMPAQUE": "Cajas de 18 kg netos / 40 lbs"
+                    },
+                    {
+                        "ALMACENAMIENTO": "Refrigerado 8-10 degC; HR: 85-90%"
+                    },
+                    {
+                        "VIDA UTIL": "30 - 45 días"
+                    },
+                    {
+                        "ORIGEN": "Colombia, Veracruz-México"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Mango",
+                "TITLE_TEC": "Mangífera Indica",
+                "NOTE": "Pertenece a la misma familia botánica que el anacardo (marañón) y el pistacho: la familia Anacardiaceae.",
+                "DESCRIPCION": "El <span style='popBlack'>Mango</span> es altamente apreciado a nivel mundial por su sabor dulce, aroma intenso y pulpa jugosa. Destaca por su valor comercial y su versatilidad en la gastronomía.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden"
+                    },
+                    {
+                        "Peso unitario": "300 - 600 gramos"
+                    },
+                    {
+                        "Pulpa": "Amarilla intensa, firme, sin fibras"
+                    },
+                    {
+                        "Empaque": "Cajas de 4kg, 6kg, o 9 Kg netos"
+                    },
+                    {
+                        "Almacenamiento": "10-13 degC, HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "14 - 21 días"
+                    },
+                    {
+                        "Origen": "México, Perú, Venezuela"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Piña",
+                "TITLE_TEC": "Ananas Comosus",
+                "NOTE": "Cada 'cuadro' o escama en la cáscara de la piña proviene de una flor individual. Estas pequeñas frutas crecen juntas en un tallo central y se unen para formar lo que parece ser una sola fruta grande",
+                "DESCRIPCION": "Nuestra <span style='popBlack'>piña</span> con un sabor intenso, aroma fresco y un alto contenido de azúcar natural, nuestra piña es ideal para exportación gracias a su excelente vida útil y presentación impecable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen": "Panamá"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Pitahaya fresca",
+                "TITLE_TEC": "Hylocereus undatus",
+                "NOTE": "Florece solo de noche, y sus flores duran una sola noche antes de marchitarse.",
+                "DESCRIPCION": "Exótica, nutritiva y visualmente impactante, rica en antioxidantes, vitamina C y fibra, su pulpa dulce y refrescante la convierte en una opción ideal para una alimentación saludable.",
+                "especificaciones": [
+                    {
+                        "Variedad": "MD2 (Golden Sweet / Extra Sweet)"
+                    },
+                    {
+                        "Peso unitario": "1.0 - 2.5 kg"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 12 kg"
+                    },
+                    {
+                        "Almacenamiento": "7 - 10 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "15 - 25 días"
+                    },
+                    {
+                        "Origen": "Panamá"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Aguacate",
+                "TITLE_TEC": "Persea americana",
+                "NOTE": "Su polinización es muy compleja porque sus flores tienen sexos alternos: cada flor funciona como hembra por unas horas y luego como macho al día siguiente",
+                "DESCRIPCION": "El aguacate es esa delicia cremosa y versátil que lo mismo va en una tostada que en un guacamole. Con su textura suave y sabor suavecito, es como el abrazo verde de la naturaleza. ¡Perfecto para darle alegría a cualquier platillo! ",
+                "especificaciones": [
+                    {
+                        "Variedad": "Hass"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 4 kg"
+                    },
+                    {
+                        "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá, México, Colombia"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Cacao",
+                "TITLE_TEC": "Theobroma cacao",
+                "NOTE": "Los insectos que lo polinizan son diminutos mosquitos del género Forcipomyia, y no abejas, como mucha gente piensa.",
+                "DESCRIPCION": "Ofrecemos cacao en grano 100% natural, seleccionado cuidadosamente y secado al sol. Ideal para la industria chocolatera y de alimentos.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Criollo / Trinitario / Forastero"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Empaque": "Cajas de cartón de 4 kg"
+                    },
+                    {
+                        "Almacenamiento": "5 - 7 degC; HR: 85-90%"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá, México, Colombia"
+                    }
+                ]
+            },
+            {
+                "TITLE": "Café",
+                "TITLE_TEC": "Coffea",
+                "NOTE": "Una curiosidad muy interesante del café es que la cafeína actúa como un pesticida natural para la planta.",
+                "DESCRIPCION": "Es el sabor de nuestra tierra y el cariño de nuestra gente en cada grano. Cultivado a mano en altitudes ideales, cuidadosamente seleccionado y tostado con pasión, ofrece una taza aromática, suave y llena de carácter. Perfecto para quienes valoran calidad, origen y una experiencia auténtica.",
+                "especificaciones": [
+                    {
+                        "Variedad": "Coffea arabica / robusta"
+                    },
+                    {
+                        "Peso unitario": "150 - 350 g"
+                    },
+                    {
+                        "Proceso": "Lavado / Natural / Honey / Anaeróbico"
+                    },
+                    {
+                        "Humedad": "10-12%"
+                    },
+                    {
+                        "Empaque": "Sacos de yute de 60 kg con bolsa GrainPro"
+                    },
+                    {
+                        "Almacenamiento": "8 - 12 meses"
+                    },
+                    {
+                        "Vida útil": "21 - 30 días"
+                    },
+                    {
+                        "Origen": "Panamá - Chiriquí, Veraguas, Colombia"
+                    }
+                ]
+            }
+        ],
+        "ESPECIFICACIONES": "Especificaciones",
+        "QUIERO_SABER_MAS": "Quiero saber más"
+      },
+    "about_us": {
+        "FRUTA_FRESCA_PRINCIPIO_FIN": "Fruta fresca desde la recolección hasta el cliente.",
+        "FRESH_FOOD_GARANTIZAMOS": "En Fresh Food garantizamos una cadena de suministro controlada desde el origen hasta su entrega final.",
+        "SIN_INTERMEDIARIOS": "Sin intermediarios entre la fruta y nuestro transporte.",
+        "LA_UNICA_MANERA_DE_GARANTIZAR": "La única manera de garantizar y certificar nuestro producto bajo estricto criterio de calidad, frescura y valor nutricional.",
+        "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "Seguimos protocolos rigurosos que aseguran la integridad del producto durante todo el proceso logístico.",
+        "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Tu confianza, nuestra prioridad.",
+        "SABEMOS_QUE_ELEGIR_ALIMENTOS": "Elegir alimentos importados implica confiar en el proceso. Por eso, trabajamos cada día para optimizar nuestros sistemas de abastecimiento y asegurar que recibas lo mejor.",
+        "pack": {
+            "CONTROL_TEMPERATURA": "Control de temperatura en tránsito y almacenamiento",
+            "EMPAQUE_ESPECIALIZADO": "Empaque especializado para productos perecederos",
+            "SEGUIMIENTO_TIEMPO_REAL": "Seguimiento en tiempo real de la trazabilidad del embarque",
+            "CUMPLIMIENTO_NORMATIVAS": "Cumplimiento de normativas sanitarias y fitosanitarias internacionales",
+            "MANTENEMOS_CADENA": "Mantenemos la cadena de frío desde el origen hasta el destino para preservar la frescura de las frutas.",
+            "UTILIZAMOS_EMPAQUES": "Utilizamos empaques diseñados para proteger frutas tropicales durante el transporte internacional.",
+            "OFRECEMOS_MONITOREO": "Ofrecemos monitoreo en tiempo real de cada embarque, desde la finca hasta el cliente final.",
+            "CUMPLIMOS_ESTANDARES": "Cumplimos con estándares globales que garantizan calidad, inocuidad y acceso a mercados exigentes."
+        }
+    },
+    "contact": {
+        "AQUI_PUEDES_COMUNICARTE": "Aquí puedes comunicarte con nosotros.",
+        "CALLE": "Calle 55, PH SFC. Oficina 26D Obarrio,",
+        "CIUDAD": "Ciudad de Panamá, Panamá",
+        "DEJANOS_TUS_DATOS": "Déjanos tus datos y te llamamos"
+    },
+    "logistic": {
+        "Y_ESTA_ES_NUESTRA_RUTA": "Y esta es nuestra ruta natural",
+        "DONDE_COMIENZA": "Donde comienza el sabor de nuestros productos, del campo hasta la mesa.",
+        "SABEMOS_QUE_PARA_CONFIAR": " Sabemos que para confiar en la calidad de nuestras frutas tropicales, necesitas conocer cómo las manejamos durante todo el proceso de transporte.",
+        "QUEREMOS_EXPLICARTE": " Queremos explicarte con claridad qué ocurre desde el momento en que el recolector cosecha la fruta hasta que llega a tus manos.",
+        "ruta_tropical": [
+            {
+                "TITLE": "Recolección en el campo",
+                "DESCRIPTION": "Nuestra red de proveedores realiza una primera selección de las mejores frutas y registra el lote en condiciones óptimas.",
+                "specifications": [
+                    "Cosecha en el punto óptimo de madurez, basada en índices Brix, color y firmeza.",
+                    "Personal capacitado → cortes limpios que minimizan magulladuras.",
+                    "Selección primaria en sitio: se descartan frutos con defectos visibles.",
+                    "Registro digital del lote (finca, parcela, fecha y hora) en una app de trazabilidad compatible con GlobalG.A.P.",
+                    "Pre‑enfriado en sombra y uso de bins ventilados para bajar la pulpa de °C de campo a < 24 °C antes del transporte."
+              ]
+            },
+            {
+                "TITLE": "Transporte a la planta de empaque",
+                "DESCRIPTION": "Transporte refrigerado y viajes cortos, evitando pérdida de calidad en los productos.",
+                "specifications": [
+                    "Camiones refrigerados (0‑5 °C) sanitizados antes de cada carga.",
+                    "Viajes < 3 h para evitar rotura de la cadena de frío.",
+                    "Data‑loggers que registran temperatura y humedad relativa cada 15 min.",
+                    "Seguro de transporte con cobertura “door to door”, gestión de incidencias en tiempo real vía GPS."
+              ]
+            },
+            {
+                "TITLE": "Procesamiento y empaque",
+                "DESCRIPTION": "Las frutas se lavan, clasifican, empacan y se emiten certificados fitosanitarios según el país de destino.",
+                "specifications": [
+                    "Lavado con solución clorada (100‑150 ppm) y enjuague con agua potable.",
+                    "Clasificación óptica por tamaño, color y defecto superficial.",
+                    "Empaque en cajas de cartón certificado FSC con liners microperforados para controlar etileno.",
+                    "Pre‑enfriamiento forzado (forced‑air) a la temperatura objetivo del producto.",
+                    "Etiquetado con código QR que vincula a la trazabilidad completa y a los certificados fitosanitarios emitidos."
+              ]
+            },
+            {
+                "TITLE": "Transporte al puerto de salida",
+                "DESCRIPTION": "En camiones refrigerados para mantener la cadena de frío, junto con la documentación requerida.",
+                "specifications": [
+                    "Transferencia directa a cámaras de consolidación a 0‑2 °C.",
+                    "Verificación de documentos: factura, lista de empaque, certificado de origen, Phyto Certificate, registro FDA, BL draft.",
+                    "Inspección de contenedores con pistolas láser para garantizar –1 °C ±0,5 antes de la carga."
+              ]
+            },
+            {
+                "TITLE": "Exportación y carga en contenedor marítimo",
+                "DESCRIPTION": "Despacho de aduana, revisión sanitaria y configuración del contenedor a la temperatura adecuada.",
+                "specifications": [
+                    "Despacho aduanero electrónico (Ventanilla Única Marítima).",
+                    "Inspección SENASA/MIDA y liberación sanitaria.",
+                    "Contenedor reefer sellado (plomo aduanero) y configuración de set‑point, ventilación y humedad según tipo de fruta.",
+                    "Inserción de termógrafos y sondas remotas para monitoreo continuo.",
+                    "Reporte “Pre‑Trip Inspection” firmado y archivado en la nube."
+              ]
+            },
+            {
+                "TITLE":  "Transporte marítimo internacional",
+                "DESCRIPTION": "El contenedor es monitoreado para asegurar la cadena de frío durante todo el trayecto.",
+                "specifications": [
+                    "Seguimiento satelital y alertas automáticas si la temperatura se desvía > 1 °C.",
+                    "Opción de atmósfera controlada (CA/MA) para productos sensibles.",
+                    "Tránsito 7‑25 días, con envío de status updates semanales al cliente.",
+                    "Seguro de carga con cláusula ICC(A) y cobertura de avería particular."
+              ]
+            },
+            {
+                "TITLE": "Llegada al puerto de destino",
+                "DESCRIPTION": "El contenedor es descargado, inspeccionado y liberado tras la aprobación documental.",
+                "specifications": [
+                    "Descarga, inspección fitosanitaria y liberación por la Autoridad Aduanera local.",
+                    "Comparación de logs de temperatura con los registrados en origen para validar la cadena de frío.",
+                    "Si procede, fumigación o muestreo para residuos de pesticidas.",
+                    "Coordinación de drayage hasta almacén frigorífico o centro de distribución."
+              ]
+            },
+            {
+                "TITLE": "Distribución final al cliente",
+                "DESCRIPTION": "El transporte terrestre refrigerado entrega las frutas al cliente final.",
+                "specifications": [
+                    "Transporte refrigerado (0‑5 °C) con rutas optimizadas para disminuir tiempos de entrega.",
+                    "Control de calidad en destino: inspección visual, medición Brix y temperatura de pulpa.",
+                    "Entrega “last mile” a supermercados, mayoristas o procesadores, con POD electrónico (Proof of Delivery).",
+                    "Encuesta de satisfacción y retroalimentación para mejora continua."
+              ]
+            }
+          ]
+          
+
+    }
+}

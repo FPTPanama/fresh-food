@@ -1,0 +1,328 @@
+{
+  "header": {
+    "HOME": "Home",
+    "PRODUCTOS": "Products",
+    "NOSOTROS": "About Us",
+    "LOGISTICA": "Logistics",
+    "QUIERES_MAS_INFO": "Want more information?"
+  },
+  "form": {
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "SEND": "Send"
+  },
+  "modal": {
+    "SENDING_YOUR_CONTACT": "Sending your contact",
+    "GRACIAS_POR_TU_MENSAJE": "Thank you for your message",
+    "TE_CONTACTAREMOS": "We will contact you as soon as possible",
+    "LISTO": "Done"
+  },
+  "scroll_down": {
+    "DESLIZA_HACIA_ABAJO": "Scroll down"
+  },
+  "footer": {
+    "CENTRO_PRINCIPAL": "Its main contracting center is located in <span class='font-black'>Miami</span>, <span class='font-black'>United States</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
+    "CALLE_NUMERO": "55th Street, PH SFC. Office 26D",
+    "PAIS_CIUDAD": "Obarrio, Panama City, Panama"
+  },
+  "home": {
+    "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
+    "CADA_PRODUCTO_LLEGA": "Each product reaches its destination with the promise of something ",
+    "BIEN_HECHO": "well made",
+    "YA_NOS_CONOCES": "Do you know us already?",
+    "LIMON_MANGO": "Lime, pineapple, dragon fruit, mango, avocado, coffee, cocoa.",
+    "compromise_items": [
+      {
+        "TITLE": "Quality products",
+        "TEXT": "From our supplier network to your country."
+      },
+      {
+        "TITLE": "International logistics",
+        "TEXT": "We make your operation a reality from start to finish."
+      },
+      {
+        "TITLE": "Availability",
+        "TEXT": "Our portfolio of producers guarantees year-round availability."
+      },
+      {
+        "TITLE": "Quality and commitment",
+        "TEXT": "Our clients endorse the seriousness and transparency of our operations."
+      }
+    ],
+    "road_fruit_map": [
+      {
+        "TITLE": "Field harvesting",
+        "TEXT": "Our supplier network performs the first selection of the best fruits and registers the batch in optimal condition."
+      },
+      {
+        "TITLE": "Transport to packing plant",
+        "TEXT": "Refrigerated transport and short trips, preventing quality loss in the products."
+      },
+      {
+        "TITLE": "Processing and packing",
+        "TEXT": "Fruits are washed and disinfected, sorted by size, color, and ripeness. Packed in traceable packaging, pre-cooled, and phytosanitary certificates are issued according to the destination country."
+      },
+      {
+        "TITLE": "Transport to port of departure",
+        "TEXT": "In refrigerated trucks to maintain the cold chain, along with documentation such as invoice, phytosanitary certificate, packing list, certificate of origin, etc."
+      },
+      {
+        "TITLE": "Export and loading into maritime container",
+        "TEXT": "Customs clearance and inspection by health authorities. Cargo is consolidated and the container is sealed and configured to the right temperature."
+      },
+      {
+        "TITLE": "International maritime transport",
+        "TEXT": "The container is GPS-tracked, and temperature is monitored throughout the journey to maintain the cold chain, with transit times ranging from 7 to 25 days depending on destination."
+      },
+      {
+        "TITLE": "Arrival at destination port",
+        "TEXT": "Container is unloaded and inspected by local customs and phytosanitary authorities. If everything is in order, cargo is released once documents are approved."
+      },
+      {
+        "TITLE": "Final distribution to client",
+        "TEXT": "Refrigerated land transport delivers the fruits to the final customer."
+      }
+    ],
+    "AGRICULTORES_EXPERTOS": "Expert farmers from Panama, the United States, and Venezuela.",
+    "LLEVANDO_TU_MESA": "Bringing to your table <br /> the essence of nature.",
+    "NUESTRO_COMPROMISO": "Our <br/> commitment",
+    "NUESTRO_EMPAQUE": "Packaging That Protects and Enhances Our Product",
+    "GARANTIZAMOS_SEGURIDAD_REQUERIMIENTOS": "We take care of every detail. Packaging is no exception.",
+    "UTILIZAMOS_MATERIAL_ALTA_CALIDAD": "High-quality materials like corrugated cardboard or kraft paper, ideal for protecting and preserving freshness throughout the journey.",
+    "NUESTRA_RUTA": "Our <br/> Tropical Route"
+  },
+  "products": {
+    "CALIDAD_EN_MANOS": "Quality is born in the hands that know how to choose.",
+    "DESDE_PRIMER_CORTE": "From the first cut, each fruit reflects our farmers' passion and knowledge.",
+    "SELECCIONAMOS_CON_ESMERO": "We carefully select the best from our land",
+    "YA_CONOCES_NUESTROS_PRODUCTOS": "Have you seen our products yet?",
+    "NUESTROS_PRODUCTOS": "Our Products",
+    "fruits": [
+      {
+        "TITLE": "Tahitian Lime",
+        "TITLE_TEC": "Citrus latifolia",
+        "NOTE": "Also known as Persian lime, it's very popular in Latin America.",
+        "DESCRIPCION": "<span style='popBlack'>Tahitian lime</span> is a seedless variety with green skin and acidic flavor, very juicy and popular in drinks and cooking.",
+        "especificaciones": [
+          { "Presentation": "Bulk / plastic or cardboard boxes" },
+          { "Size Grade": "Sizes 110, 138, 175, 200" },
+          { "Color": "Uniform bright green" },
+          { "Unit Weight": "90 - 120 grams" },
+          { "Juice Content": ">= 45%" },
+          { "Packaging": "18 kg net boxes / 40 lbs" },
+          { "Storage": "Refrigerated 8–10°C; RH: 85–90%" },
+          { "Shelf Life": "30 - 45 days" },
+          { "Origin": "Colombia, Veracruz-Mexico" }
+        ]
+      },
+      {
+        "TITLE": "Mango",
+        "TITLE_TEC": "Mangifera indica",
+        "NOTE": "Belongs to the same botanical family as cashew and pistachio: Anacardiaceae.",
+        "DESCRIPCION": "<span style='popBlack'>Mango</span> is prized worldwide for its sweet taste, intense aroma, and juicy pulp. It stands out for its commercial value and culinary versatility.",
+        "especificaciones": [
+          { "Variety": "Tommy Atkins / Kent / Ataulfo / Keitt / Haden" },
+          { "Unit Weight": "300 - 600 grams" },
+          { "Flesh": "Deep yellow, firm, fiberless" },
+          { "Packaging": "4kg, 6kg, or 9kg net boxes" },
+          { "Storage": "10–13°C; RH: 85–90%" },
+          { "Shelf Life": "14 - 21 days" },
+          { "Origin": "Mexico, Peru, Venezuela" }
+        ]
+      },
+      {
+        "TITLE": "Pineapple",
+        "TITLE_TEC": "Ananas comosus",
+        "NOTE": "Each 'eye' on the pineapple skin is from a single flower, fused into one fruit.",
+        "DESCRIPCION": "Our <span style='popBlack'>pineapple</span> has intense flavor, fresh aroma, and high natural sugar content. Ideal for export due to its excellent shelf life and flawless presentation.",
+        "especificaciones": [
+          { "Variedad": "MD2 (Golden Sweet / Extra Sweet)" },
+          { "Peso unitario": "1.0 - 2.5 kg" },
+          { "Empaque": "12 kg cardboard boxes" },
+          { "Almacenamiento": "7–10°C; RH: 85–90%" },
+          { "Vida útil": "15 - 25 days" },
+          { "Origen": "Panama" }
+        ]
+      },
+      {
+        "TITLE": "Fresh Dragon Fruit",
+        "TITLE_TEC": "Hylocereus undatus",
+        "NOTE": "Blooms only at night and flowers last for a single night.",
+        "DESCRIPCION": "Exotic, nutritious, and visually striking. Rich in antioxidants, vitamin C, and fiber. Its sweet, refreshing pulp makes it ideal for healthy eating.",
+        "especificaciones": [
+          { "Variety": "MD2 (Golden Sweet / Extra Sweet)" },
+          { "Unit Weight": "1.0 - 2.5 kg" },
+          { "Packaging": "12 kg cardboard boxes" },
+          { "Storage": "7–10°C; RH: 85–90%" },
+          { "Shelf Life": "15 - 25 days" },
+          { "Origin": "Panama" }
+        ]
+      },
+      {
+        "TITLE": "Avocado",
+        "TITLE_TEC": "Persea americana",
+        "NOTE": "Its pollination is complex—each flower functions as female for a few hours, then as male the next day.",
+        "DESCRIPCION": "Avocado is that creamy, versatile delight perfect on toast or in guacamole. With a soft texture and smooth flavor, it's nature’s green hug—ready to brighten any dish!",
+        "especificaciones": [
+          { "Variety": "Hass" },
+          { "Unit Weight": "150 - 350 g" },
+          { "Packaging": "4 kg cardboard boxes" },
+          { "Storage": "5–7°C; RH: 85–90%" },
+          { "Shelf Life": "21 - 30 days" },
+          { "Origin": "Panama, Mexico, Colombia" }
+        ]
+      },
+      {
+        "TITLE": "Cocoa",
+        "TITLE_TEC": "Theobroma cacao",
+        "NOTE": "Pollinated by tiny midges of the Forcipomyia genus, not bees as commonly believed.",
+        "DESCRIPCION": "We offer 100% natural cocoa beans, carefully selected and sun-dried. Perfect for the chocolate and food industries.",
+        "especificaciones": [
+          { "Variety": "Criollo / Trinitario / Forastero" },
+          { "Unit Weight": "150 - 350 g" },
+          { "Packaging": "4 kg cardboard boxes" },
+          { "Storage": "5–7°C; RH: 85–90%" },
+          { "Shelf Life": "21 - 30 days" },
+          { "Origin": "Panama, Mexico, Colombia" }
+        ]
+      },
+      {
+        "TITLE": "Coffee",
+        "TITLE_TEC": "Coffea",
+        "NOTE": "Caffeine acts as a natural pesticide for the coffee plant.",
+        "DESCRIPCION": "The flavor of our land and the love of our people in every bean. Hand-grown at ideal altitudes, carefully selected and roasted with passion. An aromatic, smooth, and character-filled cup—perfect for those who value quality, origin, and authenticity.",
+        "especificaciones": [
+          { "Variety": "Coffea arabica / robusta" },
+          { "Unit Weight": "150 - 350 g" },
+          { "Process": "Washed / Natural / Honey / Anaerobic" },
+          { "Moisture": "10–12%" },
+          { "Packaging": "60 kg jute bags with GrainPro liner" },
+          { "Storage": "8–12 months" },
+          { "Shelf Life": "21 - 30 days" },
+          { "Origin": "Panama – Chiriquí, Veraguas, Colombia" }
+        ]
+      }
+    ],
+    "ESPECIFICACIONES": "Specifications",
+    "QUIERO_SABER_MAS": "I want to know more"
+  },
+  "about_us": {
+    "FRUTA_FRESCA_PRINCIPIO_FIN": "Fresh fruit from harvest to customer.",
+    "FRESH_FOOD_GARANTIZAMOS": "At Fresh Food, we guarantee a controlled supply chain from origin to final delivery.",
+    "SIN_INTERMEDIARIOS": "No intermediaries between the fruit and our transport.",
+    "LA_UNICA_MANERA_DE_GARANTIZAR": "The only way to guarantee and certify our product under strict standards of quality, freshness, and nutritional value.",
+    "SEGUIMOS_PROTOCOLOS_RIGUROSOS": "We follow rigorous protocols to ensure the product’s integrity throughout the entire logistics process.",
+    "TU_CONFIANZA_NUESTRA_PRIORIDAD": "Your trust is our priority.",
+    "SABEMOS_QUE_ELEGIR_ALIMENTOS": "Choosing imported food means trusting the process. That’s why we work every day to optimize our supply systems and ensure you receive the best.",
+    "pack": {
+      "CONTROL_TEMPERATURA": "Temperature control during transit and storage",
+      "EMPAQUE_ESPECIALIZADO": "Specialized packaging for perishable products",
+      "SEGUIMIENTO_TIEMPO_REAL": "Real-time tracking of shipment traceability",
+      "CUMPLIMIENTO_NORMATIVAS": "Compliance with international sanitary and phytosanitary regulations",
+      "MANTENEMOS_CADENA": "We maintain the cold chain from origin to destination to preserve fruit freshness.",
+      "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
+      "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
+      "CUMPLIMOS_ESTANDARES": "We meet global standards that ensure quality, safety, and access to demanding markets."
+    }
+  },
+  "contact": {
+    "AQUI_PUEDES_COMUNICARTE": "Here you can get in touch with us.",
+    "CALLE": "55th Street, PH SFC. Office 26D Obarrio,",
+    "CIUDAD": "Panama City, Panama",
+    "DEJANOS_TUS_DATOS": "Leave us your information and we’ll call you"
+  },
+  "logistic": {
+    "Y_ESTA_ES_NUESTRA_RUTA": "And this is our natural route",
+    "DONDE_COMIENZA": "Where the flavor of our products begins — from the field to the table.",
+    "SABEMOS_QUE_PARA_CONFIAR": "We know that to trust the quality of our tropical fruits, you need to understand how we handle them throughout the transportation process.",
+    "QUEREMOS_EXPLICARTE": "We want to clearly explain what happens from the moment the fruit is harvested until it reaches your hands.",
+    "ruta_tropical": [
+      {
+        "TITLE": "Field collection",
+        "DESCRIPTION": "Our supplier network performs an initial selection of the best fruits and records the batch under optimal conditions.",
+        "specifications": [
+          "Harvest at optimal ripeness, based on Brix index, color, and firmness.",
+          "Trained personnel → clean cuts to minimize bruising.",
+          "On-site primary selection: fruits with visible defects are discarded.",
+          "Digital batch registration (farm, plot, date and time) using a traceability app compatible with GlobalG.A.P.",
+          "Pre-cooling in shade and use of ventilated bins to lower pulp temperature to < 24 °C before transport."
+        ]
+      },
+      {
+        "TITLE":  "Transport to packing plant",
+        "DESCRIPTION": "Refrigerated transport and short travel times to avoid loss of product quality.",
+        "specifications": [
+          "Refrigerated trucks (0–5 °C) sanitized before each trip.",
+          "Trips < 3 hours to prevent cold chain break.",
+          "Data loggers record temperature and relative humidity every 15 minutes.",
+          "Transport insurance with door-to-door coverage and real-time GPS incident tracking."
+        ]
+      },
+      {
+        "TITLE": "Processing and packing",
+        "DESCRIPTION": "Fruits are washed, sorted, packed, and phytosanitary certificates are issued according to the destination country.",
+        "specifications": [
+          "Washing with chlorinated solution (100–150 ppm) and rinsing with potable water.",
+          "Optical sorting by size, color, and surface defects.",
+          "Packing in FSC-certified cardboard boxes with micro-perforated liners to control ethylene.",
+          "Forced-air pre-cooling to the product’s target temperature.",
+          "Labeling with QR code linked to full traceability and issued phytosanitary certificates."
+        ]
+      },
+      {
+        "TITLE": "Transport to export port",
+        "DESCRIPTION": "Refrigerated trucks maintain the cold chain, along with the required export documentation.",
+        "specifications": [
+          "Direct transfer to consolidation chambers at 0–2 °C.",
+          "Verification of documents: invoice, packing list, certificate of origin, phytosanitary certificate, FDA registration, draft BL.",
+          "Inspection of containers using laser guns to ensure –1 °C ±0.5 before loading."
+        ]
+      },
+      {
+        "TITLE": "Export and container loading",
+        "DESCRIPTION": "Customs clearance, sanitary inspection, and container configuration at the appropriate temperature.",
+        "specifications": [
+          "Electronic customs clearance (Maritime Single Window).",
+          "SENASA/MIDA inspection and sanitary release.",
+          "Reefer container sealed (customs seal) and configured with set-point, ventilation, and humidity based on fruit type.",
+          "Insertion of thermographs and remote probes for continuous monitoring.",
+          "Signed Pre-Trip Inspection report archived in the cloud."
+        ]
+      },
+      {
+        "TITLE": "International maritime transport",
+        "DESCRIPTION": "The container is monitored to ensure the cold chain throughout the journey.",
+        "specifications": [
+          "Satellite tracking and automatic alerts if temperature deviates > 1 °C.",
+          "Controlled Atmosphere (CA/MA) available for sensitive products.",
+          "Transit time of 7–25 days, with weekly status updates to the client.",
+          "Cargo insurance with ICC(A) clause and coverage for particular damage."
+        ]
+      },
+      {
+        "TITLE": "Arrival at destination port",
+        "DESCRIPTION": "The container is unloaded, inspected, and released after document approval.",
+        "specifications": [
+          "Unloading, local phytosanitary inspection, and release by local customs authority.",
+          "Comparison of temperature logs with those recorded at origin to validate cold chain.",
+          "If necessary, fumigation or pesticide residue sampling.",
+          "Coordination of drayage to cold storage or distribution center."
+        ]
+      },
+      {
+        "TITLE":"Final distribution to client",
+        "DESCRIPTION": "Refrigerated ground transport delivers the fruit to the final customer.",
+        "specifications": [
+          "Refrigerated transport (0–5 °C) with optimized routes to reduce delivery time.",
+          "Quality control at destination: visual inspection, Brix measurement, and pulp temperature check.",
+          "Last-mile delivery to supermarkets, wholesalers, or processors, with electronic Proof of Delivery (POD).",
+          "Satisfaction survey and feedback for continuous improvement."
+        ]
+      }
+    ]
+    
+  }
+
+
+}
