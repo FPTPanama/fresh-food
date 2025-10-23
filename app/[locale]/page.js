@@ -108,6 +108,8 @@ export default async function Home({ params }) {
                   width={700}
                   height={200}
                   alt="frutas con zumo"
+                  priority
+                  quality={90}
                 />
               </div>
               <div className="flex flex-col items-start justify-center w-full md:w-2/6 h-ful gap-5">
@@ -166,7 +168,14 @@ export default async function Home({ params }) {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5">
               <div className="flex items-center justify-center w-full">
-                <Image src={'/img/mangos_box_ok.webp'} width={400} height={200} alt="mangos en caja" />
+                <Image 
+                  src={'/img/mangos_box_ok.webp'} 
+                  width={400} 
+                  height={200} 
+                  alt="mangos en caja"
+                  loading="lazy"
+                  quality={85}
+                />
               </div>
               <div className="flex flex-col w-full items-center justify-center gap-5">
                 <p
@@ -179,7 +188,14 @@ export default async function Home({ params }) {
                 />
               </div>
               <div className="flex items-center justify-center w-full">
-                <Image src={'/img/pineapples_box_ok.webp'} width={400} height={200} alt="mangos en caja" />
+                <Image 
+                  src={'/img/pineapples_box_ok.webp'} 
+                  width={400} 
+                  height={200} 
+                  alt="piñas en caja"
+                  loading="lazy"
+                  quality={85}
+                />
               </div>
             </div>
           </section>

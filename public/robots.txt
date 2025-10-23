@@ -1,0 +1,16 @@
+# Fresh Food Panamá - Robots.txt
+# https://freshfoodpanama.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://freshfoodpanama.com/sitemap.xml
+
+# Crawl delay (optional, for heavy crawlers)
+Crawl-delay: 1
+

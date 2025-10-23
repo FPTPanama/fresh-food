@@ -7,6 +7,42 @@ import { LuPackageCheck } from 'react-icons/lu';
 import { MdTrackChanges } from 'react-icons/md';
 import { GrUserPolice } from 'react-icons/gr';
 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  
+  return {
+    title: locale === 'es'
+      ? 'Nosotros - Fresh Food Panamá | Exportadores de Confianza desde Centroamérica'
+      : 'About Us - Fresh Food Panama | Trusted Exporters from Central America',
+    description: locale === 'es'
+      ? 'Somos exportadores directos de frutas tropicales desde Panamá. Sin intermediarios, control de temperatura, empaque especializado y trazabilidad completa. Cumplimos estándares internacionales.'
+      : 'We are direct exporters of tropical fruits from Panama. No intermediaries, temperature control, specialized packaging, and complete traceability. We comply with international standards.',
+    keywords: locale === 'es'
+      ? 'exportadores frutas panamá, agroexportación centroamérica, trazabilidad alimentos, control temperatura frutas, certificaciones fitosanitarias'
+      : 'fruit exporters panama, central america agro-export, food traceability, fruit temperature control, phytosanitary certifications',
+    openGraph: {
+      title: locale === 'es' ? 'Nosotros - Fresh Food Panamá' : 'About Us - Fresh Food Panama',
+      description: locale === 'es'
+        ? 'Exportadores directos con más de 10 años de experiencia. Garantizamos calidad y frescura desde el origen.'
+        : 'Direct exporters with over 10 years of experience. We guarantee quality and freshness from the origin.',
+      url: `https://freshfoodpanama.com/${locale}/about-us`,
+      images: [{
+        url: 'https://freshfoodpanama.com/img/limon_tahiti_volando_v2.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Fresh Food Panama - About Us',
+      }],
+    },
+    alternates: {
+      canonical: `https://freshfoodpanama.com/${locale}/about-us`,
+      languages: {
+        'es': 'https://freshfoodpanama.com/es/about-us',
+        'en': 'https://freshfoodpanama.com/en/about-us',
+      },
+    },
+  };
+}
+
 const page = async ({ params }) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
@@ -51,6 +87,8 @@ const page = async ({ params }) => {
                   width={300}
                   height={400}
                   alt="limon tahiti"
+                  priority
+                  quality={90}
                 />
               </div>
             </div>

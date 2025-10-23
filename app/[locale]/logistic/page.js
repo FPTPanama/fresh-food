@@ -13,6 +13,42 @@ import Image from 'next/image';
 import React from 'react';
 import TitleScrollDisplay from 'components/title-scroll-display/title-scroll-display';
 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  
+  return {
+    title: locale === 'es'
+      ? 'Logística - Fresh Food Panamá | Cadena de Frío y Transporte Internacional'
+      : 'Logistics - Fresh Food Panama | Cold Chain and International Transport',
+    description: locale === 'es'
+      ? 'Nuestra ruta de exportación: desde la finca hasta tu destino. Control de temperatura, empaque especializado, trazabilidad GPS y cumplimiento fitosanitario. Transporte marítimo y terrestre.'
+      : 'Our export route: from farm to your destination. Temperature control, specialized packaging, GPS traceability and phytosanitary compliance. Maritime and land transport.',
+    keywords: locale === 'es'
+      ? 'logística frutas frescas, cadena de frío exportación, transporte marítimo frutas, contenedores refrigerados, trazabilidad exportación'
+      : 'fresh fruit logistics, cold chain export, fruit maritime transport, refrigerated containers, export traceability',
+    openGraph: {
+      title: locale === 'es' ? 'Logística - Fresh Food Panamá' : 'Logistics - Fresh Food Panama',
+      description: locale === 'es'
+        ? 'Seguimiento completo desde origen hasta destino. Garantizamos la cadena de frío.'
+        : 'Complete tracking from origin to destination. We guarantee the cold chain.',
+      url: `https://freshfoodpanama.com/${locale}/logistic`,
+      images: [{
+        url: 'https://freshfoodpanama.com/img/aguacate_semilla_ok.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Fresh Food Panama Logistics',
+      }],
+    },
+    alternates: {
+      canonical: `https://freshfoodpanama.com/${locale}/logistic`,
+      languages: {
+        'es': 'https://freshfoodpanama.com/es/logistic',
+        'en': 'https://freshfoodpanama.com/en/logistic',
+      },
+    },
+  };
+}
+
 const Logistic = async ({ params }) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
@@ -84,6 +120,8 @@ const Logistic = async ({ params }) => {
                   width={400}
                   height={500}
                   alt="aguacate en semilla"
+                  priority
+                  quality={90}
                 />
               </div>
               <div className="hidden md:flex flex-col items-start justify-center w-full md:w-1/3 gap-5">

@@ -243,29 +243,30 @@ opacity: 1;
 
   //slide-left-pestana
   .slide-left-pestana {
-	  @-webkit-keyframes slide-left-pestana {
-		  0% {
-			-webkit-transform: translateX(100px);
-					transform: translateX(100px);
-		  }
-		  100% {
-			-webkit-transform: translateX(0px);
-					transform: translateX(0px);
-		  }
-		}
-		@keyframes slide-left-pestana {
-		  0% {
-			-webkit-transform: translateX(100px);
-					transform: translateX(100px);
-		  }
-		  100% {
-			-webkit-transform: translateX(0px);
-					transform: translateX(0px);
-		  }
-		}
 	-webkit-animation: slide-left-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	}	
+	animation: slide-left-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	
+	@-webkit-keyframes slide-left-pestana {
+		0% {
+			-webkit-transform: translateX(100px);
+			transform: translateX(100px);
+		}
+		100% {
+			-webkit-transform: translateX(0px);
+			transform: translateX(0px);
+		}
+	}
+	@keyframes slide-left-pestana {
+		0% {
+			-webkit-transform: translateX(100px);
+			transform: translateX(100px);
+		}
+		100% {
+			-webkit-transform: translateX(0px);
+			transform: translateX(0px);
+		}
+	}
+}	
 
 	.slide-bottom {
 	
@@ -772,12 +773,12 @@ a:hover {
 }
 
 .linkHamburguesa {
+	font-size: 1em;
 	
 	@include mobile {
 		font-size: 1.5em !important;
 
 		h2 {
-
 			font-size: 1.5em;
 		}
 	}
@@ -786,7 +787,6 @@ a:hover {
 		font-size: 1.3em;
 
 		h2 {
-
 			font-size: 2.55em;
 		}
 	}
@@ -794,9 +794,6 @@ a:hover {
 	@include miniDesktop {
 		font-size: 1.1em;
 	}
-	
-	font-size: 1em;
-	
 }
 
   
