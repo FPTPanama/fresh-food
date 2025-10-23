@@ -3,6 +3,44 @@ import { getDictionary } from '@/lib/getDictionary';
 import Image from 'next/image';
 import React from 'react';
 import { TiInfoLarge } from 'react-icons/ti';
+import ProductSchema from '@/components/seo/ProductSchema';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const dictionary = await getDictionary(locale);
+  
+  return {
+    title: locale === 'es' 
+      ? 'Productos Fresh Food | Frutas Tropicales de Exportación - Limón, Mango, Piña'
+      : 'Fresh Food Products | Export Tropical Fruits - Lime, Mango, Pineapple',
+    description: locale === 'es'
+      ? 'Exportamos frutas frescas de alta calidad: Limón Tahití, Mango Kent, Piña Golden, Aguacate Hass, Pitahaya y Cacao. Productos certificados desde Panamá.'
+      : 'We export high-quality fresh fruits: Tahiti Lime, Kent Mango, Golden Pineapple, Hass Avocado, Dragon Fruit, and Cacao. Certified products from Panama.',
+    keywords: locale === 'es'
+      ? 'limón tahití exportación, mango kent panamá, piña golden, aguacate hass, pitahaya exportación, cacao panamá, frutas tropicales exportación'
+      : 'tahiti lime export, kent mango panama, golden pineapple, hass avocado, dragon fruit export, panama cacao, tropical fruits export',
+    openGraph: {
+      title: locale === 'es' ? 'Productos Fresh Food Panamá' : 'Fresh Food Panama Products',
+      description: locale === 'es'
+        ? 'Limón, Mango, Piña, Aguacate, Pitahaya y Cacao de alta calidad para exportación'
+        : 'High-quality Lime, Mango, Pineapple, Avocado, Dragon Fruit and Cacao for export',
+      url: `https://freshfoodpanama.com/${locale}/products`,
+      images: [{
+        url: 'https://freshfoodpanama.com/img/agricultor_con_pineapple_ok.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Fresh Food Panama Products',
+      }],
+    },
+    alternates: {
+      canonical: `https://freshfoodpanama.com/${locale}/products`,
+      languages: {
+        'es': 'https://freshfoodpanama.com/es/products',
+        'en': 'https://freshfoodpanama.com/en/products',
+      },
+    },
+  };
+}
 
 const Productos = async ({ params }) => {
   const { locale } = await params;
@@ -74,8 +112,10 @@ const Productos = async ({ params }) => {
     },
   ];
   return (
-    <div className="responsiveWidth gap-10">
-      <GeneralLayout dictionary={dictionary}>
+    <>
+      <ProductSchema locale={locale} />
+      <div className="responsiveWidth gap-10">
+        <GeneralLayout dictionary={dictionary}>
         <section className="flex md:mt-0 h-full md:h-[calc(100vh-180px)] flex-col w-full items-center justify-center gap-7">
           <div className="flex flex-col md:flex-row w-full items-center justify-between">
             <div className="flex flex-col items-start justify-center gap-5 w-full md:w-1/3">
@@ -91,6 +131,8 @@ const Productos = async ({ params }) => {
                 width={500}
                 height={300}
                 alt="agricultor con piña"
+                priority
+                quality={90}
               />
             </div>
             <div className="flex flex-col items-start justify-center w-full md:w-1/3 gap-5 p-0 md:p-5">
@@ -173,6 +215,7 @@ const Productos = async ({ params }) => {
         </section>
       </GeneralLayout>
     </div>
+    </>
   );
 };
 
