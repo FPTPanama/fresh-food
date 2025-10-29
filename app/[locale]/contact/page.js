@@ -4,6 +4,36 @@ import FormHrk from 'components/form/form-hrk';
 import Image from 'next/image';
 import React from 'react';
 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  
+  return {
+    title: locale === 'es'
+      ? 'Contacto - Fresh Food Panamá | Solicita una Cotización'
+      : 'Contact - Fresh Food Panama | Request a Quote',
+    description: locale === 'es'
+      ? 'Contáctanos para solicitar información sobre exportación de frutas tropicales. Respondemos en 24 horas. Oficinas en Panamá, atención internacional.'
+      : 'Contact us to request information about tropical fruit export. We respond within 24 hours. Offices in Panama, international service.',
+    keywords: locale === 'es'
+      ? 'contacto exportadores frutas, cotización exportación panamá, importar frutas tropicales, proveedores frutas frescas'
+      : 'contact fruit exporters, panama export quote, import tropical fruits, fresh fruit suppliers',
+    openGraph: {
+      title: locale === 'es' ? 'Contacto - Fresh Food Panamá' : 'Contact - Fresh Food Panama',
+      description: locale === 'es'
+        ? 'Solicita información o cotización. Estamos aquí para ayudarte.'
+        : 'Request information or a quote. We are here to help you.',
+      url: `https://freshfoodpanama.com/${locale}/contact`,
+    },
+    alternates: {
+      canonical: `https://freshfoodpanama.com/${locale}/contact`,
+      languages: {
+        'es': 'https://freshfoodpanama.com/es/contact',
+        'en': 'https://freshfoodpanama.com/en/contact',
+      },
+    },
+  };
+}
+
 const page = async ({ params }) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);

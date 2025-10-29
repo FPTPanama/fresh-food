@@ -4,6 +4,7 @@ import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import { FaGoogle } from 'react-icons/fa';
 import { RiTwitterXLine } from 'react-icons/ri';
 import dayjs from 'dayjs';
+import TridgeLogo from '@/components/logos/TridgeLogo';
 
 const Footer = ({ dictionary }) => {
   const currentYear = dayjs().year();
@@ -28,6 +29,11 @@ const Footer = ({ dictionary }) => {
       icon: <FaGoogle size={20} color="#224C22" />,
       url: '',
     },
+    {
+      red: 'tridge',
+      icon: <TridgeLogo width={20} height={20} color="#224C22" />,
+      url: 'https://www.tridge.com/seller/premium-profile-preview/BOH-c033c708',
+    },
   ];
   return (
     <div className="flex flex-col md:flex-row items-center justify-between h-auto md:h-[120px] w-full px-0 md:px-10 py-4 my-10 md:my-20 gap-5 md:gap-0">
@@ -48,11 +54,17 @@ const Footer = ({ dictionary }) => {
         <p>{dictionary?.footer?.PAIS_CIUDAD}</p>
 
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-3 mt-4 md:w-fit w-full">
-          <div className="grid grid-cols-4 mt-3 mb-3">
+          <div className="grid grid-cols-5 mt-3 mb-3 gap-2">
             {redSocItems.map((item, key) => {
               return (
                 <div key={key} className="flex items-center justify-center w-[40px] h-auto">
-                  <button>{item.icon}</button>
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                      {item.icon}
+                    </a>
+                  ) : (
+                    <button>{item.icon}</button>
+                  )}
                 </div>
               );
             })}
