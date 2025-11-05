@@ -29,51 +29,54 @@
 @font-face {
 	font-family: "popThin";
 	src: url("/fonts/pop_thin.ttf");
-	
+
 }
 @font-face {
 	font-family: "popRare";
 	src: url("/fonts/yesteryear.ttf");
-	
+
 }
+
 @font-face {
 	font-family: "popHomeMade";
 	src: url("/fonts/apple_homemade.ttf");
-	
+
 }
+
+
+
+
 $colors: (
 
-	freshBlanco: #e6efe2,
-	greenLight: #227432,
-	greenDark: #224C22,
-	freshOrange: #D17711,
-	fresh: #e6efe2,
+	colBlaHrk: #eee8e8,
+	azuOscHrk: #003889,
+	azuClaHrk: #2867be,
+	rojOscHrk: #8C0018,
+	rojClaHrk: #c91130,
 
 );
 
 
 :root {
-	
+
 	// Variables CSS generadas automáticamente a partir del map $colors
 	@each $name, $color in $colors {
 		// --colRoj: "red";
 		--#{$name}: #{$color};
 	}
-	
+
 }
 
-
-
-
+// ***********************************************************
+// Clases colores
+// ***********************************************************
 
 // Clases generadas automáticamente con el mismo nombre que el nombre del color
 @each $colorName, $color in $colors {
-	.#{"#{$colorName}"} {
+    .#{$colorName} {
        color: $color !important;
     }
 }
-
-.hueRotate {filter: hue-rotate(var(--hueRotate)) };
 
 
 
@@ -98,5 +101,5 @@ $fs7: calc( #{$fs5} * 1.75);
 $fs6: calc( #{$fs5} * 1.35);
 $fs4: calc( #{$fs5} * 0.70); // 30px
 $fs3: calc( #{$fs5} * 0.505); // 21px
-$fs2: calc( #{$fs5} * 0.43); // 18px 
-$fs1: calc( #{$fs5} * 0.368); // 15px 
+$fs2: calc( #{$fs5} * 0.43); // 18px
+$fs1: calc( #{$fs5} * 0.368); // 15px

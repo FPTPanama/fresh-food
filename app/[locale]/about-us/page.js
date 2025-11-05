@@ -6,6 +6,7 @@ import { TbTemperatureSnow } from 'react-icons/tb';
 import { LuPackageCheck } from 'react-icons/lu';
 import { MdTrackChanges } from 'react-icons/md';
 import { GrUserPolice } from 'react-icons/gr';
+import CertificationsSection from '@/components/certifications/CertificationsSection';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -114,7 +115,7 @@ const page = async ({ params }) => {
               >
                 <div className="flex items-center justify-start w-full h-full text-white p-5 md:p-10">
                   <div className="flex flex-col w-full md:w-1/3 gap-5">
-                    <h2 className="font-black text-l-400 md:text-l-600">{dictionary.about_us.SIN_INTERMEDIARIOS}</h2>
+                    <h2 className="font-black text-l-400 md:text-l-600 text-white">{dictionary.about_us.SIN_INTERMEDIARIOS}</h2>
                     <p className="text-l-200 md:text-l-300 font-reg">{dictionary.about_us.LA_UNICA_MANERA_DE_GARANTIZAR}</p>
                     <p className="text-l-200 md:text-l-300 font-reg">{dictionary.about_us.SEGUIMOS_PROTOCOLOS_RIGUROSOS}</p>
                   </div>
@@ -133,9 +134,10 @@ const page = async ({ params }) => {
               );
             })}
           </section>
+          
           <section className="flex flex-col w-full items-center justify-center">
             <div className="flex flex-col w-full md:w-1/3 gap-10">
-              <h2 className="text-l-600 md:text-l-900 font-bold">{dictionary.about_us.TU_CONFIANZA_NUESTRA_PRIORIDAD}</h2>
+              <h2 className="text-l-600 md:text-l-900 font-bold text-greendark">{dictionary.about_us.TU_CONFIANZA_NUESTRA_PRIORIDAD}</h2>
               <p className="text-l-300 md:text-l-400 font-reg leading-9">{dictionary.about_us.SABEMOS_QUE_ELEGIR_ALIMENTOS}</p>
             </div>
           </section>

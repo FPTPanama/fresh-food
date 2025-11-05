@@ -180,7 +180,7 @@ const Productos = async ({ params }) => {
                         </div>
                         <div className="flex flex-col items-center justify-center w-full md:w-1/3">
                           <p className="text-l-500 md:text-l-800 font-black text-white text-center z-10">{fruit.title}</p>
-                          <p className="font-homemade text-l-400 md:text-l-600 leading-9 text-white">{fruit.title_tec}</p>
+                          <p className="font-homemade text-l-400 md:text-l-600 leading-9 text-white font-homemade">{fruit.title_tec}</p>
                           <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full hover:px-14 transition-all hover:font-black">
                             {dictionary.products.QUIERO_SABER_MAS}
                           </button>
