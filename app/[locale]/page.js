@@ -147,7 +147,7 @@ export default async function Home({ params }) {
             </div>
           </section>
           <section className="flex flex-col items-start justify-center w-full md:mt-14 text-greendark">
-            <h2 className="font-black text-l-500 md:text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_COMPROMISO }} />
+            <h2 className="font-black text-l-500 md:text-l-600 text-greendark" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_COMPROMISO }} />
             <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 md:gap-10 mt-10">
               {compromiseItems.map((item, key) => {
                 return (
@@ -164,7 +164,7 @@ export default async function Home({ params }) {
           </section>
           <section className="flex flex-col items-start justify-center w-full  md:mt-14 gap-5 text-greendark">
             <div className="flex flex-col items-start justify-center max-w-[350px] gap-5">
-              <h2 className="font-black text-l-500 md:text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_EMPAQUE }} />
+              <h2 className="font-black text-l-500 md:text-l-600 text-greendark" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRO_EMPAQUE }} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5">
               <div className="flex items-center justify-center w-full">

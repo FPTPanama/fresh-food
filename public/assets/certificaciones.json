@@ -1,0 +1,225 @@
+{
+  "certificaciones": [
+    {
+      "id": "zuely-trelles-pitahaya",
+      "tipo": "GLOBALG.A.P. Integrated Farm Assurance (IFA) v6.0 GFS",
+      "tipoCorto": "GlobalG.A.P. IFA v6.0 GFS",
+      "numeroCertificado": "C0720542-GGIFA1IN4",
+      "ggn": "4063651260816",
+      "fechaEmision": "2025-10-29",
+      "validoDesde": "2025-10-29",
+      "validoHasta": "2026-10-28",
+      "tipoAuditoria": "Anunciada (Announced) y En Sitio (On site)",
+      "estado": "activo",
+      "verificacionOnline": "http://database.globalgap.org/globalgap/search/SearchMain.faces",
+      "organismoEmisor": {
+        "nombre": "NSF Certification, LLC",
+        "email": "kcaceres@nsf.org",
+        "direccion": "North Dixboro Road 789, 48105 Ann Arbor, Michigan, USA"
+      },
+      "productor": {
+        "nombre": "ZUELY TRELLES MARTINEZ",
+        "nombreLegal": "ZUELY YOCASTA TRELLES MARTINEZ",
+        "ubicacion": "El Cerecito, Rocafuerte, Manabí, Ecuador",
+        "direccion": "RECINTO EL CERECITO, ROCAFUERTE - MANABI",
+        "region": "COSTA",
+        "pais": "Ecuador",
+        "telefono": "0960156103",
+        "email": "zuelytrellesm@hotmail.com",
+        "opcionCertificacion": "Option 1 - Individual Producer",
+        "coordenadas": {
+          "lat": -0.918986,
+          "lng": -80.506974
+        }
+      },
+      "productos": [
+        {
+          "nombre": "Pitahaya",
+          "nombresAlternativos": [
+            "Dragon Fruit",
+            "Pitaya",
+            "Pitahayas",
+            "Frutas del Dragón"
+          ],
+          "codigoProducto": "00154-HHXCF-0005",
+          "areaProduccionCubierta": 5,
+          "areaProduccionNoCubierta": 0,
+          "areaTotal": 5,
+          "unidad": "hectáreas",
+          "manejoPostCosecha": false,
+          "propiedadParalela": false,
+          "cosechaIncluida": true,
+          "graspStatus": "No aplicable"
+        }
+      ],
+      "sitioProduccion": {
+        "nombre": "CARMELINDA",
+        "direccion": "Recinto El Cerecito, Rocafuerte, Manabí, Ecuador",
+        "coordenadas": {
+          "lat": -0.918986,
+          "lng": -80.506974
+        },
+        "area": 5,
+        "unidad": "hectáreas"
+      },
+      "paisesDestino": [
+        {
+          "codigo": "CHN",
+          "nombre": "China"
+        },
+        {
+          "codigo": "COL",
+          "nombre": "Colombia"
+        },
+        {
+          "codigo": "ECU",
+          "nombre": "Ecuador"
+        },
+        {
+          "codigo": "EU",
+          "nombre": "Unión Europea"
+        },
+        {
+          "codigo": "PER",
+          "nombre": "Perú"
+        },
+        {
+          "codigo": "USA",
+          "nombre": "Estados Unidos"
+        }
+      ],
+      "auditoria": {
+        "tipo": "Recertificación Subsecuente (Subsequent Recertification Audit)",
+        "opcionReporte": "Opt.1 - Single Site",
+        "anunciada": true,
+        "ubicacion": "En Sitio (On-Site)",
+        "fechaInicio": "2025-10-15",
+        "fechaFin": "2025-10-15",
+        "horario": "10:00 - 17:00",
+        "auditor": "Eloy Antonio Moreno Coronel",
+        "numeroAuditoria": "4689997",
+        "versionEstandar": "6.0-GFS_AGO24",
+        "categoria": "Frutas y Hortalizas"
+      },
+      "informacionAdicional": {
+        "actividad": "Producción, comercialización y exportación de Pitahaya",
+        "estructuraOrganizativa": [
+          "Área administrativa",
+          "Agrícola",
+          "Calidad",
+          "Recursos humanos",
+          "Diseño",
+          "Exportaciones"
+        ],
+        "actividades": [
+          "Aplicaciones de fertilizantes y plaguicidas",
+          "Riego",
+          "Cosecha"
+        ],
+        "subcontratacion": false,
+        "empaque": false
+      }
+    },
+    {
+      "id": "las-tres-pinas-pineapple",
+      "tipo": "GLOBALG.A.P. IFA version 6 GFS",
+      "tipoCorto": "GlobalG.A.P. IFA v6.0 GFS",
+      "numeroCertificado": null,
+      "ggn": "4063651684858",
+      "fechaEmision": "2025-10-29",
+      "fechaDecisionCertificacion": "2025-10-29",
+      "validoDesde": "2025-10-29",
+      "validoHasta": "2026-08-23",
+      "tipoAuditoria": "Anunciada (Announced) y En Sitio (Onsite)",
+      "estado": "activo",
+      "verificacionOnline": "https://database.globalgap.org/search",
+      "organismoEmisor": {
+        "nombre": "KIWA ESPAÑA, S.L.U",
+        "email": "Teresa.Zaragoza@kiwa.com",
+        "direccion": "Calle Serpis, 66-68, 46022 Valencia, España"
+      },
+      "productor": {
+        "nombre": "LAS TRES PIÑAS S.A.",
+        "ubicacion": "LA CHORRERA, PANAMA OESTE",
+        "direccion": "ENTRANDO POR EL ESPINO CALLE PRINCIPAL EL ZAHINO, VÍA LA ARENOSA, 21310",
+        "ciudad": "LA CHORRERA",
+        "provincia": "PANAMA OESTE",
+        "pais": "Panama",
+        "opcionCertificacion": "Option 1 - Individual producer"
+      },
+      "productos": [
+        {
+          "nombre": "Piña",
+          "nombresAlternativos": [
+            "Pineapple",
+            "Ananas"
+          ],
+          "codigoProducto": "00151-XLXHN-0003",
+          "manejoProducto": "Facility (Instalación)",
+          "cosechaIncluida": true,
+          "graspStatus": "No evaluado (Not assessed)",
+          "propiedadParalela": false
+        }
+      ],
+      "paisesDestino": [
+        {
+          "codigo": "EU",
+          "nombre": "Unión Europea"
+        },
+        {
+          "codigo": "PAN",
+          "nombre": "Panamá"
+        },
+        {
+          "codigo": "USA",
+          "nombre": "Estados Unidos"
+        }
+      ]
+    }
+  ],
+  "resumen": {
+    "totalCertificaciones": 2,
+    "empresasCertificadas": [
+      {
+        "nombre": "ZUELY TRELLES MARTINEZ",
+        "pais": "Ecuador",
+        "productos": ["Pitahaya", "Dragon Fruit"],
+        "ggn": "4063651260816",
+        "validoHasta": "2026-10-28"
+      },
+      {
+        "nombre": "LAS TRES PIÑAS S.A.",
+        "pais": "Panamá",
+        "productos": ["Piña", "Pineapple"],
+        "ggn": "4063651684858",
+        "validoHasta": "2026-08-23"
+      }
+    ],
+    "tiposCertificacion": [
+      "GLOBALG.A.P. IFA v6.0 GFS"
+    ],
+    "organismosCertificadores": [
+      "NSF Certification, LLC",
+      "KIWA ESPAÑA, S.L.U"
+    ]
+  },
+  "metadata": {
+    "fechaCreacion": "2025-11-05",
+    "version": "1.0.0",
+    "descripcion": "Datos de certificaciones GlobalG.A.P. para Fresh Food Panama",
+    "camposClave": [
+      "GGN (GlobalGAP Number)",
+      "Número de Certificado",
+      "Fechas de validez",
+      "Organismo certificador",
+      "Productos certificados",
+      "Área de producción",
+      "Países de destino",
+      "Coordenadas GPS",
+      "Tipo de certificación",
+      "Estado actual del certificado"
+    ]
+  }
+}
+
+

@@ -1,8 +1,61 @@
+# Dependencies
 node_modules
-**/__mocks__/*
-**/config/*
-**/deployment/*
-**/server/*
+.pnp
+.pnp.js
 
-*.html
-*.md
+# Testing
+coverage
+
+# Next.js
+.next
+out
+build
+dist
+
+# Production
+*.lock
+package-lock.json
+yarn.lock
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Fonts (archivos binarios)
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Imágenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+
+# PDFs
+*.pdf
+
+# Python
+*.py
+__pycache__
+*.pyc

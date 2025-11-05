@@ -2,7 +2,7 @@
 @import "./mixins.scss";
 
 * {
-	
+
     margin: 0;
     padding: 0;
 	font-family: popMed, 'DM Sans', sans-serif;
@@ -11,14 +11,14 @@
 	a {
 		text-decoration: none;
 	}
-	
+
 	@include tablet {
 		font-size: 0.98em;
 	}
 	@include mobile {
 		font-size: 1em;
 	}
-	
+
 }
 
 html {
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-	
+
 	overflow-x: hidden;
 	font-size: 16px;
 	background-color: var(--freshBlanco);
@@ -38,12 +38,12 @@ body {
 	padding: 0;
 
 }
-	
+
 
 
 // scale-up-center
 .scale-up-center {
-	
+
 	-webkit-animation: scale-up-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: scale-up-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
@@ -61,14 +61,14 @@ body {
 
 	-webkit-transform: scale(1);
 			transform: scale(1);
-			
+
   }
 
 }
 
 // scale-up-center
 .fade-on {
-	
+
 	-webkit-animation: fade-on 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: fade-on 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
@@ -84,7 +84,7 @@ opacity: 0;
   100% {
 
 opacity: 1;
-			
+
   }
 
 }
@@ -102,7 +102,7 @@ opacity: 1;
 
 	-webkit-transform: scale(1);
 			transform: scale(1);
-			
+
   }
 
 }
@@ -111,7 +111,7 @@ opacity: 1;
 // slide-bottom
 
 .slide-bottom {
-	
+
 	-webkit-animation: slide-bottom .3s cubic-bezier(.25,.46,.45,.94) both;
 	animation: slide-bottom .3s cubic-bezier(.25,.46,.45,.94) both;
 
@@ -127,7 +127,7 @@ opacity: 1;
 // slide-up
 
 .slide-up {
-	
+
 	-webkit-animation: slide-up .3s cubic-bezier(.25,.46,.45,.94) both;
 	animation: slide-up .3s cubic-bezier(.25,.46,.45,.94) both;
 
@@ -210,7 +210,7 @@ opacity: 1;
 }
 
 
-  
+
 
 
 // slide-right-pestana
@@ -238,14 +238,14 @@ opacity: 1;
 .slide-right-pestana {
 	-webkit-animation: slide-right-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-right-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}	
+}
 
 
   //slide-left-pestana
   .slide-left-pestana {
 	-webkit-animation: slide-left-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-left-pestana 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	
+
 	@-webkit-keyframes slide-left-pestana {
 		0% {
 			-webkit-transform: translateX(100px);
@@ -266,34 +266,34 @@ opacity: 1;
 			transform: translateX(0px);
 		}
 	}
-}	
+}
 
 	.slide-bottom {
-	
+
 		-webkit-animation: slide-bottom .2s cubic-bezier(.25,.46,.45,.94) both;
 		animation: slide-bottom .2s cubic-bezier(.25,.46,.45,.94) both;
-	
+
 	}
-	
+
 	@keyframes slide-bottom {
-	
+
 		0%{-webkit-transform:translateY(200px);transform:translateY(-200px); opacity: 0;}
 		100%{-webkit-transform:translateY(0px);transform:translateY(0px); opacity: 1;}
-	
+
 	}
-	
+
 	.slide-menu {
-		
+
 		-webkit-animation: slide-menu .2s cubic-bezier(.25,.46,.45,.94) both;
 		animation: slide-menu .2s cubic-bezier(.25,.46,.45,.94) both;
-	
+
 	}
-	
+
 	@keyframes slide-menu {
-	
+
 		0%{-webkit-transform:translateY(200px);transform:translateY(-200px); opacity: 0;}
 		100%{-webkit-transform:translateY(0px);transform:translateY(0px); opacity: 0.8;}
-	
+
 	}
 
 // ***********************************************************
@@ -403,7 +403,7 @@ opacity: 1;
 .pl5 { padding-left: fontVar.$em5;}
 
 .responsiveWidth {
-	
+
 	margin: auto;
 	@include gte(1400) {max-width: 1400px}
 	@include lte(1399) {max-width: 1200px}
@@ -599,28 +599,8 @@ opacity: 1;
 	align-items: center;
 }
 
-.ant-typography-copy-success {
-	color: var(--colVerCor) !important;
-}
-
 .ant-select-selection-item {
 	white-space: pre-line !important;
-}
-
-.ant-btn-primary {
-	background: var(--colLuzGas) !important;
-	border-color: var(--colLuzGas) !important;
-};
-.ant-btn-primary:hover:enabled {
-	filter: brightness(107%) !important;
-}
-.ant-btn-primary:disabled {
-	background: #f5f5f5 !important;
-    border-color: #d9d9d9 !important;	
-}
-
-.ant-btn-default {
-	display: none;
 }
 
 
@@ -630,7 +610,7 @@ opacity: 1;
 // ***********************************************************
 
 h1 {
-				
+
 	font-size: fontVar.$fs7;
 	font-family: 'popExtraBold';
 	line-height: fontVar.$em3;
@@ -669,10 +649,10 @@ h1 {
 	}
 
 	@include mobile {
-		
+
 		font-size: fontVar.$fs3;
 		line-height: calc(fontVar.$em4 * 0.8);
-		
+
 	}
 
 }
@@ -689,14 +669,14 @@ h2 {
 	@include tabletVertical {
 
 		font-size: fontVar.$fs5;
-		
+
 	}
 
 	@include mobile {
 
 		font-size: calc(fontVar.$fs5*0.86);
 		max-width: 100%;
-		
+
 	}
 }
 
@@ -774,7 +754,7 @@ a:hover {
 
 .linkHamburguesa {
 	font-size: 1em;
-	
+
 	@include mobile {
 		font-size: 1.5em !important;
 
@@ -782,7 +762,7 @@ a:hover {
 			font-size: 1.5em;
 		}
 	}
-	
+
 	@include tablet {
 		font-size: 1.3em;
 
@@ -790,10 +770,9 @@ a:hover {
 			font-size: 2.55em;
 		}
 	}
-	
+
 	@include miniDesktop {
 		font-size: 1.1em;
 	}
 }
 
-  
