@@ -1,0 +1,40 @@
+GGN: 4063651260816
+Option 1 - Individual producer
+Issued to
+Producer - Zuely Trelles Martinez - El Cerecito , Rocafuerte, N/A , - Manabi
+Ecuador
+The Certification Body NSF Certification LLC declares that the production of the products mentioned on this certificate has been found to
+be compliant in accordance with the standard: GLOBALG.A.P.
+Product
+Product Cert. Attributes Quantities CoD 2 Schemeversion
+No.1
+Product Handling: No Non cov. first3:
+5.0000 ha
+GRASP status: Not applicable CHN,
+Non cov. further4:
+COL,
+00154- Audit Type: announced 5.0000 ha GLOBALG.A.P.
+Dragon ECU,
+HHXCF- IFA version 6
+fruit/Pitaya EU,
+0005 Harvest Included: Included Cov. first5: GFS
+PER,
+0.0000 ha
+Parallel Ownership (PO)?: No USA
+Cov. further6:
+Audit Method: Onsite 0.0000 ha
+Online Certificate Validation Tool
+All listed information refers to the certificate of the producer and reflects current certification information in the database as
+of the log date. The current status of this certificate can be verified at https://database.globalgap.org/search
+1 GLOBALG.A.P. Product Certificate Number
+2 Countries of Destination. The countries where the product is intended to be sold.
+3 Non Covered Crops First Harvest in hectares
+4 Non Covered Crops Further Harvest in hectares
+5 Covered Crops First Harvest in hectares
+6 Covered Crops Further Harvest in hectares
+Log Date (Printing date of certificate): 2025-10-29 21:57 UTC (GMT) 24h
+Valid from (This certificate may be valid up to 12 month from this date): 2025-10-29
+Valid to (must always be checked against latest certificate information in database): 2026-10-28
+Date of Certification decision: 2025-10-29
+NSF Certification LLC, North Dixboro Road 789, 48105 Ann Arbor, Michigan kcaceres@nsf.org Page 1 of 1
+
