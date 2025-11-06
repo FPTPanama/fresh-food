@@ -1,8 +1,9 @@
-// Componente optimizado del logo de NSF
+'use client';
+
 export default function NsfIcon({
   width = 40,
   height = 40,
-  color = '#224C22', // greendark por defecto
+  color = '#224C22',
   className = ''
 }) {
   return (

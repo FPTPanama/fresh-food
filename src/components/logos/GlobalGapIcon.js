@@ -1,4 +1,3 @@
-// Componente optimizado del logo de Global GAP
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -15,11 +14,12 @@ export default function GlobalGapIcon({
     fetch('/img/global-gap.svg')
       .then(res => res.text())
       .then(text => {
-        // El SVG usa currentColor, así que reemplazamos con el color específico
         const modified = text.replace(/fill="currentColor"/g, `fill="${color}"`);
         setSvgContent(modified);
       })
-      .catch(err => console.error('Error loading SVG:', err));
+      .catch(() => {
+        // Error al cargar SVG - se muestra placeholder vacío
+      });
   }, [color]);
 
   if (!svgContent) {
