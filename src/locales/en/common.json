@@ -225,6 +225,24 @@
       "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
       "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
       "CUMPLIMOS_ESTANDARES": "We meet global standards that ensure quality, safety, and access to demanding markets."
+    },
+    "certifications": {
+      "TITULO": "International Certifications",
+      "DESCRIPCION": "We have international certifications that guarantee the quality, safety and sustainability of our agricultural products.",
+      "BENEFICIOS": "Benefits:",
+      "PRODUCTOS_CERTIFICADOS": "Certified Products:",
+      "NUMERO_CERTIFICADO": "Certificate No.:",
+      "VALIDO_HASTA": "Valid until:",
+      "VERIFICAR_CERTIFICADO": "Verify certificate →",
+      "MAS_INFORMACION": "More information →",
+      "NO_DISPONIBLES": "No certifications available at this time.",
+      "RESUMEN_CERTIFICACIONES": "Certifications Summary",
+      "TOTAL_CERTIFICACIONES": "Total certifications:",
+      "CERTIFICACIONES_ACTIVAS": "Active certifications:",
+      "ULTIMA_ACTUALIZACION": "Last updated:",
+      "POR_QUE_IMPORTANTES": "Why are these certifications important?",
+      "TEXTO_IMPORTANCIA": "These certifications guarantee that our products meet the highest standards of quality, food safety and sustainability. This allows us to export to the most demanding markets in the world and ensure the trust of our clients.",
+      "ERROR_CARGAR": "Could not load certifications file"
     }
   },
   "contact": {
@@ -322,7 +340,7 @@
         ]
       }
     ]
-    
+
   }
 
 

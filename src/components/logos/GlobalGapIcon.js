@@ -17,7 +17,9 @@ export default function GlobalGapIcon({
         const modified = text.replace(/fill="currentColor"/g, `fill="${color}"`);
         setSvgContent(modified);
       })
-      .catch(err => console.error('Error loading SVG:', err));
+      .catch(() => {
+        // Error al cargar SVG - se muestra placeholder vacío
+      });
   }, [color]);
 
   if (!svgContent) {

@@ -40,7 +40,13 @@ const Certificates = async ({ params }) => {
     <div className="responsiveWidth text-greendark">
       <GeneralLayout dictionary={dictionary}>
         <section className="flex flex-col items-center justify-center w-full min-h-screen py-10 md:py-20">
-          <CertificationsSection showDetails={true} layout="cards" className="w-full" />
+          <CertificationsSection
+            showDetails={true}
+            layout="cards"
+            className="w-full"
+            dictionary={dictionary}
+            locale={locale}
+          />
         </section>
       </GeneralLayout>
     </div>

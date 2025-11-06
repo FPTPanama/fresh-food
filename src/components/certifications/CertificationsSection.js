@@ -1,7 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import GlobalGapIcon from '@/components/logos/GlobalGapIcon';
 import NsfIcon from '@/components/logos/NsfIcon';
@@ -9,7 +7,9 @@ import NsfIcon from '@/components/logos/NsfIcon';
 export default function CertificationsSection({
   showDetails = false,
   layout = 'cards',
-  className = ''
+  className = '',
+  dictionary = null,
+  locale = 'es'
 }) {
   const [certificationsData, setCertificationsData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,41 +18,63 @@ export default function CertificationsSection({
   useEffect(() => {
     const loadCertifications = async () => {
       try {
-        const response = await fetch('/assets/certificaciones.json');
+        // Intentar cargar el archivo de certificaciones según el idioma
+        const response = await fetch(`/assets/certificaciones${locale === 'en' ? '.en' : ''}.json`);
         if (!response.ok) {
-          throw new Error('No se pudo cargar el archivo de certificaciones');
+          // Si no existe la versión en inglés, usar la versión en español
+          const fallbackResponse = await fetch('/assets/certificaciones.json');
+          if (!fallbackResponse.ok) {
+            throw new Error(dictionary?.about_us?.certifications?.ERROR_CARGAR || 'No se pudo cargar el archivo de certificaciones');
+          }
+          const fallbackData = await fallbackResponse.json();
+          setCertificationsData(fallbackData);
+          return;
         }
         const data = await response.json();
         setCertificationsData(data);
       } catch (err) {
-        console.error('Error loading certifications:', err);
+        // Error al cargar certificaciones - usar datos de fallback
         setError(err.message);
+        // Los datos de fallback deberían venir del JSON, pero si no están disponibles,
+        // usar datos básicos sin traducción (los nombres de certificaciones son universales)
         setCertificationsData({
           certificaciones: [
             {
               id: 'globalgap-fallback',
               nombre: 'GlobalG.A.P.',
-              tipo: 'Certificación GlobalG.A.P.',
-              descripcion: 'Certificación internacional que garantiza buenas prácticas agrícolas, seguridad alimentaria y sostenibilidad.',
+              tipo: locale === 'es' ? 'Certificación GlobalG.A.P.' : 'GlobalG.A.P. Certification',
+              descripcion: locale === 'es'
+                ? 'Certificación internacional que garantiza buenas prácticas agrícolas, seguridad alimentaria y sostenibilidad.'
+                : 'International certification that guarantees good agricultural practices, food safety and sustainability.',
               logo: 'GlobalGAP',
               sitioWeb: 'https://www.globalgap.org',
-              beneficios: [
+              beneficios: locale === 'es' ? [
                 'Garantiza buenas prácticas agrícolas',
                 'Asegura la seguridad alimentaria',
                 'Promueve la sostenibilidad'
+              ] : [
+                'Guarantees good agricultural practices',
+                'Ensures food safety',
+                'Promotes sustainability'
               ]
             },
             {
               id: 'nsf-fallback',
               nombre: 'NSF International',
-              tipo: 'Certificación NSF',
-              descripcion: 'NSF International es una organización independiente que certifica productos y sistemas.',
+              tipo: locale === 'es' ? 'Certificación NSF' : 'NSF Certification',
+              descripcion: locale === 'es'
+                ? 'NSF International es una organización independiente que certifica productos y sistemas.'
+                : 'NSF International is an independent organization that certifies products and systems.',
               logo: 'NSF',
               sitioWeb: 'https://www.nsf.org',
-              beneficios: [
+              beneficios: locale === 'es' ? [
                 'Certificación de calidad y seguridad',
                 'Verificación independiente',
                 'Cumplimiento de normativas'
+              ] : [
+                'Quality and safety certification',
+                'Independent verification',
+                'Regulatory compliance'
               ]
             }
           ]
@@ -63,7 +85,7 @@ export default function CertificationsSection({
     };
 
     loadCertifications();
-  }, []);
+  }, [locale, dictionary]);
 
   if (loading) {
     return (
@@ -83,11 +105,14 @@ export default function CertificationsSection({
     );
   }
 
+  // Obtener textos de traducción con fallback
+  const t = dictionary?.about_us?.certifications || {};
+
   if (!certificationsData || !certificationsData.certificaciones || certificationsData.certificaciones.length === 0) {
     return (
       <section className={classNames('w-full py-8 px-4 md:px-8', className)}>
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-600">No hay certificaciones disponibles en este momento.</p>
+          <p className="text-gray-600">{t.NO_DISPONIBLES || 'No hay certificaciones disponibles en este momento.'}</p>
         </div>
       </section>
     );
@@ -112,11 +137,10 @@ export default function CertificationsSection({
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-greendark mb-4">
-            Certificaciones Internacionales
+            {t.TITULO || 'Certificaciones Internacionales'}
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Contamos con certificaciones internacionales que garantizan la calidad, seguridad y sostenibilidad
-            de nuestros productos agrícolas.
+            {t.DESCRIPCION || 'Contamos con certificaciones internacionales que garantizan la calidad, seguridad y sostenibilidad de nuestros productos agrícolas.'}
           </p>
         </div>
 
@@ -155,7 +179,7 @@ export default function CertificationsSection({
               {cert.beneficios && cert.beneficios.length > 0 && (
                 <div className="mb-6 flex-1">
                   <h4 className="text-sm font-bold text-greendark mb-3 uppercase tracking-wide">
-                    Beneficios:
+                    {t.BENEFICIOS || 'Beneficios:'}
                   </h4>
                   <ul className="space-y-2">
                     {cert.beneficios.map((beneficio, idx) => (
@@ -170,7 +194,7 @@ export default function CertificationsSection({
 
               {cert.productos && cert.productos.length > 0 && showDetails && (
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Productos Certificados:</h4>
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">{t.PRODUCTOS_CERTIFICADOS || 'Productos Certificados:'}</h4>
                   <div className="flex flex-wrap gap-2">
                     {cert.productos.map((producto, idx) => (
                       <span
@@ -188,7 +212,7 @@ export default function CertificationsSection({
                 <div className="mb-4 space-y-2 text-sm border-t pt-4">
                   {cert.numeroCertificado && (
                     <div className="flex justify-between">
-                      <span className="text-gray-600">N° Certificado:</span>
+                      <span className="text-gray-600">{t.NUMERO_CERTIFICADO || 'N° Certificado:'}</span>
                       <span className="font-semibold">{cert.numeroCertificado}</span>
                     </div>
                   )}
@@ -200,9 +224,9 @@ export default function CertificationsSection({
                   )}
                   {cert.validoHasta && (
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Válido hasta:</span>
+                      <span className="text-gray-600">{t.VALIDO_HASTA || 'Válido hasta:'}</span>
                       <span className="font-semibold">
-                        {new Date(cert.validoHasta).toLocaleDateString('es-ES', {
+                        {new Date(cert.validoHasta).toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric'
@@ -220,7 +244,7 @@ export default function CertificationsSection({
                   rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-3 bg-greendark text-white rounded-lg hover:bg-greendark/90 transition-colors font-semibold"
                 >
-                  {cert.verificacionOnline ? 'Verificar certificado →' : 'Más información →'}
+                  {cert.verificacionOnline ? (t.VERIFICAR_CERTIFICADO || 'Verificar certificado →') : (t.MAS_INFORMACION || 'Más información →')}
                 </a>
               </div>
             </div>
@@ -232,21 +256,21 @@ export default function CertificationsSection({
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div>
                 <h3 className="text-xl font-bold text-greendark mb-2">
-                  Resumen de Certificaciones
+                  {t.RESUMEN_CERTIFICACIONES || 'Resumen de Certificaciones'}
                 </h3>
                 <p className="text-gray-700">
-                  <strong>Total de certificaciones:</strong> {certificationsData.resumen.totalCertificaciones}
+                  <strong>{t.TOTAL_CERTIFICACIONES || 'Total de certificaciones:'}</strong> {certificationsData.resumen.totalCertificaciones}
                 </p>
                 {certificationsData.resumen.certificacionesActivas && (
                   <p className="text-gray-700">
-                    <strong>Certificaciones activas:</strong> {certificationsData.resumen.certificacionesActivas}
+                    <strong>{t.CERTIFICACIONES_ACTIVAS || 'Certificaciones activas:'}</strong> {certificationsData.resumen.certificacionesActivas}
                   </p>
                 )}
               </div>
               <div className="text-sm text-gray-600">
-                <p>Última actualización: {
+                <p>{t.ULTIMA_ACTUALIZACION || 'Última actualización:'} {
                   certificationsData.resumen.ultimaActualizacion
-                    ? new Date(certificationsData.resumen.ultimaActualizacion).toLocaleDateString('es-ES')
+                    ? new Date(certificationsData.resumen.ultimaActualizacion).toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US')
                     : 'N/A'
                 }</p>
               </div>
@@ -257,12 +281,10 @@ export default function CertificationsSection({
         {showDetails && (
           <div className="mt-8 p-6 bg-gray-50 rounded-xl">
             <h3 className="text-xl font-bold text-greendark mb-4">
-              ¿Por qué son importantes estas certificaciones?
+              {t.POR_QUE_IMPORTANTES || '¿Por qué son importantes estas certificaciones?'}
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Estas certificaciones garantizan que nuestros productos cumplen con los más altos estándares
-              de calidad, seguridad alimentaria y sostenibilidad. Esto nos permite exportar a los mercados
-              más exigentes del mundo y asegurar la confianza de nuestros clientes.
+              {t.TEXTO_IMPORTANCIA || 'Estas certificaciones garantizan que nuestros productos cumplen con los más altos estándares de calidad, seguridad alimentaria y sostenibilidad. Esto nos permite exportar a los mercados más exigentes del mundo y asegurar la confianza de nuestros clientes.'}
             </p>
           </div>
         )}

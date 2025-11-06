@@ -1,3 +1,5 @@
+'use client';
+
 export default function NsfIcon({
   width = 40,
   height = 40,
