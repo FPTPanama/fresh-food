@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:changed": "node scripts/lint-changed.js",
+    "lint:changed:main": "node scripts/lint-changed.js main",
+    "lint:changed:develop": "node scripts/lint-changed.js develop"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -21,12 +24,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "saas": "^1.0.0",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^3.4.17",
-    "uninstall": "^0.0.0"
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^15.2.4",
     "prettier": "^3.5.3",
     "sass": "^1.86.3"
   }

@@ -24,7 +24,8 @@
   "footer": {
     "CENTRO_PRINCIPAL": "Its main contracting center is located in <span class='font-black'>Miami</span>, <span class='font-black'>United States</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
     "CALLE_NUMERO": "55th Street, PH SFC. Office 26D",
-    "PAIS_CIUDAD": "Obarrio, Panama City, Panama"
+    "PAIS_CIUDAD": "Obarrio, Panama City, Panama",
+    "CERTIFICACIONES_GLOBALES": "Global Certifications"
   },
   "home": {
     "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",

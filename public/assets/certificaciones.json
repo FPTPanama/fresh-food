@@ -1,0 +1,95 @@
+{
+  "certificaciones": [
+    {
+      "id": "globalgap-1",
+      "nombre": "GlobalG.A.P.",
+      "tipo": "Certificación GlobalG.A.P.",
+      "tipoCorto": "GlobalG.A.P.",
+      "descripcion": "Certificación internacional que garantiza buenas prácticas agrícolas, seguridad alimentaria y sostenibilidad en la producción de frutas y hortalizas.",
+      "logo": "GlobalGAP",
+      "sitioWeb": "https://www.globalgap.org",
+      "numeroCertificado": null,
+      "ggn": null,
+      "validoHasta": null,
+      "organismoEmisor": {
+        "nombre": "GlobalG.A.P.",
+        "codigo": "GLOBALGAP"
+      },
+      "productos": [
+        {
+          "nombre": "Piña",
+          "areaTotal": null,
+          "unidad": null
+        },
+        {
+          "nombre": "Limón Tahití",
+          "areaTotal": null,
+          "unidad": null
+        },
+        {
+          "nombre": "Mango",
+          "areaTotal": null,
+          "unidad": null
+        }
+      ],
+      "paisesDestino": [
+        {
+          "codigo": "US",
+          "nombre": "Estados Unidos"
+        },
+        {
+          "codigo": "EU",
+          "nombre": "Unión Europea"
+        }
+      ],
+      "verificacionOnline": "https://www.globalgap.org",
+      "beneficios": [
+        "Garantiza buenas prácticas agrícolas",
+        "Asegura la seguridad alimentaria",
+        "Promueve la sostenibilidad",
+        "Cumple con estándares internacionales"
+      ]
+    },
+    {
+      "id": "nsf-1",
+      "nombre": "NSF International",
+      "tipo": "Certificación NSF",
+      "tipoCorto": "NSF",
+      "descripcion": "NSF International es una organización independiente que certifica productos y sistemas para proteger y mejorar la salud humana mundial.",
+      "logo": "NSF",
+      "sitioWeb": "https://www.nsf.org",
+      "numeroCertificado": null,
+      "ggn": null,
+      "validoHasta": null,
+      "organismoEmisor": {
+        "nombre": "NSF International",
+        "codigo": "NSF"
+      },
+      "productos": [
+        {
+          "nombre": "Productos Agrícolas",
+          "areaTotal": null,
+          "unidad": null
+        }
+      ],
+      "paisesDestino": [
+        {
+          "codigo": "US",
+          "nombre": "Estados Unidos"
+        }
+      ],
+      "verificacionOnline": "https://www.nsf.org",
+      "beneficios": [
+        "Certificación de calidad y seguridad",
+        "Verificación independiente",
+        "Cumplimiento de normativas",
+        "Trazabilidad garantizada"
+      ]
+    }
+  ],
+  "resumen": {
+    "totalCertificaciones": 2,
+    "certificacionesActivas": 2,
+    "ultimaActualizacion": "2024-01-01"
+  }
+}

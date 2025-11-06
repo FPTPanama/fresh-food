@@ -1,12 +1,26 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import { FaGoogle } from 'react-icons/fa';
 import { RiTwitterXLine } from 'react-icons/ri';
 import dayjs from 'dayjs';
 import TridgeLogo from '@/components/logos/TridgeLogo';
+import GlobalGapIcon from '@/components/logos/GlobalGapIcon';
+import NsfIcon from '@/components/logos/NsfIcon';
 
 const Footer = ({ dictionary }) => {
+  const pathname = usePathname();
+  const [locale, setLocale] = useState('es');
+  
+  useEffect(() => {
+    const localeFromPath = pathname.split('/')[1] || 'es';
+    setLocale(localeFromPath === 'es' || localeFromPath === 'en' ? localeFromPath : 'es');
+  }, [pathname]);
+  
   const currentYear = dayjs().year();
   const redSocItems = [
     {
@@ -73,6 +87,26 @@ const Footer = ({ dictionary }) => {
           <p>
             <span className="font-black">{`${currentYear} ©`}</span> All rights reserved
           </p>
+
+          <div className="flex flex-col items-end gap-2 text-l-body text-greendark">
+            <p className="font-bold">{dictionary?.footer?.CERTIFICACIONES_GLOBALES}</p>
+            <div className="flex items-center justify-center gap-2">
+              <Link
+                href={`/${locale}/certificates`}
+                className="transition-opacity hover:opacity-70 cursor-pointer flex items-center"
+                aria-label="Ver certificaciones Global GAP"
+              >
+                <GlobalGapIcon width={50} height={40} color="#224C22" />
+              </Link>
+              <Link
+                href={`/${locale}/certificates`}
+                className="transition-opacity hover:opacity-70 cursor-pointer flex items-center"
+                aria-label="Ver certificaciones NSF"
+              >
+                <NsfIcon width={40} height={40} color="#224C22" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

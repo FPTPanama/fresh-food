@@ -25,7 +25,8 @@
     "footer": {
         "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
         "CALLE_NUMERO": "Calle 55, PH SFC. Oficina 26D",
-        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá"
+        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá",
+        "CERTIFICACIONES_GLOBALES": "Certificaciones Globales"
     },
     "home": {
         "LLEVAMOS_LA_FRUTA": "Llevamos lo mejor a donde más importa",

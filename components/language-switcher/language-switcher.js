@@ -18,7 +18,11 @@ const LanguageSwitcher = () => {
 
   const toggleLocale = () => {
     const newLocale = currentLocale === 'es' ? 'en' : 'es';
-    const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '');
+    const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '') || '';
+    
+    // Guardar la preferencia en cookie para persistir entre navegaciones
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax${process.env.NODE_ENV === 'production' ? '; Secure' : ''}`;
+    
     router.push(`/${newLocale}${pathWithoutLocale}`);
   };
 
