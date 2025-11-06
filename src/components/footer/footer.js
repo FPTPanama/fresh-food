@@ -92,7 +92,7 @@ const Footer = ({ dictionary }) => {
           </p>
 
           <div className="flex flex-col items-end gap-2 text-l-body text-greendark">
-            <p className="font-bold">Certificaciones Globales</p>
+            <p className="font-bold">{dictionary?.footer?.CERTIFICACIONES_GLOBALES}</p>
             <div className="flex items-center justify-center gap-2">
               <Link
                 href={`/${locale}/certificates`}

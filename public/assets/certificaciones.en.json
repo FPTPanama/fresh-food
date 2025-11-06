@@ -3,9 +3,9 @@
     {
       "id": "globalgap-1",
       "nombre": "GlobalG.A.P.",
-      "tipo": "Certificación GlobalG.A.P.",
+      "tipo": "GlobalG.A.P. Certification",
       "tipoCorto": "GlobalG.A.P.",
-      "descripcion": "Certificación internacional que garantiza buenas prácticas agrícolas, seguridad alimentaria y sostenibilidad en la producción de frutas y hortalizas.",
+      "descripcion": "International certification that guarantees good agricultural practices, food safety and sustainability in the production of fruits and vegetables.",
       "logo": "GlobalGAP",
       "sitioWeb": "https://www.globalgap.org",
       "numeroCertificado": null,
@@ -17,12 +17,12 @@
       },
       "productos": [
         {
-          "nombre": "Piña",
+          "nombre": "Pineapple",
           "areaTotal": null,
           "unidad": null
         },
         {
-          "nombre": "Limón Tahití",
+          "nombre": "Tahitian Lime",
           "areaTotal": null,
           "unidad": null
         },
@@ -35,27 +35,27 @@
       "paisesDestino": [
         {
           "codigo": "US",
-          "nombre": "Estados Unidos"
+          "nombre": "United States"
         },
         {
           "codigo": "EU",
-          "nombre": "Unión Europea"
+          "nombre": "European Union"
         }
       ],
       "verificacionOnline": "https://www.globalgap.org",
       "beneficios": [
-        "Garantiza buenas prácticas agrícolas",
-        "Asegura la seguridad alimentaria",
-        "Promueve la sostenibilidad",
-        "Cumple con estándares internacionales"
+        "Guarantees good agricultural practices",
+        "Ensures food safety",
+        "Promotes sustainability",
+        "Complies with international standards"
       ]
     },
     {
       "id": "nsf-1",
       "nombre": "NSF International",
-      "tipo": "Certificación NSF",
+      "tipo": "NSF Certification",
       "tipoCorto": "NSF",
-      "descripcion": "NSF International es una organización independiente que certifica productos y sistemas para proteger y mejorar la salud humana mundial.",
+      "descripcion": "NSF International is an independent organization that certifies products and systems to protect and improve global human health.",
       "logo": "NSF",
       "sitioWeb": "https://www.nsf.org",
       "numeroCertificado": null,
@@ -67,7 +67,7 @@
       },
       "productos": [
         {
-          "nombre": "Productos Agrícolas",
+          "nombre": "Agricultural Products",
           "areaTotal": null,
           "unidad": null
         }
@@ -75,15 +75,15 @@
       "paisesDestino": [
         {
           "codigo": "US",
-          "nombre": "Estados Unidos"
+          "nombre": "United States"
         }
       ],
       "verificacionOnline": "https://www.nsf.org",
       "beneficios": [
-        "Certificación de calidad y seguridad",
-        "Verificación independiente",
-        "Cumplimiento de normativas",
-        "Trazabilidad garantizada"
+        "Quality and safety certification",
+        "Independent verification",
+        "Regulatory compliance",
+        "Guaranteed traceability"
       ]
     }
   ],
@@ -93,3 +93,4 @@
     "ultimaActualizacion": "2024-01-01"
   }
 }
+

@@ -25,7 +25,8 @@
     "footer": {
         "CENTRO_PRINCIPAL": "Tiene su centro principal de contrataciones en <span class='font-black'>Miami</span>, <span class='font-black'>Estados Unidos</span>, con oficinas locales y representativas en <span class='font-black'>Ciudad de Panamá, Panamá</span>, y <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
         "CALLE_NUMERO": "Calle 55, PH SFC. Oficina 26D",
-        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá"
+        "PAIS_CIUDAD": "Obarrio, Ciudad de Panamá, Panamá",
+        "CERTIFICACIONES_GLOBALES": "Certificaciones Globales"
     },
     "home": {
         "LLEVAMOS_LA_FRUTA": "Llevamos lo mejor a donde más importa",
@@ -321,6 +322,24 @@
             "UTILIZAMOS_EMPAQUES": "Utilizamos empaques diseñados para proteger frutas tropicales durante el transporte internacional.",
             "OFRECEMOS_MONITOREO": "Ofrecemos monitoreo en tiempo real de cada embarque, desde la finca hasta el cliente final.",
             "CUMPLIMOS_ESTANDARES": "Cumplimos con estándares globales que garantizan calidad, inocuidad y acceso a mercados exigentes."
+        },
+        "certifications": {
+            "TITULO": "Certificaciones Internacionales",
+            "DESCRIPCION": "Contamos con certificaciones internacionales que garantizan la calidad, seguridad y sostenibilidad de nuestros productos agrícolas.",
+            "BENEFICIOS": "Beneficios:",
+            "PRODUCTOS_CERTIFICADOS": "Productos Certificados:",
+            "NUMERO_CERTIFICADO": "N° Certificado:",
+            "VALIDO_HASTA": "Válido hasta:",
+            "VERIFICAR_CERTIFICADO": "Verificar certificado →",
+            "MAS_INFORMACION": "Más información →",
+            "NO_DISPONIBLES": "No hay certificaciones disponibles en este momento.",
+            "RESUMEN_CERTIFICACIONES": "Resumen de Certificaciones",
+            "TOTAL_CERTIFICACIONES": "Total de certificaciones:",
+            "CERTIFICACIONES_ACTIVAS": "Certificaciones activas:",
+            "ULTIMA_ACTUALIZACION": "Última actualización:",
+            "POR_QUE_IMPORTANTES": "¿Por qué son importantes estas certificaciones?",
+            "TEXTO_IMPORTANCIA": "Estas certificaciones garantizan que nuestros productos cumplen con los más altos estándares de calidad, seguridad alimentaria y sostenibilidad. Esto nos permite exportar a los mercados más exigentes del mundo y asegurar la confianza de nuestros clientes.",
+            "ERROR_CARGAR": "No se pudo cargar el archivo de certificaciones"
         }
     },
     "contact": {
@@ -418,7 +437,7 @@
               ]
             }
           ]
-          
+
 
     }
 }

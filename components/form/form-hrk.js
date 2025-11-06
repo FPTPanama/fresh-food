@@ -41,7 +41,7 @@ const FormHrk = ({ dictionary }) => {
       if (res) {
       }
     } catch (error) {
-      console.log(error);
+      // Error manejado silenciosamente - el modal ya muestra el estado
     }
 
     setLoadingResponse(false);

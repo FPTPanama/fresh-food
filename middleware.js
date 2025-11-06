@@ -1,37 +1,69 @@
 import { NextResponse } from 'next/server';
 import { i18n } from './i18n';
 
-/**
- * Detecta el idioma preferido del navegador desde el header Accept-Language
- * Compatible con todos los navegadores: Chrome, Firefox, Safari, Edge, etc.
- * @param {string} acceptLanguage - Header Accept-Language del navegador
- * @returns {string} - Código de idioma detectado o null
- */
-function detectBrowserLanguage(acceptLanguage) {
-  if (!acceptLanguage) return null;
+function detectBrowserLanguage(acceptLanguage, countryCode = null) {
+  if (!acceptLanguage) {
+    // Si no hay Accept-Language, intentar detectar por país
+    return detectLanguageByCountry(countryCode);
+  }
 
-  // El header Accept-Language puede venir en varios formatos:
-  // - "es-ES,es;q=0.9,en;q=0.8" (Chrome, Edge)
-  // - "es-MX,es;q=0.9" (Chrome con español de México)
-  // - "en-US,en;q=0.9" (Chrome/Safari con inglés)
-  // - "es" (algunos navegadores móviles)
-  
-  // Dividir por comas para obtener todos los idiomas en orden de preferencia
   const languages = acceptLanguage.split(',');
-  
+
   for (const lang of languages) {
-    // Remover el valor de calidad (q=0.9) si existe
-    const languageCode = lang.split(';')[0].trim();
-    
-    // Extraer el código de idioma principal (es de es-ES, en de en-US, etc.)
+    const languageCode = lang.split(';')[0].trim().toLowerCase();
     const primaryLanguage = languageCode.split('-')[0].toLowerCase();
-    
-    // Verificar si el idioma está en nuestros locales soportados
+
     if (i18n.locales.includes(primaryLanguage)) {
       return primaryLanguage;
     }
   }
-  
+
+  // Si no se encuentra en Accept-Language, intentar por país
+  return detectLanguageByCountry(countryCode);
+}
+
+function detectLanguageByCountry(countryCode) {
+  // Países donde el inglés es más común
+  const englishCountries = ['US', 'GB', 'AU', 'CA', 'NZ', 'IE', 'ZA', 'SG', 'MY', 'PH', 'IN', 'PK', 'NG', 'KE', 'GH'];
+
+  // Países donde el español es más común
+  const spanishCountries = [
+    'ES',
+    'MX',
+    'AR',
+    'CO',
+    'CL',
+    'PE',
+    'VE',
+    'EC',
+    'GT',
+    'CU',
+    'BO',
+    'DO',
+    'HN',
+    'PY',
+    'SV',
+    'NI',
+    'CR',
+    'PA',
+    'UY',
+    'PR',
+    'GQ',
+  ];
+
+  if (!countryCode) return null;
+
+  const upperCountry = countryCode.toUpperCase();
+
+  if (englishCountries.includes(upperCountry)) {
+    return 'en';
+  }
+
+  if (spanishCountries.includes(upperCountry)) {
+    return 'es';
+  }
+
+  // Para otros países, usar español como predeterminado (puedes ajustar esto)
   return null;
 }
 
@@ -41,16 +73,55 @@ export function middleware(request) {
   const isMissingLocale = i18n.locales.every(locale => !pathname.startsWith(`/${locale}`));
 
   if (isMissingLocale) {
-    // Obtener el header Accept-Language del navegador
+    const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+    if (cookieLocale && i18n.locales.includes(cookieLocale)) {
+      const response = NextResponse.redirect(new URL(`/${cookieLocale}${pathname}`, request.url));
+      response.cookies.set('NEXT_LOCALE', cookieLocale, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+      });
+      return response;
+    }
+
     const acceptLanguage = request.headers.get('accept-language');
-    
-    // Detectar el idioma preferido del navegador
-    const detectedLocale = detectBrowserLanguage(acceptLanguage);
-    
-    // Usar el idioma detectado o el idioma por defecto
+    // Intentar obtener el país desde el header CF-IPCountry (Cloudflare) o Vercel
+    const countryCode =
+      request.headers.get('cf-ipcountry') || request.headers.get('x-vercel-ip-country') || request.headers.get('x-country-code') || null;
+    const detectedLocale = detectBrowserLanguage(acceptLanguage, countryCode);
     const locale = detectedLocale || i18n.defaultLocale;
-    
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
+
+    const response = NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
+
+    response.cookies.set('NEXT_LOCALE', locale, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production',
+    });
+
+    return response;
+  }
+
+  const currentLocale = pathname.split('/')[1];
+  if (i18n.locales.includes(currentLocale)) {
+    const response = NextResponse.next();
+    const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+
+    // Sincronizar la cookie con el locale de la URL
+    // Si no hay cookie o no coincide, actualizarla sin redirigir
+    // Esto evita recargas innecesarias cuando el usuario navega normalmente
+    if (!cookieLocale || cookieLocale !== currentLocale) {
+      response.cookies.set('NEXT_LOCALE', currentLocale, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+      });
+    }
+
+    return response;
   }
 
   return NextResponse.next();

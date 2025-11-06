@@ -24,7 +24,8 @@
   "footer": {
     "CENTRO_PRINCIPAL": "Its main contracting center is located in <span class='font-black'>Miami</span>, <span class='font-black'>United States</span>, with local and representative offices in <span class='font-black'>Panama City, Panama</span>, and <span class='font-black'>Ciudad Guayana, Venezuela</span>.",
     "CALLE_NUMERO": "55th Street, PH SFC. Office 26D",
-    "PAIS_CIUDAD": "Obarrio, Panama City, Panama"
+    "PAIS_CIUDAD": "Obarrio, Panama City, Panama",
+    "CERTIFICACIONES_GLOBALES": "Global Certifications"
   },
   "home": {
     "LLEVAMOS_LA_FRUTA": "We bring the best to where it matters most",
@@ -224,6 +225,24 @@
       "UTILIZAMOS_EMPAQUES": "We use packaging designed to protect tropical fruits during international transport.",
       "OFRECEMOS_MONITOREO": "We offer real-time monitoring of each shipment, from the farm to the final customer.",
       "CUMPLIMOS_ESTANDARES": "We meet global standards that ensure quality, safety, and access to demanding markets."
+    },
+    "certifications": {
+      "TITULO": "International Certifications",
+      "DESCRIPCION": "We have international certifications that guarantee the quality, safety and sustainability of our agricultural products.",
+      "BENEFICIOS": "Benefits:",
+      "PRODUCTOS_CERTIFICADOS": "Certified Products:",
+      "NUMERO_CERTIFICADO": "Certificate No.:",
+      "VALIDO_HASTA": "Valid until:",
+      "VERIFICAR_CERTIFICADO": "Verify certificate →",
+      "MAS_INFORMACION": "More information →",
+      "NO_DISPONIBLES": "No certifications available at this time.",
+      "RESUMEN_CERTIFICACIONES": "Certifications Summary",
+      "TOTAL_CERTIFICACIONES": "Total certifications:",
+      "CERTIFICACIONES_ACTIVAS": "Active certifications:",
+      "ULTIMA_ACTUALIZACION": "Last updated:",
+      "POR_QUE_IMPORTANTES": "Why are these certifications important?",
+      "TEXTO_IMPORTANCIA": "These certifications guarantee that our products meet the highest standards of quality, food safety and sustainability. This allows us to export to the most demanding markets in the world and ensure the trust of our clients.",
+      "ERROR_CARGAR": "Could not load certifications file"
     }
   },
   "contact": {
@@ -321,7 +340,7 @@
         ]
       }
     ]
-    
+
   }
 
 
