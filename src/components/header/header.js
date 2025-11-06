@@ -1,12 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import Menu from '../menu/menu';
 import LanguageSwitcher from 'components/language-switcher/language-switcher';
 import BurgerMenu from '../burger-menu/burger-menu';
 
 const Header = ({ dictionary }) => {
+  const pathname = usePathname();
   const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
@@ -41,14 +43,14 @@ const Header = ({ dictionary }) => {
         <Menu dictionary={dictionary} />
       </div>
 
-      <Link className="cursor-pointer hidden md:flex flex-1 items-center justify-center" href={'/'}>
+      <Link className="cursor-pointer hidden md:flex flex-1 items-center justify-center" href={`/${pathname.split('/')[1] || 'es'}`}>
         <Image src={'/img/freshfood_logo.svg'} height={50} width={300} alt="freshfood logo" />
       </Link>
 
       <div className="flex-1 items-center justify-end gap-5 hidden md:flex">
         <LanguageSwitcher />
         <Link
-          href={'/contact'}
+          href={`/${pathname.split('/')[1] || 'es'}/contact`}
           className="flex items-center  text-l-100 justify-center border-greendark border-2 py-2 px-4 rounded-full md:hover:px-8 transition-all hover:bg-greendark hover:text-white"
         >
           {dictionary.header.QUIERES_MAS_INFO}

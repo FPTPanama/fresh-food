@@ -73,9 +73,11 @@ export function middleware(request) {
   const isMissingLocale = i18n.locales.every(locale => !pathname.startsWith(`/${locale}`));
 
   if (isMissingLocale) {
+    // SIEMPRE priorizar la cookie si existe, incluso si hay una detección automática disponible
     const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
     if (cookieLocale && i18n.locales.includes(cookieLocale)) {
       const response = NextResponse.redirect(new URL(`/${cookieLocale}${pathname}`, request.url));
+      // Reforzar la cookie para asegurar que persista
       response.cookies.set('NEXT_LOCALE', cookieLocale, {
         path: '/',
         maxAge: 60 * 60 * 24 * 365,
@@ -85,6 +87,7 @@ export function middleware(request) {
       return response;
     }
 
+    // Solo si NO hay cookie, hacer detección automática
     const acceptLanguage = request.headers.get('accept-language');
     // Intentar obtener el país desde el header CF-IPCountry (Cloudflare) o Vercel
     const countryCode =
@@ -94,6 +97,7 @@ export function middleware(request) {
 
     const response = NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
 
+    // Guardar el locale detectado en la cookie para futuras navegaciones
     response.cookies.set('NEXT_LOCALE', locale, {
       path: '/',
       maxAge: 60 * 60 * 24 * 365,
@@ -109,9 +113,23 @@ export function middleware(request) {
     const response = NextResponse.next();
     const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
 
-    // Sincronizar la cookie con el locale de la URL
-    // Si no hay cookie o no coincide, actualizarla sin redirigir
-    // Esto evita recargas innecesarias cuando el usuario navega normalmente
+    // CRÍTICO: Si el locale en la URL no coincide con la cookie, redirigir a la cookie
+    // Esto asegura que la preferencia del usuario siempre se respete
+    if (cookieLocale && cookieLocale !== currentLocale && i18n.locales.includes(cookieLocale)) {
+      const newPath = pathname.replace(`/${currentLocale}`, `/${cookieLocale}`);
+      const redirectResponse = NextResponse.redirect(new URL(newPath, request.url));
+      // Reforzar la cookie
+      redirectResponse.cookies.set('NEXT_LOCALE', cookieLocale, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+      });
+      return redirectResponse;
+    }
+
+    // Sincronizar la cookie con el locale de la URL si no hay cookie o coincide
+    // Esto asegura que la cookie siempre esté actualizada
     if (!cookieLocale || cookieLocale !== currentLocale) {
       response.cookies.set('NEXT_LOCALE', currentLocale, {
         path: '/',
