@@ -49,6 +49,3 @@ const Certificates = async ({ params }) => {
 
 export default Certificates;
 
-
-
-
