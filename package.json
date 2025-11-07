@@ -9,7 +9,8 @@
     "lint": "next lint",
     "lint:changed": "node scripts/lint-changed.js",
     "lint:changed:main": "node scripts/lint-changed.js main",
-    "lint:changed:develop": "node scripts/lint-changed.js develop"
+    "lint:changed:develop": "node scripts/lint-changed.js develop",
+    "pr:summary": "node scripts/generate-pr-summary.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -31,6 +32,7 @@
     "eslint-config-next": "^15.2.4",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "sass": "^1.86.3"
+    "sass": "^1.86.3",
+    "simple-git": "^3.27.0"
   }
 }

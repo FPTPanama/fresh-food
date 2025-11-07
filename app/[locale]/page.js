@@ -168,10 +168,10 @@ export default async function Home({ params }) {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5">
               <div className="flex items-center justify-center w-full">
-                <Image 
-                  src={'/img/mangos_box_ok.webp'} 
-                  width={400} 
-                  height={200} 
+                <Image
+                  src={'/img/mangos_box_ok.webp'}
+                  width={400}
+                  height={200}
                   alt="mangos en caja"
                   loading="lazy"
                   quality={85}
@@ -188,10 +188,10 @@ export default async function Home({ params }) {
                 />
               </div>
               <div className="flex items-center justify-center w-full">
-                <Image 
-                  src={'/img/pineapples_box_ok.webp'} 
-                  width={400} 
-                  height={200} 
+                <Image
+                  src={'/img/pineapples_box_ok.webp'}
+                  width={400}
+                  height={200}
                   alt="piñas en caja"
                   loading="lazy"
                   quality={85}
@@ -200,7 +200,7 @@ export default async function Home({ params }) {
             </div>
           </section>
           <section className="flex flex-col items-start justify-center w-full md: mt-14 gap-5 text-greendark">
-            <h2 className="font-black text-l-500 md:text-l-600" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRA_RUTA }} />
+            <h2 className="font-black text-l-500 md:text-l-600 text-greendark" dangerouslySetInnerHTML={{ __html: dictionary.home.NUESTRA_RUTA }} />
             <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 mt-10">
               {RoadFruitMap.map((item, key) => {
                 return (
