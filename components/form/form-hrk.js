@@ -34,8 +34,8 @@ const FormHrk = ({ dictionary }) => {
     try {
       setLoadingResponse(true);
 
-      const res = await emailjs.send('hrk_global_service_mail', 'hrk_template_email', dataSend, {
-        publicKey: 'RpK5TowBV0ICJanq6',
+      const res = await emailjs.send('fresh_food_service', 'freshfoodform', dataSend, {
+        publicKey: 'COpkrS0SXtBVm24hl',
       });
 
       if (res) {
@@ -48,7 +48,7 @@ const FormHrk = ({ dictionary }) => {
   };
 
   return (
-    <div className={'flex flex-col w-full gap-5'}>
+    <div className={'flex w-full flex-col gap-5'}>
       <ModalHrk showModal={showModal}>
         {loadingResponse ? (
           <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>{dictionary.modal.SENDING_YOUR_CONTACT}</p>
@@ -69,7 +69,7 @@ const FormHrk = ({ dictionary }) => {
             )}
           >
             <MdOutlineMarkEmailRead size={100} color="white" />
-            <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center gap-5')}>
+            <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'gap-5 md:justify-center')}>
               <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>
                 {dictionary.modal.GRACIAS_POR_TU_MENSAJE}
               </p>
@@ -98,8 +98,8 @@ const FormHrk = ({ dictionary }) => {
         )}
       </ModalHrk>
 
-      <div className={'flex flex-col justify-center items-center gap-5 w-full text-greendark'}>
-        <div className={'flex flex-col justify-center items-start w-full'}>
+      <div className={'flex w-full flex-col items-center justify-center gap-5 text-greendark'}>
+        <div className={'flex w-full flex-col items-start justify-center'}>
           <label
             htmlFor=""
             className={classNames({ 'text-primary': nameError.ok || nombre === null }, { 'text-red-600': !nameError.ok && nombre !== null })}
@@ -132,7 +132,7 @@ const FormHrk = ({ dictionary }) => {
             )}
           </div>
         </div>
-        <div className={'flex flex-col justify-center items-start w-full'}>
+        <div className={'flex w-full flex-col items-start justify-center'}>
           <label
             htmlFor="Email"
             className={classNames({ 'text-primary': emailError.ok || email === null }, { 'text-red-600': !emailError.ok && email !== null })}
@@ -168,7 +168,7 @@ const FormHrk = ({ dictionary }) => {
           </div>
         </div>
 
-        <div className={'flex flex-col justify-center items-start w-full'}>
+        <div className={'flex w-full flex-col items-start justify-center'}>
           <label
             htmlFor=""
             className={classNames({ 'text-primary': phoneError.ok || phone === null }, { 'text-red-600': !phoneError.ok && phone !== null })}
@@ -207,9 +207,9 @@ const FormHrk = ({ dictionary }) => {
       <div className={classNames('flex items-center justify-center')}>
         <button
           className={classNames(
-            'flex justify-center items-center p-3 w-full box-border rounded-2xl gap-3',
-            { ' bg-greendark text-white': isValid },
-            { 'bg-transparent text-primary text-greendark border-greendark border-2': !isValid },
+            'box-border flex w-full items-center justify-center gap-3 rounded-2xl p-3',
+            { 'bg-greendark text-white': isValid },
+            { 'text-primary border-2 border-greendark bg-transparent text-greendark': !isValid },
           )}
           onClick={() => {
             isValid && sendEmail();
