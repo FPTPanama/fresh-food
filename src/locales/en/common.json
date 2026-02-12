@@ -4,7 +4,8 @@
     "PRODUCTOS": "Products",
     "NOSOTROS": "About Us",
     "LOGISTICA": "Logistics",
-    "QUIERES_MAS_INFO": "Want more information?"
+    "QUIERES_MAS_INFO": "Want more information?",
+    "NEWS": "News"
   },
   "form": {
     "NAME": "Name",
@@ -269,7 +270,7 @@
         ]
       },
       {
-        "TITLE":  "Transport to packing plant",
+        "TITLE": "Transport to packing plant",
         "DESCRIPTION": "Refrigerated transport and short travel times to avoid loss of product quality.",
         "specifications": [
           "Refrigerated trucks (0–5 °C) sanitized before each trip.",
@@ -330,7 +331,7 @@
         ]
       },
       {
-        "TITLE":"Final distribution to client",
+        "TITLE": "Final distribution to client",
         "DESCRIPTION": "Refrigerated ground transport delivers the fruit to the final customer.",
         "specifications": [
           "Refrigerated transport (0–5 °C) with optimized routes to reduce delivery time.",
@@ -340,8 +341,5 @@
         ]
       }
     ]
-
   }
-
-
 }
