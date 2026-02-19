@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build --workspace=web"
+  command = "npm install --legacy-peer-deps && rm -rf apps/web/node_modules && npm run build --workspace=web"
   publish = "apps/web/.next"
 
 [[plugins]]
