@@ -1,9 +1,5 @@
 import { notFound } from 'next/navigation';
 import { i18n } from '../../i18n';
-import '@/styles/burger-menu.scss';
-import '@/styles/global.scss';
-import '@/styles/globals.css';
-import '@/styles/mixins.scss';
 import OrganizationSchema from '@/components/seo/OrganizationSchema';
 
 export async function generateMetadata({ params }) {
@@ -91,12 +87,10 @@ const LocaleLayout = async ({ children, params }) => {
   }
 
   return (
-    <html lang={locale}>
-      <head>
-        <OrganizationSchema locale={locale} />
-      </head>
-      <body className={`bg-fresh snap-y snap-mandatory scroll-smooth overflow-y-scroll`}>{children}</body>
-    </html>
+    <>
+      <OrganizationSchema locale={locale} />
+      {children}
+    </>
   );
 };
 
