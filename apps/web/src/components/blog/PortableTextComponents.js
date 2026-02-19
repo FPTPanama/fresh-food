@@ -144,7 +144,7 @@ function QuoteBlock({ value }) {
 
   return (
     <blockquote className="my-8 border-l-4 border-green-500 bg-green-50 p-6 rounded-r-lg">
-      <p className="text-xl italic text-gray-700 mb-4">"{value.quote}"</p>
+      <p className="text-xl italic text-gray-700 mb-4">&ldquo;{value.quote}&rdquo;</p>
       {(value.author || value.authorTitle) && (
         <footer className="flex items-center gap-3">
           {authorImageUrl && (

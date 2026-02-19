@@ -67,7 +67,7 @@ const ParallaxContainer = ({
     });
 
     return () => ctx.revert();
-  }, [speed]);
+  }, [speed, yOffset]);
 
   const offset = yOffset || 30;
   const extraSize = offset + 10;
