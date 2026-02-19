@@ -1,6 +1,6 @@
 [build]
   base = "apps/web"
-  command = "rm -rf ../../node_modules && npm install --legacy-peer-deps && npm run build"
+  command = "rm -rf ../../node_modules ../../package-lock.json && npm install --legacy-peer-deps --install-links && npm run build"
   publish = ".next"
 
 [[plugins]]
