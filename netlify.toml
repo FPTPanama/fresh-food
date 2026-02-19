@@ -1,0 +1,9 @@
+[build]
+  command = "mv package.json package.json.bak && mv package-lock.json package-lock.json.bak 2>/dev/null; cd apps/web && npm install --legacy-peer-deps && npm run build"
+  publish = "apps/web/.next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -1,38 +1,22 @@
 {
-  "name": "fresh-food",
-  "version": "0.1.0",
+  "name": "fresh-food-monorepo",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "lint:changed": "node scripts/lint-changed.js",
-    "lint:changed:main": "node scripts/lint-changed.js main",
-    "lint:changed:develop": "node scripts/lint-changed.js develop",
-    "pr:summary": "node scripts/generate-pr-summary.mjs"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "antd": "^5.26.7",
-    "autoprefixer": "^10.4.21",
-    "classnames": "^2.5.1",
-    "dayjs": "^1.11.13",
-    "framer-motion": "^12.23.12",
-    "next": "15.2.4",
-    "next-i18next": "^15.4.2",
-    "postcss": "^8.5.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "tailwindcss": "^3.4.17"
+    "dev": "npm run dev --workspace=web",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:studio": "npm run dev --workspace=studio",
+    "build": "npm run build --workspace=web",
+    "build:web": "npm run build --workspace=web",
+    "lint": "npm run lint --workspace=web",
+    "clean": "rm -rf node_modules apps/*/node_modules apps/*/.next"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.2.4",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.7.1",
-    "sass": "^1.86.3",
-    "simple-git": "^3.27.0"
-  }
+    "react-is": "^19.2.4",
+    "turbo": "^2.3.0"
+  },
+  "packageManager": "npm@10.2.0"
 }
