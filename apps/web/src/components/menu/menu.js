@@ -47,7 +47,7 @@ const Menu = ({ dictionary, pulse, setPulse, isAbsolute = false }) => {
       <Link
         onClick={handleLinkClick}
         className="z-50 font-black text-greendark transition-all hover:text-l-200 hover:text-greenlight md:hover:px-2"
-        href={`/${locale}/news`}
+        href={`/${locale}/blog`}
       >
         {dictionary.header.NEWS}
       </Link>

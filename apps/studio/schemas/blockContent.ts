@@ -1,35 +1,35 @@
-import {defineType, defineArrayMember} from 'sanity'
+import { defineType, defineArrayMember } from 'sanity'
 
 export default defineType({
-  title: 'Block Content',
+  title: 'Contenido del Post',
   name: 'blockContent',
   type: 'array',
   of: [
+    // Texto enriquecido
     defineArrayMember({
-      title: 'Block',
+      title: 'Texto',
       type: 'block',
       styles: [
-        {title: 'Normal', value: 'normal'},
-        {title: 'H1', value: 'h1'},
-        {title: 'H2', value: 'h2'},
-        {title: 'H3', value: 'h3'},
-        {title: 'H4', value: 'h4'},
-        {title: 'Quote', value: 'blockquote'},
+        { title: 'Normal', value: 'normal' },
+        { title: 'H2', value: 'h2' },
+        { title: 'H3', value: 'h3' },
+        { title: 'H4', value: 'h4' },
+        { title: 'Cita', value: 'blockquote' },
       ],
       lists: [
-        {title: 'Bullet', value: 'bullet'},
-        {title: 'Numbered', value: 'number'},
+        { title: 'Viñetas', value: 'bullet' },
+        { title: 'Numerada', value: 'number' },
       ],
       marks: {
         decorators: [
-          {title: 'Strong', value: 'strong'},
-          {title: 'Emphasis', value: 'em'},
-          {title: 'Underline', value: 'underline'},
-          {title: 'Strike', value: 'strike-through'},
+          { title: 'Negrita', value: 'strong' },
+          { title: 'Cursiva', value: 'em' },
+          { title: 'Subrayado', value: 'underline' },
+          { title: 'Tachado', value: 'strike-through' },
         ],
         annotations: [
           {
-            title: 'URL',
+            title: 'Enlace',
             name: 'link',
             type: 'object',
             fields: [
@@ -43,9 +43,11 @@ export default defineType({
         ],
       },
     }),
+
+    // Imagen individual
     defineArrayMember({
       type: 'image',
-      options: {hotspot: true},
+      options: { hotspot: true },
       fields: [
         {
           name: 'alt',
@@ -58,6 +60,31 @@ export default defineType({
           title: 'Pie de imagen',
         },
       ],
+    }),
+
+    // Galería de imágenes
+    defineArrayMember({
+      type: 'imageGallery',
+    }),
+
+    // Video embebido
+    defineArrayMember({
+      type: 'videoEmbed',
+    }),
+
+    // Llamada a la acción
+    defineArrayMember({
+      type: 'callToAction',
+    }),
+
+    // Cita destacada
+    defineArrayMember({
+      type: 'quoteBlock',
+    }),
+
+    // Caja de información
+    defineArrayMember({
+      type: 'infoBox',
     }),
   ],
 })

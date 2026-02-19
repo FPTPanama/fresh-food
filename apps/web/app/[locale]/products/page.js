@@ -8,35 +8,41 @@ import ProductSchema from '@/components/seo/ProductSchema';
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
-  
+
   return {
-    title: locale === 'es' 
-      ? 'Productos Fresh Food | Frutas Tropicales de Exportación - Limón, Mango, Piña'
-      : 'Fresh Food Products | Export Tropical Fruits - Lime, Mango, Pineapple',
-    description: locale === 'es'
-      ? 'Exportamos frutas frescas de alta calidad: Limón Tahití, Mango Kent, Piña Golden, Aguacate Hass, Pitahaya y Cacao. Productos certificados desde Panamá.'
-      : 'We export high-quality fresh fruits: Tahiti Lime, Kent Mango, Golden Pineapple, Hass Avocado, Dragon Fruit, and Cacao. Certified products from Panama.',
-    keywords: locale === 'es'
-      ? 'limón tahití exportación, mango kent panamá, piña golden, aguacate hass, pitahaya exportación, cacao panamá, frutas tropicales exportación'
-      : 'tahiti lime export, kent mango panama, golden pineapple, hass avocado, dragon fruit export, panama cacao, tropical fruits export',
+    title:
+      locale === 'es'
+        ? 'Productos Fresh Food | Frutas Tropicales de Exportación - Limón, Mango, Piña'
+        : 'Fresh Food Products | Export Tropical Fruits - Lime, Mango, Pineapple',
+    description:
+      locale === 'es'
+        ? 'Exportamos frutas frescas de alta calidad: Limón Tahití, Mango Kent, Piña Golden, Aguacate Hass, Pitahaya y Cacao. Productos certificados desde Panamá.'
+        : 'We export high-quality fresh fruits: Tahiti Lime, Kent Mango, Golden Pineapple, Hass Avocado, Dragon Fruit, and Cacao. Certified products from Panama.',
+    keywords:
+      locale === 'es'
+        ? 'limón tahití exportación, mango kent panamá, piña golden, aguacate hass, pitahaya exportación, cacao panamá, frutas tropicales exportación'
+        : 'tahiti lime export, kent mango panama, golden pineapple, hass avocado, dragon fruit export, panama cacao, tropical fruits export',
     openGraph: {
       title: locale === 'es' ? 'Productos Fresh Food Panamá' : 'Fresh Food Panama Products',
-      description: locale === 'es'
-        ? 'Limón, Mango, Piña, Aguacate, Pitahaya y Cacao de alta calidad para exportación'
-        : 'High-quality Lime, Mango, Pineapple, Avocado, Dragon Fruit and Cacao for export',
+      description:
+        locale === 'es'
+          ? 'Limón, Mango, Piña, Aguacate, Pitahaya y Cacao de alta calidad para exportación'
+          : 'High-quality Lime, Mango, Pineapple, Avocado, Dragon Fruit and Cacao for export',
       url: `https://freshfoodpanama.com/${locale}/products`,
-      images: [{
-        url: 'https://freshfoodpanama.com/img/agricultor_con_pineapple_ok.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Fresh Food Panama Products',
-      }],
+      images: [
+        {
+          url: 'https://freshfoodpanama.com/img/agricultor_con_pineapple_ok.webp',
+          width: 1200,
+          height: 630,
+          alt: 'Fresh Food Panama Products',
+        },
+      ],
     },
     alternates: {
       canonical: `https://freshfoodpanama.com/${locale}/products`,
       languages: {
-        'es': 'https://freshfoodpanama.com/es/products',
-        'en': 'https://freshfoodpanama.com/en/products',
+        es: 'https://freshfoodpanama.com/es/products',
+        en: 'https://freshfoodpanama.com/en/products',
       },
     },
   };
@@ -116,105 +122,105 @@ const Productos = async ({ params }) => {
       <ProductSchema locale={locale} />
       <div className="responsiveWidth gap-10">
         <GeneralLayout dictionary={dictionary}>
-        <section className="flex md:mt-0 h-full md:h-[calc(100vh-180px)] flex-col w-full items-center justify-center gap-7">
-          <div className="flex flex-col md:flex-row w-full items-center justify-between">
-            <div className="flex flex-col items-start justify-center gap-5 w-full md:w-1/3">
-              <h1
-                className="font-black text-l-600 md:text-l-800 text-greendark"
-                dangerouslySetInnerHTML={{ __html: dictionary.products.CALIDAD_EN_MANOS }}
-              />
+          <section className="flex h-full w-full flex-col items-center justify-center gap-7 md:mt-0 md:h-[calc(100vh-180px)]">
+            <div className="flex w-full flex-col items-center justify-between md:flex-row">
+              <div className="flex w-full flex-col items-start justify-center gap-5 md:w-1/3">
+                <h1
+                  className="font-black text-l-600 text-greendark md:text-l-800"
+                  dangerouslySetInnerHTML={{ __html: dictionary.products.CALIDAD_EN_MANOS }}
+                />
+              </div>
+              <div className="mb-10 mt-12 flex h-[200px] w-full items-center justify-center md:mb-0 md:mt-0 md:h-auto md:w-1/3">
+                <Image
+                  className="z-20 h-[400px] w-auto md:h-auto md:w-full"
+                  src={'/img/agricultor_con_pineapple_ok.webp'}
+                  width={500}
+                  height={300}
+                  alt="agricultor con piña"
+                  priority
+                  quality={90}
+                />
+              </div>
+              <div className="flex w-full flex-col items-start justify-center gap-5 p-0 md:w-1/3 md:p-5">
+                <h2
+                  className="font-black text-l-400 leading-snug text-greendark md:text-l-500"
+                  dangerouslySetInnerHTML={{ __html: dictionary.products.DESDE_PRIMER_CORTE }}
+                />
+
+                <button className="rounded-full bg-greendark px-5 py-2 text-white">{dictionary.products.YA_CONOCES_NUESTROS_PRODUCTOS}</button>
+              </div>
             </div>
-            <div className="flex items-center justify-center w-full h-[200px] md:h-auto md:w-1/3 mt-12 md:mt-0 mb-10 md:mb-0">
-              <Image
-                className="z-20 h-[400px] md:h-auto w-auto md:w-full"
-                src={'/img/agricultor_con_pineapple_ok.webp'}
-                width={500}
-                height={300}
-                alt="agricultor con piña"
-                priority
-                quality={90}
-              />
-            </div>
-            <div className="flex flex-col items-start justify-center w-full md:w-1/3 gap-5 p-0 md:p-5">
+          </section>
+
+          <section className="flex flex-col items-center justify-center gap-10">
+            <div className="mt-10 flex w-full flex-col items-center justify-center">
               <h2
-                className="text-greendark leading-snug font-black text-l-400 md:text-l-500"
-                dangerouslySetInnerHTML={{ __html: dictionary.products.DESDE_PRIMER_CORTE }}
+                className="text-left font-black text-l-500 leading-snug text-greendark md:text-center md:text-l-600"
+                dangerouslySetInnerHTML={{ __html: dictionary.products.NUESTROS_PRODUCTOS }}
               />
-
-              <button className="text-white bg-greendark py-2 px-5 rounded-full">{dictionary.products.YA_CONOCES_NUESTROS_PRODUCTOS}</button>
+              <p
+                className="max-w-[350px] text-left font-reg text-l-300 text-greendark md:text-center md:text-l-400"
+                dangerouslySetInnerHTML={{ __html: dictionary.products.SELECCIONAMOS_CON_ESMERO }}
+              />
             </div>
-          </div>
-        </section>
 
-        <section className="flex flex-col items-center justify-center gap-10">
-          <div className="flex flex-col items-center justify-center w-full mt-10">
-            <h2
-              className="text-greendark leading-snug font-black text-l-500 md:text-l-600 text-left md:text-center"
-              dangerouslySetInnerHTML={{ __html: dictionary.products.NUESTROS_PRODUCTOS }}
-            />
-            <p
-              className="text-l-300 md:text-l-400 font-reg text-greendark max-w-[350px] text-left md:text-center"
-              dangerouslySetInnerHTML={{ __html: dictionary.products.SELECCIONAMOS_CON_ESMERO }}
-            />
-          </div>
-
-          <div className="flex flex-col md:items-center justify-center w-full gap-5 mb-0 md:mb-10">
-            {products.map((fruit, key) => {
-              return (
-                <div key={key} className="flex flex-col w-full gap-3 h-auto">
-                  <div
-                    className="flex flex-col items-start md:items-center relative justify-start md:justify-center w-full min-h-[1100px] md:min-h-[700px] bg-cover bg-center bg-no-repeat rounded-[30px]"
-                    style={{
-                      backgroundImage: `url(${fruit.bg_img})`,
-                    }}
-                  >
+            <div className="mb-0 flex w-full flex-col justify-center gap-5 md:mb-10 md:items-center">
+              {products.map((fruit, key) => {
+                return (
+                  <div key={key} className="flex h-auto w-full flex-col gap-3">
                     <div
-                      className="flex flex-col items-center justify-center absolute top-0 left-0 right-0 bottom-0 rounded-[50px]"
+                      className="relative flex min-h-[1100px] w-full flex-col items-start justify-start rounded-[30px] bg-cover bg-center bg-no-repeat md:min-h-[700px] md:items-center md:justify-center"
                       style={{
-                        background: 'linear-gradient(90deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.7) 100%)',
+                        backgroundImage: `url(${fruit.bg_img})`,
                       }}
                     >
-                      <div className="flex flex-col md:flex-row items-center justify-start md:justify-center w-full h-full">
-                        <div className="flex flex-col justify-start items-start gap-4 w-full md:w-1/3 p-5 md:p-10 md:h-full">
-                          <p className="text-l-300 md:text-l-400 text-white font-thin" dangerouslySetInnerHTML={{ __html: fruit.descripcion }} />
-                        </div>
-                        <div className="flex flex-col items-center justify-center w-full md:w-1/3">
-                          <p className="text-l-500 md:text-l-800 font-black text-white text-center z-10">{fruit.title}</p>
-                          <p className="font-homemade text-l-400 md:text-l-600 leading-9 text-white font-homemade">{fruit.title_tec}</p>
-                          <button className="mt-7 text-white font-reg border border-white px-10 py-2 rounded-full hover:px-14 transition-all hover:font-black">
-                            {dictionary.products.QUIERO_SABER_MAS}
-                          </button>
-                        </div>
-                        <div className="flex flex-col justify-center text-white items-start gap-5 md:h-full w-full md:w-1/3 p-5">
-                          <div className="flex flex-col justify-start items-start gap-3">
-                            <div className="flex flex-col gap-4 items-start justify-start">
-                              {fruit.especificaciones.map((item, key) => {
-                                return (
-                                  <div key={key} className="flex flex-col md:flex-row items-start md:items-center justify-center gap-2">
-                                    <p className="font-black text-l-200">{Object.keys(item)}</p>
-                                    <p className="text-l-body">{Object.values(item)}</p>
-                                  </div>
-                                );
-                              })}
+                      <div
+                        className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center rounded-[50px]"
+                        style={{
+                          background: 'linear-gradient(90deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.7) 100%)',
+                        }}
+                      >
+                        <div className="flex h-full w-full flex-col items-center justify-start md:flex-row md:justify-center">
+                          <div className="flex w-full flex-col items-start justify-start gap-4 p-5 md:h-full md:w-1/3 md:p-10">
+                            <p className="font-thin text-l-300 text-white md:text-l-400" dangerouslySetInnerHTML={{ __html: fruit.descripcion }} />
+                          </div>
+                          <div className="flex w-full flex-col items-center justify-center md:w-1/3">
+                            <p className="z-10 text-center font-black text-l-500 text-white md:text-l-800">{fruit.title}</p>
+                            <p className="font-homemade text-l-400 leading-9 text-white md:text-l-600">{fruit.title_tec}</p>
+                            <button className="mt-7 rounded-full border border-white px-10 py-2 font-reg text-white transition-all hover:px-14 hover:font-black">
+                              {dictionary.products.QUIERO_SABER_MAS}
+                            </button>
+                          </div>
+                          <div className="flex w-full flex-col items-start justify-center gap-5 p-5 text-white md:h-full md:w-1/3">
+                            <div className="flex flex-col items-start justify-start gap-3">
+                              <div className="flex flex-col items-start justify-start gap-4">
+                                {fruit.especificaciones.map((item, key) => {
+                                  return (
+                                    <div key={key} className="flex flex-col items-start justify-center gap-2 md:flex-row md:items-center">
+                                      <p className="font-black text-l-200">{Object.keys(item)}</p>
+                                      <p className="text-l-body">{Object.values(item)}</p>
+                                    </div>
+                                  );
+                                })}
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="flex justify-start items-center md:h-9 w-full mb-10">
-                    <div className="flex items-center justify-center">
-                      <TiInfoLarge size={40} />
-                      <p className="font-reg text-l-100">{fruit.alias}</p>
+                    <div className="mb-10 flex w-full items-center justify-start md:h-9">
+                      <div className="flex items-center justify-center">
+                        <TiInfoLarge size={40} />
+                        <p className="font-reg text-l-100">{fruit.alias}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      </GeneralLayout>
-    </div>
+                );
+              })}
+            </div>
+          </section>
+        </GeneralLayout>
+      </div>
     </>
   );
 };

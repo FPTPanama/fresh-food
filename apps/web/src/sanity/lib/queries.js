@@ -1,18 +1,20 @@
 import { groq } from 'next-sanity'
 
-// Obtener todos los posts
+// Obtener todos los posts (sin filtro de idioma)
 export const postsQuery = groq`
-  *[_type == "post" && language == $language] | order(publishedAt desc) {
+  *[_type == "post"] | order(publishedAt desc) {
     _id,
     title,
     slug,
     publishedAt,
     excerpt,
     mainImage,
+    language,
     "author": author->name,
     "categories": categories[]->title
   }
 `
+
 
 // Obtener un post por slug
 export const postBySlugQuery = groq`
@@ -22,11 +24,44 @@ export const postBySlugQuery = groq`
     slug,
     publishedAt,
     excerpt,
-    body,
-    mainImage,
+    body[] {
+      ...,
+      _type == "image" => {
+        ...,
+        asset->
+      },
+      _type == "imageGallery" => {
+        ...,
+        images[] {
+          ...,
+          asset->
+        }
+      },
+      _type == "videoEmbed" => {
+        ...,
+        thumbnail {
+          ...,
+          asset->
+        }
+      },
+      _type == "quoteBlock" => {
+        ...,
+        authorImage {
+          ...,
+          asset->
+        }
+      }
+    },
+    mainImage {
+      ...,
+      asset->
+    },
     "author": author->{
       name,
-      image,
+      image {
+        ...,
+        asset->
+      },
       bio
     },
     "categories": categories[]->{
@@ -67,5 +102,35 @@ export const recentPostsQuery = groq`
     slug,
     publishedAt,
     mainImage
+  }
+`
+
+// Obtener posts destacados (sin filtro de idioma)
+export const featuredPostsQuery = groq`
+  *[_type == "post" && "Destacado" in categories[]->title] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    publishedAt,
+    excerpt,
+    mainImage,
+    language,
+    "author": author->name,
+    "categories": categories[]->title
+  }
+`
+
+// Obtener posts NO destacados (sin filtro de idioma)
+export const regularPostsQuery = groq`
+  *[_type == "post" && !("Destacado" in categories[]->title)] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    publishedAt,
+    excerpt,
+    mainImage,
+    language,
+    "author": author->name,
+    "categories": categories[]->title
   }
 `

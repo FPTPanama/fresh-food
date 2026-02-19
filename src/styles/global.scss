@@ -1,5 +1,5 @@
-@use '_font-variables' as fontVar;
-@import './mixins.scss';
+@use "_font-variables" as fontVar;
+@import "./mixins.scss";
 
 :root {
   --greenDark: #224c22;
@@ -10,7 +10,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: popMed, 'DM Sans', sans-serif;
+  font-family: popMed, "DM Sans", sans-serif;
   box-sizing: border-box;
 
   a {
@@ -43,7 +43,8 @@ body {
 
 // scale-up-center
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
   animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -190,7 +191,8 @@ body {
 }
 
 .ocultar-right {
-  -webkit-animation: ocultar-right 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: ocultar-right 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
   animation: ocultar-right 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -216,13 +218,15 @@ body {
   }
 }
 .slide-right-pestana {
-  -webkit-animation: slide-right-pestana 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-right-pestana 0.2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-right-pestana 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 //slide-left-pestana
 .slide-left-pestana {
-  -webkit-animation: slide-left-pestana 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-left-pestana 0.2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-left-pestana 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @-webkit-keyframes slide-left-pestana {
@@ -526,6 +530,249 @@ body {
   }
 }
 
+// ***********************************************************
+// Margin
+// ***********************************************************
+
+.m0 {
+  margin: 0;
+}
+.mt0 {
+  margin-top: 0;
+}
+.mr0 {
+  margin-right: 0;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.ml0 {
+  margin-left: 0;
+}
+
+.m1 {
+  margin: fontVar.$em1;
+}
+.m2 {
+  margin: fontVar.$em2;
+}
+.m3 {
+  margin: fontVar.$em3;
+}
+.m4 {
+  margin: fontVar.$em4;
+}
+.m5 {
+  margin: fontVar.$em5;
+}
+
+.mt1 {
+  margin-top: fontVar.$em1;
+}
+.mr1 {
+  margin-right: fontVar.$em1;
+}
+.mb1 {
+  margin-bottom: fontVar.$em1;
+}
+.ml1 {
+  margin-left: fontVar.$em1;
+}
+
+.mt2 {
+  margin-top: fontVar.$em2;
+}
+.mr2 {
+  margin-right: fontVar.$em2;
+}
+.mb2 {
+  margin-bottom: fontVar.$em2;
+}
+.ml2 {
+  margin-left: fontVar.$em2;
+}
+
+.mt3 {
+  margin-top: fontVar.$em3;
+}
+.mr3 {
+  margin-right: fontVar.$em3;
+}
+.mb3 {
+  margin-bottom: fontVar.$em3;
+}
+.ml3 {
+  margin-left: fontVar.$em3;
+}
+
+.mt4 {
+  margin-top: fontVar.$em4;
+}
+.mr4 {
+  margin-right: fontVar.$em4;
+}
+.mb4 {
+  margin-bottom: fontVar.$em4;
+}
+.ml4 {
+  margin-left: fontVar.$em4;
+}
+
+.mt5 {
+  margin-top: fontVar.$em5;
+}
+.mr5 {
+  margin-right: fontVar.$em5;
+}
+.mb5 {
+  margin-bottom: fontVar.$em5;
+}
+.ml5 {
+  margin-left: fontVar.$em5;
+}
+
+.mt6 {
+  margin-top: fontVar.$em6;
+}
+.mr6 {
+  margin-right: fontVar.$em6;
+}
+.mb6 {
+  margin-bottom: fontVar.$em6;
+}
+.ml6 {
+  margin-left: fontVar.$em6;
+}
+
+// ***********************************************************
+// Sizes
+// ***********************************************************
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.w75 {
+  width: 75%;
+}
+.h75 {
+  height: 75%;
+}
+.w66 {
+  width: 66%;
+}
+.h66 {
+  height: 66%;
+}
+.w50 {
+  width: 50%;
+}
+.h50 {
+  height: 50%;
+}
+.w33 {
+  width: 33%;
+}
+.h33 {
+  height: 33%;
+}
+.w25 {
+  width: 25%;
+}
+.h25 {
+  height: 25%;
+}
+
+.wminc {
+  width: min-content;
+}
+.wmaxc {
+  width: max-content;
+}
+.wfitc {
+  width: fit-content;
+}
+
+.hminc {
+  height: min-content;
+}
+.hmaxc {
+  height: max-content;
+}
+.hfitc {
+  height: fit-content;
+}
+
+// ***********************************************************
+// Text
+// ***********************************************************
+
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+
+.wsn {
+  white-space: normal;
+}
+.wspw {
+  white-space: pre-wrap;
+}
+.wspl {
+  white-space: pre-line;
+}
+.wsnw {
+  white-space: nowrap;
+}
+
+.strong {
+  font-family: popBlack;
+}
+.reg {
+  font-family: popMed;
+}
+.bold {
+  font-family: popBold;
+}
+.bolder {
+  font-family: popExtraBold;
+}
+
+// ***********************************************************
+// Text size
+// ***********************************************************
+
+.fs8 {
+  font-size: fontVar.$fs8;
+}
+.fs7 {
+  font-size: fontVar.$fs7;
+}
+.fs6 {
+  font-size: fontVar.$fs6;
+}
+.fs5 {
+  font-size: fontVar.$fs5;
+}
+.fs4 {
+  font-size: fontVar.$fs4;
+}
+.fs3 {
+  font-size: fontVar.$fs3;
+}
+.fs2 {
+  font-size: fontVar.$fs2;
+}
+.fs1 {
+  font-size: fontVar.$fs1;
+}
+
 @include tablet {
   $fs5: 2.2em;
   .fs8 {
@@ -620,7 +867,7 @@ body {
 
 h1 {
   font-size: fontVar.$fs7;
-  font-family: 'popExtraBold';
+  font-family: "popExtraBold";
   line-height: fontVar.$em3;
   max-width: 490px;
   margin: 0px;
@@ -640,7 +887,7 @@ h1 {
   line-height: calc(fontVar.$em4 * 0.8);
 
   span {
-    font-family: 'ganaBolder';
+    font-family: "ganaBolder";
   }
 
   @include tabletVertical {
@@ -651,23 +898,4 @@ h1 {
     font-size: fontVar.$fs3;
     line-height: calc(fontVar.$em4 * 0.8);
   }
-}
-
-.notification-button {
-  background-color: #f2f4f5 !important;
-  border: none !important;
-  color: black !important;
-  transition: all 1s !important;
-}
-
-.notification-button:hover {
-  background-color: #d8d8d8 !important;
-  color: black !important;
-  border: none !important;
-}
-
-.notification-button:focus {
-  background-color: #d8d8d8 !important;
-  color: black !important;
-  border: none !important;
 }

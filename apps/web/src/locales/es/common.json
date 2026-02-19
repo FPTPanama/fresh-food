@@ -438,5 +438,11 @@
         ]
       }
     ]
+  },
+  "blog": {
+    "BLOG": "Blog",
+    "PRODUCTS": "Products",
+    "EXPERT_FARMERS": "Agricultores expertos de Panamá, Estados Unidos y Venezuela.",
+    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Llevamos a tu mesa la esencia de la naturaleza."
   }
 }

@@ -341,5 +341,11 @@
         ]
       }
     ]
+  },
+  "blog": {
+    "BLOG": "Blog",
+    "PRODUCTS": "Products",
+    "EXPERT_FARMERS": "Expert farmers from Panama, the United States, and Venezuela.",
+    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Bringing to your table the essence of nature."
   }
 }

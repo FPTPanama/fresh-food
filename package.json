@@ -6,13 +6,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
-    "dev:web": "turbo run dev --filter=web",
-    "dev:studio": "turbo run dev --filter=studio",
-    "build": "turbo run build",
-    "build:web": "turbo run build --filter=web",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "dev": "npm run dev --workspace=web",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:studio": "npm run dev --workspace=studio",
+    "build": "npm run build --workspace=web",
+    "build:web": "npm run build --workspace=web",
+    "lint": "npm run lint --workspace=web",
+    "clean": "rm -rf node_modules apps/*/node_modules apps/*/.next"
   },
   "devDependencies": {
     "turbo": "^2.3.0"
