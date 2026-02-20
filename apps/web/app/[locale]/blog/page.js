@@ -6,29 +6,44 @@ import PostCard from 'components/post-card/post-card';
 import PostFeaturedCard from 'components/post-featured-card/post-featured-card';
 import BlogHero from 'components/blog-hero/blog-hero';
 
-async function getFeaturedPosts() {
-  return await safeFetch(featuredPostsQuery, {});
+async function getFeaturedPosts(language) {
+  return await safeFetch(featuredPostsQuery, { language });
 }
 
-async function getRegularPosts() {
-  return await safeFetch(regularPostsQuery, {});
+async function getRegularPosts(language) {
+  return await safeFetch(regularPostsQuery, { language });
 }
 
-async function getAllPosts() {
-  return await safeFetch(postsQuery, {});
+async function getAllPosts(language) {
+  return await safeFetch(postsQuery, { language });
 }
 
-export const metadata = {
-  title: 'Blog | Fresh Food',
-  description: 'Noticias y artículos sobre agricultura sostenible y productos frescos',
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  
+  return {
+    title: locale === 'es' 
+      ? 'Noticias | Fresh Food Panamá' 
+      : 'News | Fresh Food Panama',
+    description: locale === 'es'
+      ? 'Noticias y artículos sobre exportación de frutas tropicales, agricultura sostenible y productos frescos desde Panamá.'
+      : 'News and articles about tropical fruit export, sustainable agriculture and fresh products from Panama.',
+    openGraph: {
+      title: locale === 'es' ? 'Noticias | Fresh Food Panamá' : 'News | Fresh Food Panama',
+      description: locale === 'es'
+        ? 'Noticias y artículos sobre exportación de frutas tropicales y productos frescos.'
+        : 'News and articles about tropical fruit export and fresh products.',
+      type: 'website',
+    },
+  };
+}
 
 const BlogPage = async ({ params }) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
 
-  const featuredPosts = await getFeaturedPosts();
-  const regularPosts = await getRegularPosts();
+  const featuredPosts = await getFeaturedPosts(locale);
+  const regularPosts = await getRegularPosts(locale);
 
   const posts = await getAllPosts(locale);
 

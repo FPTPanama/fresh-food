@@ -65,18 +65,6 @@ export default defineType({
       title: 'Contenido',
       type: 'blockContent',
     }),
-    defineField({
-      name: 'language',
-      title: 'Idioma',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Español', value: 'es'},
-          {title: 'English', value: 'en'},
-        ],
-      },
-      initialValue: 'es',
-    }),
   ],
 
   preview: {
