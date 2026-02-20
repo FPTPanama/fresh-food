@@ -9,8 +9,8 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import { IoArrowForwardCircleOutline, IoArrowForwardOutline } from 'react-icons/io5';
 
-async function getPost(slug) {
-  return await safeFetch(postBySlugQuery, { slug });
+async function getPost(slug, language) {
+  return await safeFetch(postBySlugQuery, { slug, language });
 }
 
 export async function generateMetadata({ params }) {
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Blog | Fresh Food' };
   }
 
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
 
   if (!post) {
     return { title: 'Post no encontrado' };
@@ -54,7 +54,7 @@ export default async function PostPage({ params }) {
     );
   }
 
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
 
   if (!post) {
     notFound();

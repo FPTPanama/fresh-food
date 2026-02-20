@@ -30,9 +30,9 @@ export const allPostsQuery = groq`
   }
 `;
 
-// Obtener un post por slug
+// Obtener un post por slug e idioma
 export const postBySlugQuery = groq`
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && slug.current == $slug && language == $language][0] {
     _id,
     title,
     slug,
