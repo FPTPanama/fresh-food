@@ -193,6 +193,10 @@ const components = {
     infoBox: ({ value }) => <InfoBox value={value} />,
   },
   marks: {
+    strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+    em: ({ children }) => <em className="italic">{children}</em>,
+    underline: ({ children }) => <span className="underline">{children}</span>,
+    'strike-through': ({ children }) => <span className="line-through">{children}</span>,
     link: ({ children, value }) => {
       const rel = !value.href?.startsWith('/') ? 'noreferrer noopener' : undefined;
       return (
