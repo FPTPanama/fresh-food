@@ -6,16 +6,16 @@ import PostCard from 'components/post-card/post-card';
 import PostFeaturedCard from 'components/post-featured-card/post-featured-card';
 import BlogHero from 'components/blog-hero/blog-hero';
 
-async function getFeaturedPosts() {
-  return await safeFetch(featuredPostsQuery, {});
+async function getFeaturedPosts(language) {
+  return await safeFetch(featuredPostsQuery, { language });
 }
 
-async function getRegularPosts() {
-  return await safeFetch(regularPostsQuery, {});
+async function getRegularPosts(language) {
+  return await safeFetch(regularPostsQuery, { language });
 }
 
-async function getAllPosts() {
-  return await safeFetch(postsQuery, {});
+async function getAllPosts(language) {
+  return await safeFetch(postsQuery, { language });
 }
 
 export async function generateMetadata({ params }) {
@@ -42,8 +42,8 @@ const BlogPage = async ({ params }) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
 
-  const featuredPosts = await getFeaturedPosts();
-  const regularPosts = await getRegularPosts();
+  const featuredPosts = await getFeaturedPosts(locale);
+  const regularPosts = await getRegularPosts(locale);
 
   const posts = await getAllPosts(locale);
 

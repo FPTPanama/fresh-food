@@ -1,7 +1,22 @@
 import { groq } from 'next-sanity'
 
-// Obtener todos los posts (sin filtro de idioma)
+// Obtener todos los posts por idioma
 export const postsQuery = groq`
+  *[_type == "post" && language == $language] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    publishedAt,
+    excerpt,
+    mainImage,
+    language,
+    "author": author->name,
+    "categories": categories[]->title
+  }
+`
+
+// Obtener todos los posts (sin filtro de idioma - fallback)
+export const allPostsQuery = groq`
   *[_type == "post"] | order(publishedAt desc) {
     _id,
     title,
@@ -105,9 +120,9 @@ export const recentPostsQuery = groq`
   }
 `
 
-// Obtener posts destacados (sin filtro de idioma)
+// Obtener posts destacados por idioma
 export const featuredPostsQuery = groq`
-  *[_type == "post" && "Destacado" in categories[]->title] | order(publishedAt desc) {
+  *[_type == "post" && "Destacado" in categories[]->title && language == $language] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -120,9 +135,9 @@ export const featuredPostsQuery = groq`
   }
 `
 
-// Obtener posts NO destacados (sin filtro de idioma)
+// Obtener posts NO destacados por idioma
 export const regularPostsQuery = groq`
-  *[_type == "post" && !("Destacado" in categories[]->title)] | order(publishedAt desc) {
+  *[_type == "post" && !("Destacado" in categories[]->title) && language == $language] | order(publishedAt desc) {
     _id,
     title,
     slug,
