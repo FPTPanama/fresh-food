@@ -61,71 +61,75 @@ export default async function PostPage({ params }) {
   }
 
   return (
-    <GeneralLayout dictionary={dictionary}>
-      <section className="flex w-full flex-col items-center justify-center text-gray-800">
-        <article className="mx-auto mt-20 max-w-3xl">
-          {/* Breadcrumb */}
-          <nav className="mb-8 flex items-center gap-2 text-l-100 text-greendark">
-            <Link href={'/'}>Home</Link>
-            <IoArrowForwardOutline />
-            <Link href={`/${locale}/blog`}>Blog</Link>
-            <IoArrowForwardOutline />
-            <Link href={`/${locale}/blog/${slug}`}>{post.title}</Link>
-          </nav>
+    <div className="responsiveWidth mb-20 flex w-full flex-col px-5 text-greendark md:px-0">
+      <GeneralLayout dictionary={dictionary}>
+        <section className="flex w-full flex-col items-center justify-center text-gray-800">
+          <article className="mx-auto mt-20 max-w-3xl">
+            {/* Breadcrumb */}
+            <nav className="mb-8 flex items-center gap-2 text-l-100 text-greendark">
+              <Link href={'/'}>Home</Link>
+              <IoArrowForwardOutline />
+              <Link href={`/${locale}/blog`}>Blog</Link>
+              <IoArrowForwardOutline />
+              <Link className="line-clamp-1" href={`/${locale}/blog/${slug}`}>
+                {post.title}
+              </Link>
+            </nav>
 
-          {/* Header */}
-          <header className="mb-8 w-full">
-            <h1 className="mb-4 w-full text-4xl font-bold leading-tight">{post.title}</h1>
+            {/* Header */}
+            <header className="mb-8 w-full">
+              <h1 className="mb-4 w-full text-4xl font-bold leading-tight">{post.title}</h1>
 
-            {/* Meta */}
-            <div className="flex-start flex w-full items-center gap-4">
-              {post.author && (
-                <div className="flex items-center gap-2">
-                  {post.author.image && (
-                    <Image
-                      src={urlFor(post.author.image).width(40).height(40).url()}
-                      alt={post.author.name}
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
-                  )}
-                  <span className="text-sm font-bold">{post.author.name}</span>
-                </div>
-              )}
-              <p className="text-sm text-greendark">|</p>
-              {post.publishedAt && (
-                <time className="text-sm text-greendark" dateTime={post.publishedAt}>
-                  {new Date(post.publishedAt).toLocaleDateString(locale, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </time>
-              )}
-            </div>
-          </header>
+              {/* Meta */}
+              <div className="flex-start flex w-full items-center gap-4">
+                {post.author && (
+                  <div className="flex items-center gap-2">
+                    {post.author.image && (
+                      <Image
+                        src={urlFor(post.author.image).width(40).height(40).url()}
+                        alt={post.author.name}
+                        width={40}
+                        height={40}
+                        className="rounded-full"
+                      />
+                    )}
+                    <span className="text-sm font-bold">{post.author.name}</span>
+                  </div>
+                )}
+                <p className="text-sm text-greendark">|</p>
+                {post.publishedAt && (
+                  <time className="text-sm text-greendark" dateTime={post.publishedAt}>
+                    {new Date(post.publishedAt).toLocaleDateString(locale, {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+                )}
+              </div>
+            </header>
 
-          {/* Imagen principal */}
-          {post.mainImage && (
-            <div className="relative mb-8 h-96 w-full overflow-hidden rounded-xl">
-              <Image
-                src={urlFor(post.mainImage).width(1200).height(600).url()}
-                alt={post.mainImage.alt || post.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
+            {/* Imagen principal */}
+            {post.mainImage && (
+              <div className="relative mb-8 h-96 w-full overflow-hidden rounded-xl">
+                <Image
+                  src={urlFor(post.mainImage).width(1200).height(600).url()}
+                  alt={post.mainImage.alt || post.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
 
-          {/* Extracto */}
-          {post.excerpt && <p className="font-regular mb-8 text-xl leading-relaxed">{post.excerpt}</p>}
+            {/* Extracto */}
+            {post.excerpt && <p className="font-regular mb-8 text-xl leading-relaxed">{post.excerpt}</p>}
 
-          {/* Contenido */}
-          <BlogContent body={post.body} />
-        </article>
-      </section>
-    </GeneralLayout>
+            {/* Contenido */}
+            <BlogContent body={post.body} />
+          </article>
+        </section>
+      </GeneralLayout>
+    </div>
   );
 }
