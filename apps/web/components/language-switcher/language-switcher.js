@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState, useTransition } from 'react';
 import { MdLanguage } from 'react-icons/md';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ alternateUrls = null }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [currentLocale, setCurrentLocale] = useState('es');
@@ -42,8 +42,11 @@ const LanguageSwitcher = () => {
 
   const toggleLocale = () => {
     const newLocale = currentLocale === 'es' ? 'en' : 'es';
-    const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '') || '/';
-    const newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+    // Si hay URLs alternativas (ej. post con slugs distintos por idioma), usar la correcta
+    const newPath = alternateUrls?.[newLocale] ?? (() => {
+      const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '') || '/';
+      return `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+    })();
 
     // Guardar la posición actual del scroll en sessionStorage antes de navegar
     const scrollPosition = window.scrollY || window.pageYOffset;
