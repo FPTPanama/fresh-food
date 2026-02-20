@@ -246,7 +246,7 @@ export const portableTextComponents = {
     infoBox: ({ value }) => <InfoBox value={value} />,
   },
   marks: {
-    strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+    strong: ({ children }) => <strong style={{ fontFamily: 'popBold, popMed, sans-serif' }}>{children}</strong>,
     em: ({ children }) => <em className="italic">{children}</em>,
     underline: ({ children }) => <span className="underline">{children}</span>,
     'strike-through': ({ children }) => <span className="line-through">{children}</span>,

@@ -193,10 +193,11 @@ const components = {
     infoBox: ({ value }) => <InfoBox value={value} />,
   },
   marks: {
-    strong: ({ children }) => <strong className="font-bold">{children}</strong>,
-    em: ({ children }) => <em className="italic">{children}</em>,
-    underline: ({ children }) => <span className="underline">{children}</span>,
-    'strike-through': ({ children }) => <span className="line-through">{children}</span>,
+    // popBold es la familia de fuente bold del proyecto (popMed no tiene variante por peso)
+    strong: ({ children }) => <strong style={{ fontFamily: 'popBold, popMed, sans-serif' }}>{children}</strong>,
+    em: ({ children }) => <em style={{ fontStyle: 'italic' }}>{children}</em>,
+    underline: ({ children }) => <span style={{ textDecoration: 'underline' }}>{children}</span>,
+    'strike-through': ({ children }) => <span style={{ textDecoration: 'line-through' }}>{children}</span>,
     link: ({ children, value }) => {
       const rel = !value.href?.startsWith('/') ? 'noreferrer noopener' : undefined;
       return (
@@ -216,6 +217,10 @@ const components = {
   list: {
     bullet: ({ children }) => <ul className="mb-4 ml-6 list-disc space-y-2">{children}</ul>,
     number: ({ children }) => <ol className="mb-4 ml-6 list-decimal space-y-2">{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children }) => <li className="ml-2">{children}</li>,
+    number: ({ children }) => <li className="ml-2">{children}</li>,
   },
 };
 

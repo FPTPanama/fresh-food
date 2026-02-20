@@ -21,7 +21,6 @@ export async function generateMetadata({ params }) {
   }
 
   const post = await getPost(slug);
-  console.log(post);
 
   if (!post) {
     return { title: 'Post no encontrado' };
