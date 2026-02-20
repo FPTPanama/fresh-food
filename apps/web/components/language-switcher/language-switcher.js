@@ -2,20 +2,26 @@
 
 import classNames from 'classnames';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState, useTransition } from 'react';
+import { useEffect, useRef, useState, useTransition } from 'react';
 import { MdLanguage } from 'react-icons/md';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ alternateUrls = null }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [currentLocale, setCurrentLocale] = useState('es');
   const [isHover, setIsHover] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const prevLocaleRef = useRef(null);
 
   useEffect(() => {
     const localeFromPath = pathname.split('/')[1];
     if (localeFromPath && (localeFromPath === 'es' || localeFromPath === 'en')) {
       setCurrentLocale(localeFromPath);
+      // Solo refrescar cuando el locale cambió (ej. al cambiar idioma en el blog)
+      if (prevLocaleRef.current !== null && prevLocaleRef.current !== localeFromPath) {
+        router.refresh();
+      }
+      prevLocaleRef.current = localeFromPath;
     }
 
     // Restaurar la posición del scroll si se cambió el idioma
@@ -36,8 +42,11 @@ const LanguageSwitcher = () => {
 
   const toggleLocale = () => {
     const newLocale = currentLocale === 'es' ? 'en' : 'es';
-    const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '') || '/';
-    const newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+    // Si hay URLs alternativas (ej. post con slugs distintos por idioma), usar la correcta
+    const newPath = alternateUrls?.[newLocale] ?? (() => {
+      const pathWithoutLocale = pathname.replace(/^\/(es|en)/, '') || '/';
+      return `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+    })();
 
     // Guardar la posición actual del scroll en sessionStorage antes de navegar
     const scrollPosition = window.scrollY || window.pageYOffset;

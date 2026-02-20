@@ -30,12 +30,13 @@ export const allPostsQuery = groq`
   }
 `;
 
-// Obtener un post por slug
+// Obtener un post por slug e idioma, con traducciones para el language switcher
 export const postBySlugQuery = groq`
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && slug.current == $slug && language == $language][0] {
     _id,
     title,
     slug,
+    language,
     publishedAt,
     excerpt,
     body[] {
@@ -81,6 +82,10 @@ export const postBySlugQuery = groq`
     "categories": categories[]->{
       title,
       slug
+    },
+    "_translations": *[_type == "translation.metadata" && references(^._id)].translations[].value->{
+      "slug": slug.current,
+      language
     }
   }
 `;

@@ -7,6 +7,7 @@ const GeneralLayout = ({
   dictionary,
   showFooter = true,
   overflowHidden = false,
+  alternateUrls = null,
 }) => {
   return (
     <div
@@ -14,7 +15,7 @@ const GeneralLayout = ({
         overflowHidden && "overflow-hidden"
       } h-auto`}
     >
-      <Header dictionary={dictionary} />
+      <Header dictionary={dictionary} alternateUrls={alternateUrls} />
       <div className="md:mt-[130px] flex flex-col w-full mb-10">{children}</div>
       {showFooter && <Footer dictionary={dictionary} />}
     </div>

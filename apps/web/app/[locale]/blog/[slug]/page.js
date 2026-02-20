@@ -9,8 +9,8 @@ import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import { IoArrowForwardCircleOutline, IoArrowForwardOutline } from 'react-icons/io5';
 
-async function getPost(slug) {
-  return await safeFetch(postBySlugQuery, { slug });
+async function getPost(slug, language) {
+  return await safeFetch(postBySlugQuery, { slug, language });
 }
 
 export async function generateMetadata({ params }) {
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     return { title: 'Blog | Fresh Food' };
   }
 
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
 
   if (!post) {
     return { title: 'Post no encontrado' };
@@ -54,15 +54,29 @@ export default async function PostPage({ params }) {
     );
   }
 
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
 
   if (!post) {
     notFound();
   }
 
+  // Construir URLs alternativas para el language switcher (slugs pueden diferir por idioma)
+  const alternateUrls = (post._translations || [])
+    .filter((t) => t?.slug && t?.language)
+    .reduce(
+      (acc, t) => {
+        acc[t.language] = `/${t.language}/blog/${t.slug}`;
+        return acc;
+      },
+      { es: null, en: null }
+    );
+  // Si falta una traducción, usar el índice del blog en ese idioma
+  if (!alternateUrls.es) alternateUrls.es = '/es/blog';
+  if (!alternateUrls.en) alternateUrls.en = '/en/blog';
+
   return (
     <div className="responsiveWidth mb-20 flex w-full flex-col px-5 text-greendark md:px-0">
-      <GeneralLayout dictionary={dictionary}>
+      <GeneralLayout dictionary={dictionary} alternateUrls={alternateUrls}>
         <section className="flex w-full flex-col items-center justify-center text-gray-800">
           <article className="mx-auto mt-20 max-w-3xl">
             {/* Breadcrumb */}
