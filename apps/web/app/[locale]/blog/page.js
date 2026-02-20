@@ -18,10 +18,25 @@ async function getAllPosts() {
   return await safeFetch(postsQuery, {});
 }
 
-export const metadata = {
-  title: 'Blog | Fresh Food',
-  description: 'Noticias y artículos sobre agricultura sostenible y productos frescos',
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  
+  return {
+    title: locale === 'es' 
+      ? 'Noticias | Fresh Food Panamá' 
+      : 'News | Fresh Food Panama',
+    description: locale === 'es'
+      ? 'Noticias y artículos sobre exportación de frutas tropicales, agricultura sostenible y productos frescos desde Panamá.'
+      : 'News and articles about tropical fruit export, sustainable agriculture and fresh products from Panama.',
+    openGraph: {
+      title: locale === 'es' ? 'Noticias | Fresh Food Panamá' : 'News | Fresh Food Panama',
+      description: locale === 'es'
+        ? 'Noticias y artículos sobre exportación de frutas tropicales y productos frescos.'
+        : 'News and articles about tropical fruit export and fresh products.',
+      type: 'website',
+    },
+  };
+}
 
 const BlogPage = async ({ params }) => {
   const { locale } = await params;
