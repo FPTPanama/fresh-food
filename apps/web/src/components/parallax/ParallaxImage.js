@@ -19,7 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
  * @param {number} width - Ancho de la imagen (si fill=false)
  * @param {number} height - Alto de la imagen (si fill=false)
  * @param {string} objectFit - Ajuste de la imagen. Default: 'cover'
- * @param {number} scale - Escala adicional para evitar espacios vacíos. Default: 1.3
+ * @param {number} scale - Escala para parallax. 1.3 para fill, 1.05 sutil para dimensiones fijas
+ * @param {number} quality - Calidad de la imagen (Next.js)
  */
 const ParallaxImage = ({
   src,
@@ -31,9 +32,12 @@ const ParallaxImage = ({
   width,
   height,
   objectFit = 'cover',
-  scale = 1.3,
+  scale,
   priority = false,
+  quality,
 }) => {
+  // Scale sutil cuando hay dimensiones fijas para no alterar el aspecto
+  const parallaxScale = scale ?? (fill ? 1.3 : 1.05);
   const containerRef = useRef(null);
   const imageRef = useRef(null);
 
@@ -47,7 +51,7 @@ const ParallaxImage = ({
 
     const ctx = gsap.context(() => {
       gsap.set(image, {
-        scale: scale,
+        scale: parallaxScale,
         yPercent: -movement / 2,
       });
 
@@ -64,15 +68,21 @@ const ParallaxImage = ({
     });
 
     return () => ctx.revert();
-  }, [speed, scale]);
+  }, [speed, parallaxScale]);
+
+  const containerClass = fill
+    ? `relative h-full w-full min-h-[100px] self-stretch overflow-hidden ${className}`.trim()
+    : `relative inline-block overflow-hidden ${className}`.trim();
+
+  const imageWrapperClass = fill ? 'absolute inset-0' : 'relative';
 
   return (
-    <div ref={containerRef} className={`relative overflow-hidden ${className}`}>
-      <div ref={imageRef} className="h-full w-full">
+    <div ref={containerRef} className={containerClass}>
+      <div ref={imageRef} className={imageWrapperClass}>
         {fill ? (
-          <Image src={src} alt={alt} fill className={`object-${objectFit} ${imageClassName}`} priority={priority} />
+          <Image src={src} alt={alt} fill className={`object-${objectFit} ${imageClassName}`} priority={priority} sizes="(max-width: 768px) 100vw, 800px" />
         ) : (
-          <Image src={src} alt={alt} width={width} height={height} className={`object-${objectFit} ${imageClassName}`} priority={priority} />
+          <Image src={src} alt={alt} width={width} height={height} className={`object-${objectFit} ${imageClassName}`} priority={priority} quality={quality} />
         )}
       </div>
     </div>
