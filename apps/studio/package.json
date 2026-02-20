@@ -9,6 +9,7 @@
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
+    "@sanity/document-internationalization": "^4.1.1",
     "@sanity/vision": "^3.72.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
