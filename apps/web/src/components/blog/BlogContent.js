@@ -51,7 +51,7 @@ function ImageGallery({ value }) {
                 height={300}
                 loading="lazy"
               />
-              {image.caption && <figcaption className="mt-1 text-center text-sm text-gray-500">{image.caption}</figcaption>}
+              {image.caption && <figcaption className="mt-1 text-center text-sm text-gray-900">{image.caption}</figcaption>}
             </figure>
           );
         })}
@@ -88,7 +88,7 @@ function VideoEmbed({ value }) {
           className="absolute inset-0 h-full w-full"
         />
       </div>
-      {value.caption && <p className="mt-2 text-center text-sm text-gray-500">{value.caption}</p>}
+      {value.caption && <p className="mt-2 text-center text-sm text-gray-900">{value.caption}</p>}
     </div>
   );
 }
@@ -131,7 +131,7 @@ function QuoteBlock({ value }) {
 
   return (
     <blockquote className="my-8 rounded-r-lg border-l-4 border-green-500 bg-green-50 p-6">
-      <p className="mb-4 text-xl italic text-gray-700">{`"${value.quote}"`}</p>
+      <p className="mb-4 text-xl italic text-gray-900">{`"${value.quote}"`}</p>
       {(value.author || value.authorTitle) && (
         <footer className="flex items-center gap-3">
           {authorImageUrl && (
@@ -139,7 +139,7 @@ function QuoteBlock({ value }) {
           )}
           <div>
             {value.author && <cite className="font-semibold not-italic text-gray-900">{value.author}</cite>}
-            {value.authorTitle && <p className="text-sm text-gray-500">{value.authorTitle}</p>}
+            {value.authorTitle && <p className="text-sm text-gray-900">{value.authorTitle}</p>}
           </div>
         </footer>
       )}
@@ -166,7 +166,7 @@ function InfoBox({ value }) {
         <span className="text-2xl">{style.icon}</span>
         <div>
           <h4 className="font-semibold text-gray-900">{value.title || style.title}</h4>
-          <p className="mt-1 text-gray-700">{value.content}</p>
+          <p className="mt-1 text-gray-900">{value.content}</p>
         </div>
       </div>
     </div>
@@ -182,7 +182,7 @@ const components = {
       return (
         <figure className="my-8">
           <Image src={imageUrl} alt={value.alt || 'Imagen del post'} className="w-full rounded-lg" loading="lazy" width={800} height={450} />
-          {value.caption && <figcaption className="mt-2 text-center text-sm text-gray-500">{value.caption}</figcaption>}
+          {value.caption && <figcaption className="mt-2 text-center text-sm text-gray-900">{value.caption}</figcaption>}
         </figure>
       );
     },
@@ -211,7 +211,7 @@ const components = {
     h2: ({ children }) => <h2 className="mb-4 mt-8 text-2xl font-bold">{children}</h2>,
     h3: ({ children }) => <h3 className="mb-3 mt-6 text-xl font-semibold">{children}</h3>,
     h4: ({ children }) => <h4 className="mb-2 mt-4 text-lg font-semibold">{children}</h4>,
-    blockquote: ({ children }) => <blockquote className="my-6 border-l-4 border-green-500 pl-4 italic text-gray-700">{children}</blockquote>,
+    blockquote: ({ children }) => <blockquote className="my-6 border-l-4 border-green-500 pl-4 italic text-gray-900">{children}</blockquote>,
     normal: ({ children }) => <p className="mb-4 leading-relaxed">{children}</p>,
   },
   list: {

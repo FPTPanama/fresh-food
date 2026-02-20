@@ -66,7 +66,7 @@ export default async function PostPage({ params }) {
         <article className="mx-auto mt-20 max-w-3xl">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-l-100 text-greendark">
-            <Link href={`/${locale}/home`}>Home</Link>
+            <Link href={'/'}>Home</Link>
             <IoArrowForwardOutline />
             <Link href={`/${locale}/blog`}>Blog</Link>
             <IoArrowForwardOutline />
@@ -120,7 +120,7 @@ export default async function PostPage({ params }) {
           )}
 
           {/* Extracto */}
-          {post.excerpt && <p className="mb-8 text-xl leading-relaxed">{post.excerpt}</p>}
+          {post.excerpt && <p className="font-regular mb-8 text-xl leading-relaxed">{post.excerpt}</p>}
 
           {/* Contenido */}
           <BlogContent body={post.body} />

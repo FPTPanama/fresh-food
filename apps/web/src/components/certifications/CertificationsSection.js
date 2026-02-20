@@ -152,14 +152,14 @@ export default function CertificationsSection({ showDetails = false, layout = 'c
               <p className="text-sm font-semibold uppercase tracking-wide text-gray-600">{cert.tipo}</p>
             </div>
 
-            <p className="mb-6 text-center leading-relaxed text-gray-700">{cert.descripcion}</p>
+            <p className="mb-6 text-center leading-relaxed text-gray-900">{cert.descripcion}</p>
 
             {cert.beneficios && cert.beneficios.length > 0 && (
               <div className="mb-6 flex-1">
                 <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-greendark">{t.BENEFICIOS || 'Beneficios:'}</h4>
                 <ul className="space-y-2">
                   {cert.beneficios.map((beneficio, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-gray-700">
+                    <li key={idx} className="flex items-start gap-2 text-gray-900">
                       <span className="mt-1 text-greendark">✓</span>
                       <span className="text-sm">{beneficio}</span>
                     </li>
@@ -170,7 +170,7 @@ export default function CertificationsSection({ showDetails = false, layout = 'c
 
             {cert.productos && cert.productos.length > 0 && showDetails && (
               <div className="mb-4">
-                <h4 className="mb-2 text-sm font-semibold text-gray-700">{t.PRODUCTOS_CERTIFICADOS || 'Productos Certificados:'}</h4>
+                <h4 className="mb-2 text-sm font-semibold text-gray-900">{t.PRODUCTOS_CERTIFICADOS || 'Productos Certificados:'}</h4>
                 <div className="flex flex-wrap gap-2">
                   {cert.productos.map((producto, idx) => (
                     <span key={idx} className="rounded bg-greendark/10 px-2 py-1 text-xs font-medium text-greendark">
@@ -227,7 +227,7 @@ export default function CertificationsSection({ showDetails = false, layout = 'c
       {certificationsData?.resumen && showDetails && (
         <div className="flex w-full flex-col items-start justify-between rounded-xl border-2 border-greendark p-6">
           <h3 className="mb-2 text-xl font-bold text-greendark">{t.RESUMEN_CERTIFICACIONES || 'Resumen de Certificaciones'}</h3>
-          <p className="text-gray-700">
+          <p className="text-gray-900">
             <strong>{t.TOTAL_CERTIFICACIONES || 'Total de certificaciones:'}</strong> {certificationsData.resumen.totalCertificaciones}
           </p>
 
@@ -248,7 +248,7 @@ export default function CertificationsSection({ showDetails = false, layout = 'c
             <h3 className="mb-4 font-reg text-3xl text-greendark md:text-6xl">
               {t.POR_QUE_IMPORTANTES || '¿Por qué son importantes estas certificaciones?'}
             </h3>
-            <p className="leading-relaxed text-gray-700">
+            <p className="leading-relaxed text-gray-900">
               {t.TEXTO_IMPORTANCIA ||
                 'Estas certificaciones garantizan que nuestros productos cumplen con los más altos estándares de calidad, seguridad alimentaria y sostenibilidad. Esto nos permite exportar a los mercados más exigentes del mundo y asegurar la confianza de nuestros clientes.'}
             </p>
