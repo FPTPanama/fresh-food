@@ -1,0 +1,45 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next node_modules",
+    "lint:changed": "node scripts/lint-changed.js",
+    "lint:changed:main": "node scripts/lint-changed.js main",
+    "lint:changed:develop": "node scripts/lint-changed.js develop",
+    "pr:summary": "node scripts/generate-pr-summary.mjs"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@portabletext/react": "^3.1.0",
+    "@sanity/image-url": "^1.1.0",
+    "antd": "^5.26.7",
+    "autoprefixer": "^10.4.21",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.23.12",
+    "gsap": "^3.14.2",
+    "next": "^15.3.3",
+    "next-i18next": "^15.4.2",
+    "next-sanity": "^9.8.12",
+    "postcss": "^8.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-is": "^19.2.4",
+    "styled-components": "^6.3.10",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.2.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "sass": "^1.86.3",
+    "simple-git": "^3.27.0"
+  }
+}

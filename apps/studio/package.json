@@ -1,0 +1,22 @@
+{
+  "name": "studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "clean": "rm -rf dist node_modules"
+  },
+  "dependencies": {
+    "@sanity/document-internationalization": "^4.1.1",
+    "@sanity/vision": "^3.72.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.72.1",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12"
+  }
+}
