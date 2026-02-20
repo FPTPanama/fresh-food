@@ -5,28 +5,26 @@
 ```jsx
 // En src/components/footer/footer.js
 
-import CertificationsBadge from '@/components/certifications/CertificationsBadge';
+import CertificationsBadge from "@/components/certifications/CertificationsBadge";
 
 // Dentro del componente Footer, agregar antes del cierre del div principal:
 
 <div className="flex flex-col items-center justify-center w-full mt-6 pt-6 border-t border-gray-200">
-  <p className="text-sm font-bold text-greendark mb-3">Certificaciones Internacionales</p>
-  <CertificationsBadge 
-    size="small" 
-    layout="horizontal" 
-    showLabels={false}
-  />
-  <p className="text-xs text-gray-500 mt-2">
-    <a 
-      href="https://database.globalgap.org/globalgap/search/SearchMain.faces" 
-      target="_blank" 
+  <p className="text-sm font-bold text-greendark mb-3">
+    Certificaciones Internacionales
+  </p>
+  <CertificationsBadge size="small" layout="horizontal" showLabels={false} />
+  <p className="text-xs text-gray-900 mt-2">
+    <a
+      href="https://database.globalgap.org/globalgap/search/SearchMain.faces"
+      target="_blank"
       rel="noopener noreferrer"
       className="hover:underline"
     >
       Verificar certificados →
     </a>
   </p>
-</div>
+</div>;
 ```
 
 ## Ubicación sugerida en el Footer
@@ -41,4 +39,3 @@ Footer
         ├── Badge GlobalG.A.P.
         └── Link: "Verificar certificados"
 ```
-
