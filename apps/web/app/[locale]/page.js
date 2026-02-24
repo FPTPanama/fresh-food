@@ -1,5 +1,5 @@
 import GeneralLayout from '@/components/general-layout/general-layout';
-import ScrollReveal from '@/components/scroll-reveal';
+import { ScrollReveal } from '@/components/scroll-reveal';
 import Image from 'next/image';
 import { TiLeaf } from 'react-icons/ti';
 import { BiWorld, BiLoaderCircle } from 'react-icons/bi';

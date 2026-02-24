@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-export default function NotFound() {
+export default function NotFound404() {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center' }}>
@@ -14,7 +14,7 @@ export default function NotFound() {
             backgroundColor: '#16a34a',
             color: 'white',
             borderRadius: '9999px',
-            textDecoration: 'none'
+            textDecoration: 'none',
           }}
         >
           Volver al inicio
