@@ -154,7 +154,8 @@ export default async function Home({ params }) {
                 className="w-full md:w-auto"
                 imageClassName="mb-0 w-full md:mb-28 h-auto md:w-[800px] w-auto"
                 priority
-                quality={90}
+                quality={75}
+                sizes="(max-width: 768px) 90vw, 800px"
               />
             </div>
           </section>
