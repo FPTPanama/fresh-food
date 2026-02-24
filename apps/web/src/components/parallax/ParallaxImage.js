@@ -22,6 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
  * @param {string} objectFit - Ajuste de la imagen. Default: 'cover'
  * @param {number} scale - Escala para parallax. 1.3 para fill, 1.05 sutil para dimensiones fijas
  * @param {number} quality - Calidad de la imagen (Next.js)
+ * @param {string} sizes - Atributo sizes para responsive (Next.js Image). Recomendado cuando fill=false
  * @param {boolean} fadeIn - Aplica fade-in al cargar. Default: false
  * @param {boolean} zoomIn - Aplica zoom-in al cargar. Default: false
  */
@@ -41,6 +42,7 @@ const ParallaxImage = ({
   scale,
   priority = false,
   quality,
+  sizes,
 }) => {
   // Scale sutil cuando hay dimensiones fijas para no alterar el aspecto
   const parallaxScale = scale ?? (fill ? 1.3 : 1.05);
@@ -124,6 +126,7 @@ const ParallaxImage = ({
               className={`object-${objectFit} ${imageClassName}`}
               priority={priority}
               quality={quality}
+              sizes={sizes}
             />
           )}
         </div>
