@@ -25,27 +25,27 @@ const Footer = ({ dictionary }) => {
   const redSocItems = [
     {
       red: 'instagram',
-      icon: <FaInstagram size={20} color="#224C22" />,
+      icon: <FaInstagram size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
       url: '',
     },
     {
       red: 'twitter',
-      icon: <RiTwitterXLine size={20} color="#224C22" />,
+      icon: <RiTwitterXLine size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
       url: '',
     },
     {
       red: 'linkedin',
-      icon: <FaLinkedinIn size={20} color="#224C22" />,
+      icon: <FaLinkedinIn size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
       url: '',
     },
     {
       red: 'google',
-      icon: <FaGoogle size={20} color="#224C22" />,
+      icon: <FaGoogle size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
       url: '',
     },
     {
       red: 'tridge',
-      icon: <TridgeLogo width={20} height={20} color="#224C22" />,
+      icon: <TridgeLogo width={20} height={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
       url: 'https://www.tridge.com/seller/premium-profile-preview/BOH-c033c708',
     },
   ];
@@ -75,14 +75,10 @@ const Footer = ({ dictionary }) => {
           <div className="mb-3 mt-3 grid grid-cols-5 gap-2">
             {redSocItems.map((item, key) => {
               return (
-                <div key={key} className="flex h-auto w-[40px] items-center justify-center">
-                  {item.url ? (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-70">
-                      {item.icon}
-                    </a>
-                  ) : (
-                    <button>{item.icon}</button>
-                  )}
+                <div key={key} className="flex h-[40px] w-[40px] items-center justify-center transition-all">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.icon}
+                  </a>
                 </div>
               );
             })}
@@ -96,14 +92,14 @@ const Footer = ({ dictionary }) => {
             <div className="flex items-center justify-center gap-2">
               <Link
                 href={`/${locale}/certificates`}
-                className="transition-opacity hover:opacity-70 cursor-pointer flex items-center"
+                className="flex cursor-pointer items-center transition-opacity hover:opacity-70"
                 aria-label="Ver certificaciones Global GAP"
               >
                 <GlobalGapIcon width={50} height={40} color="#224C22" />
               </Link>
               <Link
                 href={`/${locale}/certificates`}
-                className="transition-opacity hover:opacity-70 cursor-pointer flex items-center"
+                className="flex cursor-pointer items-center transition-opacity hover:opacity-70"
                 aria-label="Ver certificaciones NSF"
               >
                 <NsfIcon width={40} height={40} color="#224C22" />

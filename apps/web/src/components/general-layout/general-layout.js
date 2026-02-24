@@ -1,23 +1,22 @@
-import React from "react";
-import Header from "../header/header";
-import Footer from "../footer/footer";
+import React from 'react';
+import Header from '../header/header';
+import Footer from '../footer/footer';
+import ScrollSmootherProvider from '../scroll-smoother';
 
-const GeneralLayout = ({
-  children,
-  dictionary,
-  showFooter = true,
-  overflowHidden = false,
-  alternateUrls = null,
-}) => {
+const GeneralLayout = ({ children, dictionary, showFooter = true, overflowHidden = false, alternateUrls = null, useScrollSmoother = false }) => {
+  const content = (
+    <>
+      <div className={`mb-10 flex w-full flex-col md:mt-[130px] ${overflowHidden ? 'overflow-hidden' : ''}`}>{children}</div>
+      {showFooter && <Footer dictionary={dictionary} />}
+    </>
+  );
+
   return (
     <div
-      className={`flex flex-col items-center justify-between ${
-        overflowHidden && "overflow-hidden"
-      } h-auto`}
+      className={`mb-20 flex w-full flex-col items-center justify-between ${overflowHidden && !useScrollSmoother ? 'overflow-hidden' : ''} h-auto`}
     >
       <Header dictionary={dictionary} alternateUrls={alternateUrls} />
-      <div className="md:mt-[130px] flex flex-col w-full mb-10">{children}</div>
-      {showFooter && <Footer dictionary={dictionary} />}
+      {useScrollSmoother ? <ScrollSmootherProvider>{content}</ScrollSmootherProvider> : content}
     </div>
   );
 };

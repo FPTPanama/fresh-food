@@ -70,6 +70,11 @@ function detectLanguageByCountry(countryCode) {
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
+  // No redirigir /404 - tiene su propia página para evitar errores de prerender
+  if (pathname === '/404') {
+    return NextResponse.next();
+  }
+
   const isMissingLocale = i18n.locales.every(locale => !pathname.startsWith(`/${locale}`));
 
   if (isMissingLocale) {

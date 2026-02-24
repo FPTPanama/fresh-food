@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BlogHero = ({ children, image, brightness, yOffset }) => {
+const BlogHero = ({ children, image, brightness, yOffset, isCover = true }) => {
   const containerRef = useRef(null);
   const bgRef = useRef(null);
 
@@ -45,7 +45,7 @@ const BlogHero = ({ children, image, brightness, yOffset }) => {
     <div ref={containerRef} className="relative flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-3xl">
       <div
         ref={bgRef}
-        className="absolute left-0 w-full bg-cover bg-center bg-no-repeat"
+        className={`absolute left-0 w-full bg-center bg-no-repeat ${isCover ? 'bg-cover' : 'bg-[length:auto_100%] md:bg-contain'}`}
         style={{
           backgroundImage: `url(${image})`,
           filter: brightness ? `brightness(${brightness})` : 'brightness(0.6)',
