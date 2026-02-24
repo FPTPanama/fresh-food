@@ -67,7 +67,7 @@ const ScrollReveal = ({
         start,
         animation,
         toggleActions: once ? 'play none none none' : 'play none none reverse',
-        markers: true,
+        // markers: true,
       });
     });
 

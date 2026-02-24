@@ -52,10 +52,10 @@ const BlogPage = async ({ params }) => {
       <GeneralLayout dictionary={dictionary}>
         <section className="flex w-full flex-col items-start justify-between gap-5 pb-10 md:h-[calc(100vh-130px)]">
           <BlogHero image="/img/frutas_blog_header.webp" brightness="0.6" yOffset={30}>
-            <div className="relative z-10 mb-10 flex w-1/2 flex-col items-start justify-center p-10 md:p-20">
-              <p className="mb-5 rounded-full border border-white px-6 py-2 text-sm text-white">{dictionary.blog.PRODUCTS}</p>
-              <h1 className="text-4xl font-bold text-white">{dictionary.blog.EXPERT_FARMERS}</h1>
-              <h2 className="font-thin text-3xl text-white">{dictionary.blog.BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST}</h2>
+            <div className="relative z-10 mb-10 flex h-[450px] w-full flex-col items-start justify-center p-10 md:w-1/2 md:p-20">
+              <p className="mb-10 rounded-full border border-white px-6 py-2 text-sm text-white">{dictionary.blog.PRODUCTS}</p>
+              <h1 className="text-2xl font-bold text-white md:text-4xl">{dictionary.blog.EXPERT_FARMERS}</h1>
+              <h2 className="font-thin text-lg text-white md:text-3xl">{dictionary.blog.BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST}</h2>
             </div>
           </BlogHero>
           <div className="grid w-full grow flex-col items-start justify-center gap-5 md:grid-cols-2">
