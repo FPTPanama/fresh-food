@@ -13,7 +13,7 @@ const GeneralLayout = ({ children, dictionary, showFooter = true, overflowHidden
 
   return (
     <div
-      className={`flex w-full flex-col items-center justify-between ${overflowHidden && !useScrollSmoother ? 'overflow-hidden' : ''} h-auto`}
+      className={`mb-20 flex w-full flex-col items-center justify-between ${overflowHidden && !useScrollSmoother ? 'overflow-hidden' : ''} h-auto`}
     >
       <Header dictionary={dictionary} alternateUrls={alternateUrls} />
       {useScrollSmoother ? <ScrollSmootherProvider>{content}</ScrollSmootherProvider> : content}

@@ -1,1 +1,1 @@
-export { default } from './ScrollReveal';
+export { ScrollReveal } from './ScrollReveal';

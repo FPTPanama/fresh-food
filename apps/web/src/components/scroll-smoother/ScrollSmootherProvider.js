@@ -39,7 +39,7 @@ const ScrollSmootherProvider = ({ children }) => {
 
   return (
     <div ref={wrapperRef} id="smooth-wrapper" className="fixed inset-0 z-0 overflow-hidden">
-      <div ref={contentRef} id="smooth-content" className="responsiveWidth flex w-full flex-col items-center">
+      <div ref={contentRef} id="smooth-content" className="responsiveWidth flex w-full flex-col items-center px-[5%] pb-20 md:px-0">
         {children}
       </div>
     </div>

@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
  * @param {Object} style - Estilos inline para el wrapper
  * @param {boolean} once - Si true, la animación solo se ejecuta una vez. Default: true
  */
-const ScrollReveal = ({
+export const ScrollReveal = ({
   children,
   start = 'top 85%',
   from = { opacity: 0, y: 40 },
@@ -80,5 +80,3 @@ const ScrollReveal = ({
     </div>
   );
 };
-
-export default ScrollReveal;
