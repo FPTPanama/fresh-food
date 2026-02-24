@@ -121,7 +121,7 @@ const Productos = async ({ params }) => {
     <>
       <ProductSchema locale={locale} />
       <div className="responsiveWidth gap-10">
-        <GeneralLayout dictionary={dictionary}>
+        <GeneralLayout dictionary={dictionary} useScrollSmoother>
           <section className="flex h-full w-full flex-col items-center justify-center gap-7 md:mt-0 md:h-[calc(100vh-180px)]">
             <div className="flex w-full flex-col items-center justify-between md:flex-row">
               <div className="flex w-full flex-col items-start justify-center gap-5 md:w-1/3">

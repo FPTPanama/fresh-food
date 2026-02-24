@@ -111,7 +111,7 @@ export default async function Home({ params }) {
 
   return (
     <div className="responsiveWidth flex flex-col">
-      <GeneralLayout dictionary={dictionary}>
+      <GeneralLayout dictionary={dictionary} useScrollSmoother>
         <div className="flex w-full flex-col items-center justify-center gap-14">
           <section className="relative mt-10 flex h-full w-full flex-col items-center justify-center gap-7 md:mt-0 md:h-[calc(100vh-180px)]">
             <div className="flex h-full w-full flex-col items-center justify-center md:flex-row">

@@ -49,7 +49,7 @@ const BlogPage = async ({ params }) => {
 
   return (
     <div className="responsiveWidth mb-20 flex w-full flex-col px-5 text-greendark md:px-0">
-      <GeneralLayout dictionary={dictionary}>
+      <GeneralLayout dictionary={dictionary} useScrollSmoother>
         <section className="flex w-full flex-col items-start justify-between gap-5 pb-10 md:h-[calc(100vh-130px)]">
           <BlogHero image="/img/frutas_blog_header.webp" brightness="0.6" yOffset={30}>
             <div className="relative z-10 mb-10 flex h-[450px] w-full flex-col items-start justify-center p-10 md:w-1/2 md:p-20">
