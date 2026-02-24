@@ -16,19 +16,30 @@ async function getPost(slug, language) {
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
 
+  const defaultDescription =
+    locale === 'es'
+      ? 'Artículos sobre exportación de frutas tropicales, agricultura sostenible y productos frescos desde Panamá.'
+      : 'Articles about tropical fruit export, sustainable agriculture and fresh products from Panama.';
+
   if (!checkSanityConfig()) {
-    return { title: 'Blog | Fresh Food' };
+    return {
+      title: 'Blog | Fresh Food',
+      description: defaultDescription,
+    };
   }
 
   const post = await getPost(slug, locale);
 
   if (!post) {
-    return { title: 'Post no encontrado' };
+    return {
+      title: locale === 'es' ? 'Post no encontrado' : 'Post not found',
+      description: defaultDescription,
+    };
   }
 
   return {
     title: `${post.title} | Fresh Food Blog`,
-    description: post.excerpt,
+    description: post.excerpt || defaultDescription,
   };
 }
 

@@ -1,4 +1,10 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
+
+export const metadata = {
+  title: 'Página no encontrada | Fresh Food Panamá',
+  description: 'La página que buscas no existe. Volver al inicio de Fresh Food Panamá.',
+};
+
 export default function NotFound404() {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center' }}>
