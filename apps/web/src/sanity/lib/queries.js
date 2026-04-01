@@ -90,6 +90,18 @@ export const postBySlugQuery = groq`
   }
 `;
 
+// Post por slug en cualquier idioma (solo metadatos para resolver URL canónica)
+export const postBySlugAnyLanguageQuery = groq`
+  *[_type == "post" && slug.current == $slug][0] {
+    language,
+    "slug": slug.current,
+    "_translations": *[_type == "translation.metadata" && references(^._id)].translations[].value->{
+      "slug": slug.current,
+      language
+    }
+  }
+`;
+
 // Obtener posts por categoría
 export const postsByCategoryQuery = groq`
   *[_type == "post" && $categorySlug in categories[]->slug.current && language == $language] | order(publishedAt desc) {

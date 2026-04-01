@@ -1,5 +1,4 @@
-import { safeFetch, checkSanityConfig } from '@/sanity/lib/client';
-import { postBySlugQuery } from '@/sanity/lib/queries';
+import { checkSanityConfig } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import BlogContent from '@/components/blog/BlogContent';
 import Image from 'next/image';
@@ -7,11 +6,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
+import { resolveBlogPost } from '@/lib/resolveBlogPost';
 import { IoArrowForwardCircleOutline, IoArrowForwardOutline } from 'react-icons/io5';
-
-async function getPost(slug, language) {
-  return await safeFetch(postBySlugQuery, { slug, language });
-}
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
@@ -28,7 +24,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const post = await getPost(slug, locale);
+  const post = await resolveBlogPost(slug, locale);
 
   if (!post) {
     return {
@@ -65,7 +61,7 @@ export default async function PostPage({ params }) {
     );
   }
 
-  const post = await getPost(slug, locale);
+  const post = await resolveBlogPost(slug, locale);
 
   if (!post) {
     notFound();
