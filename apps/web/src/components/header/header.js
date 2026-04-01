@@ -7,7 +7,7 @@ import Menu from '../menu/menu';
 import LanguageSwitcher from 'components/language-switcher/language-switcher';
 import BurgerMenu from '../burger-menu/burger-menu';
 
-const Header = ({ dictionary }) => {
+const Header = ({ dictionary, alternateUrls = null }) => {
   const pathname = usePathname();
   const [isAtTop, setIsAtTop] = useState(true);
 
@@ -36,7 +36,7 @@ const Header = ({ dictionary }) => {
           <Image src={'/img/freshfood_logo.svg'} height={50} width={300} alt="freshfood logo" />
         </div>
         <div className="flex w-1/5 items-center justify-center">
-          <LanguageSwitcher />
+          <LanguageSwitcher alternateUrls={alternateUrls} />
         </div>
       </div>
       <div className="hidden flex-1 md:flex">
@@ -48,7 +48,7 @@ const Header = ({ dictionary }) => {
       </Link>
 
       <div className="hidden flex-1 items-center justify-end gap-5 md:flex">
-        <LanguageSwitcher />
+        <LanguageSwitcher alternateUrls={alternateUrls} />
         <Link
           href={`/${pathname.split('/')[1] || 'es'}/contact`}
           className="flex items-center justify-center rounded-full border-2 border-greendark px-4 py-2 text-l-100 transition-all hover:bg-greendark hover:text-white md:hover:px-8"

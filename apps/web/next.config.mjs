@@ -1,6 +1,15 @@
 export default {
   reactStrictMode: true,
   compress: true,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      // Evita polyfills innecesarios en navegadores modernos (Lighthouse: Legacy JavaScript)
+      '../build/polyfills/polyfill-module': false,
+      'next/dist/build/polyfills/polyfill-module': false,
+    };
+    return config;
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

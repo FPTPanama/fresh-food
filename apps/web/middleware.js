@@ -67,8 +67,19 @@ function detectLanguageByCountry(countryCode) {
   return null;
 }
 
+/** /[locale]/blog/[slug] — el slug puede ser solo válido en un idioma; no forzar cookie sobre la URL */
+function isBlogArticlePath(pathname) {
+  const parts = pathname.split('/').filter(Boolean);
+  return parts.length === 3 && parts[1] === 'blog' && i18n.locales.includes(parts[0]);
+}
+
 export function middleware(request) {
   const { pathname } = request.nextUrl;
+
+  // No redirigir /404 - tiene su propia página para evitar errores de prerender
+  if (pathname === '/404') {
+    return NextResponse.next();
+  }
 
   const isMissingLocale = i18n.locales.every(locale => !pathname.startsWith(`/${locale}`));
 
@@ -113,9 +124,14 @@ export function middleware(request) {
     const response = NextResponse.next();
     const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
 
-    // CRÍTICO: Si el locale en la URL no coincide con la cookie, redirigir a la cookie
-    // Esto asegura que la preferencia del usuario siempre se respete
-    if (cookieLocale && cookieLocale !== currentLocale && i18n.locales.includes(cookieLocale)) {
+    // Si el locale en la URL no coincide con la cookie, redirigir a la cookie — excepto en
+    // artículos del blog, donde el slug es por idioma y no debe mezclarse con otro locale.
+    if (
+      cookieLocale &&
+      cookieLocale !== currentLocale &&
+      i18n.locales.includes(cookieLocale) &&
+      !isBlogArticlePath(pathname)
+    ) {
       const newPath = pathname.replace(`/${currentLocale}`, `/${cookieLocale}`);
       const redirectResponse = NextResponse.redirect(new URL(newPath, request.url));
       // Reforzar la cookie

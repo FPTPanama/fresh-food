@@ -1,5 +1,4 @@
-import { safeFetch, checkSanityConfig } from '@/sanity/lib/client';
-import { postBySlugQuery } from '@/sanity/lib/queries';
+import { checkSanityConfig } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import BlogContent from '@/components/blog/BlogContent';
 import Image from 'next/image';
@@ -7,28 +6,36 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
+import { resolveBlogPost } from '@/lib/resolveBlogPost';
 import { IoArrowForwardCircleOutline, IoArrowForwardOutline } from 'react-icons/io5';
-
-async function getPost(slug) {
-  return await safeFetch(postBySlugQuery, { slug });
-}
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
 
+  const defaultDescription =
+    locale === 'es'
+      ? 'Artículos sobre exportación de frutas tropicales, agricultura sostenible y productos frescos desde Panamá.'
+      : 'Articles about tropical fruit export, sustainable agriculture and fresh products from Panama.';
+
   if (!checkSanityConfig()) {
-    return { title: 'Blog | Fresh Food' };
+    return {
+      title: 'Blog | Fresh Food',
+      description: defaultDescription,
+    };
   }
 
-  const post = await getPost(slug);
+  const post = await resolveBlogPost(slug, locale);
 
   if (!post) {
-    return { title: 'Post no encontrado' };
+    return {
+      title: locale === 'es' ? 'Post no encontrado' : 'Post not found',
+      description: defaultDescription,
+    };
   }
 
   return {
     title: `${post.title} | Fresh Food Blog`,
-    description: post.excerpt,
+    description: post.excerpt || defaultDescription,
   };
 }
 
@@ -54,15 +61,29 @@ export default async function PostPage({ params }) {
     );
   }
 
-  const post = await getPost(slug);
+  const post = await resolveBlogPost(slug, locale);
 
   if (!post) {
     notFound();
   }
 
+  // Construir URLs alternativas para el language switcher (slugs pueden diferir por idioma)
+  const alternateUrls = (post._translations || [])
+    .filter((t) => t?.slug && t?.language)
+    .reduce(
+      (acc, t) => {
+        acc[t.language] = `/${t.language}/blog/${t.slug}`;
+        return acc;
+      },
+      { es: null, en: null }
+    );
+  // Si falta una traducción, usar el índice del blog en ese idioma
+  if (!alternateUrls.es) alternateUrls.es = '/es/blog';
+  if (!alternateUrls.en) alternateUrls.en = '/en/blog';
+
   return (
     <div className="responsiveWidth mb-20 flex w-full flex-col px-5 text-greendark md:px-0">
-      <GeneralLayout dictionary={dictionary}>
+      <GeneralLayout dictionary={dictionary} alternateUrls={alternateUrls}>
         <section className="flex w-full flex-col items-center justify-center text-gray-800">
           <article className="mx-auto mt-20 max-w-3xl">
             {/* Breadcrumb */}

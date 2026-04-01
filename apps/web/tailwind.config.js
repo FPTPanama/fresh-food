@@ -92,6 +92,20 @@ module.exports = {
           pressed: 'var(--interactive-inverse-pressed, #4A41A5)',
           disabled: 'var(--interactive-inverse-disabled, #8F8F8F)',
         },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          zoomIn: {
+            '0%': { transform: 'scale(0.5)' },
+            '100%': { transform: 'scale(1)' },
+          },
+        },
+        animation: {
+          'fade-in': 'fadeIn 1s ease-out both',
+          'zoom-in': 'zoomIn 1s ease-out both',
+        },
         border: {
           DEFAULT: 'var(--border-default, #D8D8D2)',
           subdued: 'var(--border-subdued, #E4E4E0)',
