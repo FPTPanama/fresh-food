@@ -1,25 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { urlFor } from '@/sanity/lib/image';
-
-// Helper para obtener URL de imagen de forma segura
-function getImageUrl(image, width = 400, height = 300) {
-  try {
-    // Si tiene asset con url directa (cuando se expande con asset->)
-    if (image?.asset?.url) {
-      return `${image.asset.url}?w=${width}&h=${height}&fit=crop`;
-    }
-    // Si tiene _ref, usar urlFor
-    if (image?.asset?._ref || image?._ref) {
-      return urlFor(image).width(width).height(height).url();
-    }
-    return null;
-  } catch (error) {
-    console.error('Error generating image URL:', error);
-    return null;
-  }
-}
+import { getBlogImageUrl, blogImagePresets } from '@/lib/blogImageUrl';
 
 // Componente para Galería de Imágenes
 function ImageGallery({ value }) {
@@ -36,7 +18,7 @@ function ImageGallery({ value }) {
       {value.title && <h3 className="mb-4 text-lg font-semibold">{value.title}</h3>}
       <div className={layoutClasses[value.layout] || layoutClasses.grid}>
         {value.images.map((image, index) => {
-          const imageUrl = getImageUrl(image, 400, 300);
+          const imageUrl = getBlogImageUrl(image, blogImagePresets.gallery);
           if (!imageUrl) return null;
 
           return (
@@ -50,6 +32,7 @@ function ImageGallery({ value }) {
                 width={400}
                 height={300}
                 className="h-auto w-full rounded-lg object-cover"
+                sizes="(max-width: 768px) 50vw, 33vw"
               />
               {image.caption && <figcaption className="mt-1 text-center text-sm text-gray-900">{image.caption}</figcaption>}
             </figure>
@@ -128,7 +111,7 @@ function CallToAction({ value }) {
 function QuoteBlock({ value }) {
   if (!value?.quote) return null;
 
-  const authorImageUrl = value.authorImage ? getImageUrl(value.authorImage, 48, 48) : null;
+  const authorImageUrl = value.authorImage ? getBlogImageUrl(value.authorImage, blogImagePresets.avatar) : null;
 
   return (
     <blockquote className="my-8 rounded-r-lg border-l-4 border-green-500 bg-green-50 p-6">
@@ -192,11 +175,18 @@ function InfoBox({ value }) {
 export const portableTextComponents = {
   types: {
     image: ({ value }) => {
-      const imageUrl = getImageUrl(value, 800, 450);
+      const imageUrl = getBlogImageUrl(value, blogImagePresets.inline);
       if (!imageUrl) return null;
       return (
         <figure className="my-8">
-          <Image src={imageUrl} alt={value.alt || 'Imagen del post'} width={800} height={450} className="rounded-lg" />
+          <Image
+            src={imageUrl}
+            alt={value.alt || 'Imagen del post'}
+            width={800}
+            height={450}
+            className="rounded-lg"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
           {value.caption && <figcaption className="mt-2 text-center text-sm text-gray-900">{value.caption}</figcaption>}
         </figure>
       );
