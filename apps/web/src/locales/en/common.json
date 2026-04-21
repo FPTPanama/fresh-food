@@ -7,6 +7,12 @@
     "QUIERES_MAS_INFO": "Want more information?",
     "NEWS": "News"
   },
+  "not_found": {
+    "TITLE": "Looks like we're short a few pineapples around here.",
+    "SUBTITLE": "Page not found",
+    "BACK_HOME": "Back to home",
+    "ARIA_404": "404"
+  },
   "form": {
     "NAME": "Name",
     "EMAIL": "Email",
@@ -346,6 +352,9 @@
     "BLOG": "Blog",
     "PRODUCTS": "Products",
     "EXPERT_FARMERS": "Expert farmers from Panama, the United States, and Venezuela.",
-    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Bringing to your table the essence of nature."
+    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Bringing to your table the essence of nature.",
+    "POST_NAV_TO_OLDER": "Previous",
+    "POST_NAV_TO_NEWER": "Next",
+    "POST_NAV_ARIA": "Blog post navigation"
   }
 }

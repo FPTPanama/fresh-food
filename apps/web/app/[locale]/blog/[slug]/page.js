@@ -7,7 +7,9 @@ import { notFound } from 'next/navigation';
 import GeneralLayout from '@/components/general-layout/general-layout';
 import { getDictionary } from '@/lib/getDictionary';
 import { resolveBlogPost } from '@/lib/resolveBlogPost';
-import { IoArrowForwardCircleOutline, IoArrowForwardOutline } from 'react-icons/io5';
+import { IoArrowForwardOutline } from 'react-icons/io5';
+import BlogPostAdjacentNav from '@/components/blog/BlogPostAdjacentNav';
+import { getBlogAdjacentPosts } from '@/lib/getBlogAdjacentPosts';
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
@@ -66,6 +68,8 @@ export default async function PostPage({ params }) {
   if (!post) {
     notFound();
   }
+
+  const { older, newer } = await getBlogAdjacentPosts(locale, slug);
 
   // Construir URLs alternativas para el language switcher (slugs pueden diferir por idioma)
   const alternateUrls = (post._translations || [])
@@ -148,6 +152,17 @@ export default async function PostPage({ params }) {
 
             {/* Contenido */}
             <BlogContent body={post.body} />
+
+            <BlogPostAdjacentNav
+              locale={locale}
+              older={older}
+              newer={newer}
+              labels={{
+                TO_OLDER: dictionary.blog.POST_NAV_TO_OLDER,
+                TO_NEWER: dictionary.blog.POST_NAV_TO_NEWER,
+                ARIA: dictionary.blog.POST_NAV_ARIA,
+              }}
+            />
           </article>
         </section>
       </GeneralLayout>

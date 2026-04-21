@@ -7,6 +7,12 @@
     "QUIERES_MAS_INFO": "¿Quieres más información?",
     "NEWS": "Noticias"
   },
+  "not_found": {
+    "TITLE": "Parece que faltan unas piñas por aquí.",
+    "SUBTITLE": "Página no encontrada",
+    "BACK_HOME": "Volver al inicio",
+    "ARIA_404": "404"
+  },
   "form": {
     "NAME": "Nombre",
     "EMAIL": "Email",
@@ -443,6 +449,9 @@
     "BLOG": "Blog",
     "PRODUCTS": "Products",
     "EXPERT_FARMERS": "Agricultores expertos de Panamá, Estados Unidos y Venezuela.",
-    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Llevamos a tu mesa la esencia de la naturaleza."
+    "BRINGING_THE_BEST_TO_WHERE_IT_MATTERS_MOST": "Llevamos a tu mesa la esencia de la naturaleza.",
+    "POST_NAV_TO_OLDER": "Anterior",
+    "POST_NAV_TO_NEWER": "Siguiente",
+    "POST_NAV_ARIA": "Navegación entre artículos del blog"
   }
 }

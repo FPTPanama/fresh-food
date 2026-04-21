@@ -26,10 +26,10 @@ export default function OrganizationSchema({ locale }) {
       availableLanguage: ['Spanish', 'English'],
     },
     sameAs: [
-      // Agregar redes sociales cuando estén disponibles
+      'https://www.linkedin.com/company/freshfoodpanama/',
+      // Agregar cuando estén disponibles:
       // 'https://www.facebook.com/freshfoodpanama',
       // 'https://www.instagram.com/freshfoodpanama',
-      // 'https://www.linkedin.com/company/freshfoodpanama',
     ],
     areaServed: {
       '@type': 'Place',
