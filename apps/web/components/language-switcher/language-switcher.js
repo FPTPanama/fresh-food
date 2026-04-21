@@ -38,7 +38,7 @@ const LanguageSwitcher = ({ alternateUrls = null }) => {
         });
       });
     }
-  }, [pathname]);
+  }, [pathname, router]);
 
   const toggleLocale = () => {
     const newLocale = currentLocale === 'es' ? 'en' : 'es';

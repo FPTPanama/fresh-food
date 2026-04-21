@@ -4,9 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
-import { FaGoogle } from 'react-icons/fa';
-import { RiTwitterXLine } from 'react-icons/ri';
+import { FaLinkedinIn } from 'react-icons/fa6';
+// Redes pendientes (descomentar import e ítem cuando haya URL):
+// import { FaInstagram } from 'react-icons/fa6';
+// import { FaGoogle } from 'react-icons/fa';
+// import { RiTwitterXLine } from 'react-icons/ri';
 import dayjs from 'dayjs';
 import TridgeLogo from '@/components/logos/TridgeLogo';
 import GlobalGapIcon from '@/components/logos/GlobalGapIcon';
@@ -23,26 +25,26 @@ const Footer = ({ dictionary }) => {
 
   const currentYear = dayjs().year();
   const redSocItems = [
-    {
-      red: 'instagram',
-      icon: <FaInstagram size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
-      url: '',
-    },
-    {
-      red: 'twitter',
-      icon: <RiTwitterXLine size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
-      url: '',
-    },
+    // {
+    //   red: 'instagram',
+    //   icon: <FaInstagram size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
+    //   url: 'https://www.instagram.com/...',
+    // },
+    // {
+    //   red: 'twitter',
+    //   icon: <RiTwitterXLine size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
+    //   url: 'https://...',
+    // },
     {
       red: 'linkedin',
       icon: <FaLinkedinIn size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
-      url: '',
+      url: 'https://www.linkedin.com/company/freshfoodpanama/',
     },
-    {
-      red: 'google',
-      icon: <FaGoogle size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
-      url: '',
-    },
+    // {
+    //   red: 'google',
+    //   icon: <FaGoogle size={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
+    //   url: 'https://...',
+    // },
     {
       red: 'tridge',
       icon: <TridgeLogo width={20} height={20} color="#224C22" className="transition-all duration-100 hover:scale-125" />,
@@ -72,16 +74,20 @@ const Footer = ({ dictionary }) => {
         <p>{dictionary?.footer?.PAIS_CIUDAD}</p>
 
         <div className="mt-4 flex w-full flex-col items-end justify-center md:w-fit md:gap-3">
-          <div className="mb-3 mt-3 grid grid-cols-5 gap-2">
-            {redSocItems.map((item, key) => {
-              return (
-                <div key={key} className="flex h-[40px] w-[40px] items-center justify-center transition-all">
+          <div className="mb-3 mt-3 flex flex-wrap justify-end gap-2">
+            {redSocItems.map((item) => (
+              <div key={item.red} className="flex h-[40px] w-[40px] items-center justify-center transition-all">
+                {item.url ? (
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
                     {item.icon}
                   </a>
-                </div>
-              );
-            })}
+                ) : (
+                  <span className="inline-flex cursor-default select-none" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
           <p>
             <span className="font-black">{`${currentYear} ©`}</span> All rights reserved

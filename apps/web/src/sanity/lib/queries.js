@@ -165,3 +165,11 @@ export const regularPostsQuery = groq`
     "categories": categories[]->title
   }
 `;
+
+// Orden de posts por idioma (mismo criterio que el listado) para navegación anterior/siguiente
+export const postsNavOrderQuery = groq`
+  *[_type == "post" && language == $language] | order(publishedAt desc) {
+    title,
+    "slug": slug.current
+  }
+`;
